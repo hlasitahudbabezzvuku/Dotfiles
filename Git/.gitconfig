@@ -1,0 +1,19 @@
+[user]
+	name = hlasitahudbabezzvuku
+	email = frantisek.lednicky@outlook.com
+	signingkey = ED4878C6764789C5
+[core]
+	editor = nvim
+	excludesfile = ~/.gitglobalignore
+[init]
+	defaultBranch = development
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
+[tag]
+	gpgSign = true
+[push]
+	recurseSubmodules = on-demand
+[submodule]
+	recurse = true
