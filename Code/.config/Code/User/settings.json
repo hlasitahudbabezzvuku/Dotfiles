@@ -1,0 +1,45 @@
+{
+    "telemetry.feedback.enabled": false,
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [ "workbench.action.quickOpen" ]
+        },
+        {
+            "before": [ "K" ],
+            "commands": [ "editor.action.showHover" ]
+        }
+    ],
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+        "asvetliakov.vscode-neovim": 1
+    },
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/Thumbs.db": false
+    },
+    "window.titleBarStyle": "native",
+    "window.restoreWindows": "none",
+    "window.confirmBeforeClose": "always",
+    "window.menuStyle": "custom",
+    "window.menuBarVisibility": "toggle",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.sideBar.location": "right",
+    "workbench.navigationControl.enabled": false,
+    "terminal.external.linuxExec": "footclient",
+}
