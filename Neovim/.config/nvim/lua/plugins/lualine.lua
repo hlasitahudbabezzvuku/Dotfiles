@@ -3,22 +3,11 @@ return {
     lazy = false,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
-        local palette = require('lualine.themes.github_dark_default')
-
-        palette.normal.c.bg = 'None'
-        palette.insert.c.bg = 'None'
-        palette.command.c.bg = 'None'
-        palette.visual.c.bg = 'None'
-        palette.replace.c.bg = 'None'
-        palette.terminal.c.bg = 'None'
-        palette.inactive.c.bg = 'None'
-
         require('lualine').setup({
             options = {
                 icons_enabled = true,
                 section_separators = '',
                 component_separators = '',
-                theme = palette,
                 globalstatus = false,
             },
             sections = {
