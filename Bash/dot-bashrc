@@ -204,11 +204,11 @@ if ${BASHRC_BLESH}; then
         source "$HOME"/.local/share/blesh/ble.sh
     else
         (
-            if [[ ! -d "/var/bashrc" ]]; then
-                mkdir -p "/var/bashrc"
+            if [[ ! -d "/tmp/bashrc" ]]; then
+                mkdir -p "/tmp/bashrc"
             fi
 
-            pushd "/var/bashrc" || exit
+            pushd "/tmp/bashrc" || exit
 
             git clone --recursive https://github.com/akinomyoga/ble.sh.git && \
                 pushd ble.sh && \
@@ -216,7 +216,7 @@ if ${BASHRC_BLESH}; then
                 make install && \
                 popd
 
-            popd && rm -rf "/var/bashrc/ble.sh"
+            popd && rm -rf "/tmp/bashrc/ble.sh"
         )
     fi
 fi
