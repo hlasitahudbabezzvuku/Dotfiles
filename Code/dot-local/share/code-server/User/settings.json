@@ -35,7 +35,7 @@
     "window.restoreWindows": "none",
     "window.confirmBeforeClose": "always",
     "window.menuStyle": "custom",
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "classic",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "GitHub Dark Default",
