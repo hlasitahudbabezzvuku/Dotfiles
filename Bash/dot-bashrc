@@ -8,8 +8,8 @@
 
 
 # General modules
-readonly BASHRC_LOGIN=true                                # Enable session selection screen 
-readonly BASHRC_BELORA=true                               # Enable automatic tmux sessions via Belora (https://github.com/hlasitahudbabezzvuku/Belora)
+readonly BASHRC_LOGIN=false                               # Enable session selection screen 
+readonly BASHRC_BELORA=false                              # Enable automatic tmux sessions via Belora (https://github.com/hlasitahudbabezzvuku/Belora)
 readonly BASHRC_BLESH=true                                # Enable ble.sh integration
 
 # Login module
@@ -117,7 +117,7 @@ unset software_required
 ### Updates ###
 ###############
 
-if ${BASHRC_BLESH} && [[ -z ${_bashrc_first_login+x} ]]; then
+if ${BASHRC_BLESH} && ${BASHRC_LOGIN} && [[ -z ${_bashrc_first_login+x} ]]; then
     ( bash "$HOME"/.local/share/blesh/ble.sh --update )
 fi
 
