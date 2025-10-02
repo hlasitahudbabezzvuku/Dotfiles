@@ -10,14 +10,21 @@
                 "<leader>",
                 "f"
             ],
-            "commands": [ "workbench.action.quickOpen" ]
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
         },
         {
-            "before": [ "K" ],
-            "commands": [ "editor.action.showHover" ]
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
         }
     ],
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
+    "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
     "extensions.experimental.affinity": {
@@ -42,4 +49,9 @@
     "workbench.sideBar.location": "right",
     "workbench.navigationControl.enabled": false,
     "terminal.external.linuxExec": "footclient",
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.deleteBuildDirOnCleanConfigure": true,
+    "cmake.debugConfig": {
+        "type": "lldb",
+    },
 }
