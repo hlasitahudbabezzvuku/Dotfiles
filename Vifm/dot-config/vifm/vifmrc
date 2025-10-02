@@ -1,0 +1,34 @@
+set vicmd=nvim
+set syscalls
+set trash
+set nofollowlinks
+set dotdirs=treeleafsparent
+
+set fastrun
+set norunexec
+
+set history=100
+set undolevels=100
+
+set sortnumbers
+
+colorscheme TheCalling
+
+set timefmt=%d.%m.%y\ %H:%M
+
+set wildmenu
+set wildstyle=popup
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
+
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+
+set scrolloff=4
+set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
+
+mark h ~/
+
+only
+set millerview milleroptions+="rpreview:all"
