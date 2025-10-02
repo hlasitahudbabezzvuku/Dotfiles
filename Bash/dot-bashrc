@@ -3,50 +3,15 @@
 #  _ / _ \/ _ `(_-</ _ \/ __/ __/
 # (_)_.__/\_,_/___/_//_/_/  \__/ 
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 
 # General modules
-readonly BASHRC_LOGIN=false                               # Enable session selection screen 
-readonly BASHRC_BELORA=false                              # Enable automatic tmux sessions via Belora (https://github.com/hlasitahudbabezzvuku/Belora)
-readonly BASHRC_BLESH=true                                # Enable ble.sh integration
+readonly BASHRC_SESSION=true # Enable session integration (needed for most other modules)
+readonly BASHRC_BELORA=true  # Enable automatic tmux sessions via Belora (https://github.com/hlasitahudbabezzvuku/Belora)
+readonly BASHRC_BLESH=true   # Enable ble.sh integration
 
-# Login module
-readonly BASHRC_LOGIN_CMD_REBOOT="systemctl reboot"       # Command used for rebooting the system
-readonly BASHRC_LOGIN_CMD_POWEROFF="systemctl poweroff"   # Command used for powering off the system
-readonly BASHRC_LOGIN_CMD_HIBERNATE="systemctl hibernate" # Command used for hibernating the system
-readonly -A BASHRC_LOGIN_ENTRIES=(                        # Entries that are shown right after the first login
-    ["Shell (Full)"]="bash"
-    ["Shell (Minimal)"]="bash --norc --noprofile"
-    ["Btop++"]="btop"
-)
 
-# Belora module
-readonly BASHRC_BELORA_SERVER="/var/tmp/belora"           # Path to the Belora's tmux server
-readonly -a BASHRC_BELORA_NAMES=(                         # List of names that are used for selecting the names of the Belora sessions
-    "Tracer"
-    "Reaper"
-    "Widowmaker"
-    "Pharah"
-    "Reinhardt"
-    "Mercy"
-    "Torbjörn"
-    "Hanzo"
-    "Winston"
-    "Zenyatta"
-    "Bastion"
-    "Symmetra"
-    "Zarya"
-    "McCree"
-    "Soldier"
-    "Lúcio"
-    "Roadhog"
-    "Junkrat"
-    "D.Va"
-    "Mei"
-    "Genji"
-)
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 
 ################
@@ -100,7 +65,6 @@ declare -a software_required=(
     "bash"
     "kill" # util-linux
     "shuf" # coreutils
-    "tput" # ncurses
 )
 
 for entry in "${software_required[@]}"; do
@@ -117,7 +81,7 @@ unset software_required
 ### Updates ###
 ###############
 
-if ${BASHRC_BLESH} && ${BASHRC_LOGIN} && [[ -z ${_bashrc_first_login+x} ]]; then
+if ${BASHRC_BLESH} && ${BASHRC_SESSION} && [[ -z ${_bashrc_first_login+x} ]]; then
     ( bash "$HOME"/.local/share/blesh/ble.sh --update )
 fi
 
@@ -126,72 +90,15 @@ fi
 ### Login ###
 #############
 
-if ${BASHRC_LOGIN} && [[ -z ${_bashrc_first_login+x} ]]; then
-    export _bashrc_first_login=false
-
-    declare -a software_avalible=( "${!BASHRC_LOGIN_ENTRIES[@]}" )
-
-    height=${#software_avalible[@]} 
-    start_col=$(( $( tput cols ) / 2 - 15 ))
-    start_row=$(( $( tput lines ) / 2 - ( height + 12 ) / 2 ))
-
-    while true; do
-        tput reset && tput cup $start_row ${start_col}       && printf "┌───────── ENTRIES ─────────┐"
-
-        for i in "${!software_avalible[@]}"; do
-            tput cup $(( start_row + i + 2 )) ${start_col}
-            printf "   %i   %s" $(( i + 1 )) "${software_avalible[${i}]}"
-        done
-
-        tput cup $(( start_row + height + 3 )) ${start_col}  && printf "└───────────────────────────┘"
-        tput cup $(( start_row + height + 5 )) ${start_col}  && printf "┌───────── SESSION ─────────┐"
-
-        tput cup $(( start_row + height + 7 )) ${start_col}  && printf "   %c   %s" "r" "Reboot"
-        tput cup $(( start_row + height + 8 )) ${start_col} && printf "   %c   %s" "h" "Hibernate"
-        tput cup $(( start_row + height + 9 )) ${start_col} && printf "   %c   %s" "p" "Poweroff"
-        tput cup $(( start_row + height + 10 )) ${start_col}  && printf "   %c   %s" "q" "Exit"
-
-        tput cup $(( start_row + height + 12 )) ${start_col} && printf "└───────────────────────────┘"
-        tput cup $(( start_row + height + 14 )) ${start_col} && read -p " > " -n 1 -r input
-
-        if [[ ${input} == "q" ]] || [[ ${input} == "e" ]]; then break
-        elif [[ ${input} == "r" ]]; then ${AURORA_CMD_REBOOT}
-        elif [[ ${input} == "p" ]]; then ${AURORA_CMD_POWEROFF}
-        elif [[ ${input} -gt 0 ]] && [[ ${input} -le ${height} ]]; then
-            tput reset
-            ${BASHRC_LOGIN_ENTRIES[${software_avalible[$(( input - 1 ))]}]}
-        fi
-    done
-
-    exit
-fi
+[[ ${BASHRC_SESSION} ]] && [[ -z ${_bashrc_first_login+x} ]] && export _bashrc_first_login=false
 
 
 ####################
 ### Tmux Session ###
 ####################
 
-if "${BASHRC_BELORA}" && type tmux &> /dev/null && [[ -z "${TMUX+x}" ]] && [[ -z "${SESSION+x}" ]]; then
-    mapfile -t session_names < <( shuf -e "${BASHRC_BELORA_NAMES[@]}" )
-    mapfile -t sessions < <( tmux -S "${BASHRC_BELORA_SERVER}" list-sessions )
-
-    for session in "${sessions[@]}"; do
-        if [[ ! "$session" =~ "attached" ]]; then
-            exec tmux -S "${BASHRC_BELORA_SERVER}" attach-session -t "${session/:*/}"
-        fi
-    done
-
-    [[ "${#sessions[@]}" -ge "${#BASHRC_BELORA_NAMES[@]}" ]] && exec bashrc --norc --noprofile
-
-    name="${BASHRC_BELORA_NAMES[RANDOM % ${#BASHRC_BELORA_NAMES[@]}]}"
-
-    for name in "${session_names[@]}"; do
-        if ! [[ "${sessions[*]}" =~ "${name}" ]]; then
-            exec tmux -S "${BASHRC_BELORA_SERVER}" new-session -s "${name}"
-        fi
-    done
-    
-    exec bash --norc --noprofile
+if "${BASHRC_BELORA}" && type belora &> /dev/null && { [[ -n "${SSH_CONNECTION}" ]] || [[ "${XDG_SESSION_TYPE}" == "web" ]]; }; then
+    belora && exit
 fi
 
 
@@ -226,7 +133,7 @@ fi
 ### Addinational Config ###
 ###########################
 
-if [ -d "${HOME}"/.config/bash ]; then
+if [[ -d "${HOME}"/.config/bash ]]; then
     for file in "${HOME}"/.config/bash/*.sh; do
         if [ -f "${file}" ]; then
             source "${file}"
