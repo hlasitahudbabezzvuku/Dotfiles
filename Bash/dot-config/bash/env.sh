@@ -15,6 +15,5 @@ alias ip='ip -color=auto'
 if type nvim &> /dev/null; then
     export EDITOR="nvim"
     export VISUAL="nvim"
-    alias vi=nvim
 fi
 
