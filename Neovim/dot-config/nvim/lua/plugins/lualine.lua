@@ -3,8 +3,12 @@ return {
     lazy = false,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function ()
+        local auto_theme_custom = require('lualine.themes.auto')
+        auto_theme_custom.normal.c.bg = 'none'
+
         require('lualine').setup({
             options = {
+                theme = auto_theme_custom,
                 icons_enabled = true,
                 section_separators = '',
                 component_separators = '',

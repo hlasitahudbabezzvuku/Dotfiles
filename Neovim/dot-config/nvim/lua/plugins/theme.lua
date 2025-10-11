@@ -7,7 +7,7 @@ return {
     config = function()
         require('github-theme').setup({
             options = {
-                transparent = false,
+                transparent = true,
                 styles = {
                     comments = 'italic',
                     keywords = 'bold',
