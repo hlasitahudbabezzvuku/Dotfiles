@@ -3,6 +3,7 @@ return {
     name = 'github-theme',
     lazy = false,
     priority = 1000,
+    dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
         require('github-theme').setup({
             options = {
