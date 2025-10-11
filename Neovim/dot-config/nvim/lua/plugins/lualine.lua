@@ -5,12 +5,41 @@ return {
     config = function ()
         local theme = require('lualine.themes.auto')
 
-        theme.normal.c.bg = 'none'
-        theme.insert.c.bg = 'none'
-        theme.visual.c.bg = 'none'
-        theme.command.c.bg = 'none'
-        theme.replace.c.bg = 'none'
-        theme.terminal.c.bg = 'none'
+        theme.normal = {
+            a = { bg = '#21262d', fg = '#c9d1d9' },
+            b = { bg = '#161b22' },
+            c = { bg = 'None', fg = '#c9d1d9' },
+        }
+
+        theme.insert = {
+            a = { bg = '#7ee787', fg = 'Black' },
+            b = { bg = '#161b22', fg = '#c9d1d9' },
+            c = { bg = 'None', fg = '#c9d1d9' },
+        }
+
+        theme.visual = {
+            a = { bg = '#ffa657', fg = 'Black' },
+            b = { bg = '#161b22', fg = '#c9d1d9' },
+            c = { bg = 'None', fg = '#c9d1d9' },
+        }
+
+        theme.replace = {
+            a = { bg = '#797ef9', fg = 'Black' },
+            b = { bg = '#161b22', fg = '#c9d1d9' },
+            c = { bg = 'None', fg = '#c9d1d9' },
+        }
+
+        theme.command = {
+            a = { bg = '#ff7b72', fg = 'Black' },
+            b = { bg = '#161b22', fg = '#c9d1d9' },
+            c = { bg = 'None', fg = '#c9d1d9' },
+        }
+
+        theme.inactive = {
+            a = { bg = '#161b22', fg = '#c9d1d9' },
+            b = { bg = '#161b22', fg = '#c9d1d9' },
+            c = { bg = '#161b22', fg = '#c9d1d9' },
+        }
 
         require('lualine').setup({
             options = {
