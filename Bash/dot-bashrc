@@ -81,7 +81,7 @@ unset software_required
 ### Updates ###
 ###############
 
-if ${BASHRC_BLESH} && ${BASHRC_SESSION} && [[ -z ${_bashrc_first_login+x} ]]; then
+if ${BASHRC_BLESH} && ${BASHRC_SESSION} && [[ ${XDG_SESSION_TYPE} != "wayland" ]] && [[ -z ${_bashrc_first_login+x} ]]; then
     ( bash "$HOME"/.local/share/blesh/ble.sh --update )
 fi
 
