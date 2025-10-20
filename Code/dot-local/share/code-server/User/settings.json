@@ -24,6 +24,7 @@
         }
     ],
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
+    "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
