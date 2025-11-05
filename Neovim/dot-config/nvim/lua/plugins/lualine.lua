@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    lazy = false, -- TODO: VeryLazy
+    lazy = false,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         local theme = require('lualine.themes.auto')
@@ -56,6 +56,11 @@ return {
                     {
                         'diagnostics',
                         update_in_insert = false,
+                    },
+                    {
+                        require('noice').api.statusline.mode.get,
+                        cond = require('noice').api.statusline.mode.has,
+                        color = { fg = '#7ee787' },
                     }
                 },
                 lualine_x = { 'diff' },
