@@ -21,7 +21,6 @@ vim.opt.signcolumn = 'yes'
 vim.opt.cursorline = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.laststatus = 3
 vim.opt.splitkeep = 'screen'
 vim.opt.showtabline = 0
 vim.opt.updatetime = 500
