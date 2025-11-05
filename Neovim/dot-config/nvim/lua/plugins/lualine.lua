@@ -1,8 +1,8 @@
 return {
     'nvim-lualine/lualine.nvim',
-    lazy = false,
+    lazy = false, -- TODO: VeryLazy
     dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function ()
+    config = function()
         local theme = require('lualine.themes.auto')
 
         theme.normal = {
@@ -47,24 +47,23 @@ return {
                 icons_enabled = true,
                 section_separators = '',
                 component_separators = '',
-                globalstatus = false,
             },
-            sections = {
+            sections = {},
+            tabline = {
                 lualine_a = { 'mode' },
-                lualine_b = {
+                lualine_b = { 'branch' },
+                lualine_c = {
                     {
-                        'tabs',
-                        tab_max_length = 20,
-                        mode = 1,
-                        path = 0,
-                        use_mode_colors = true,
+                        'diagnostics',
+                        update_in_insert = false,
                     }
                 },
-                lualine_c = { 'diagnostics' },
-                lualine_x = { 'branch', 'diff' },
-                lualine_y = {},
+                lualine_x = { 'diff' },
+                lualine_y = { 'filetype', 'progress' },
                 lualine_z = { 'fileformat' }
             }
         })
+
+        vim.opt.laststatus = 0
     end
 }
