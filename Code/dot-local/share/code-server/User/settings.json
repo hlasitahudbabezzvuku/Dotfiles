@@ -24,7 +24,6 @@
         }
     ],
     "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace', monospace",
-    "editor.fontSize": 14,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
@@ -32,6 +31,7 @@
         "vscodevim.vim": 1,
         "asvetliakov.vscode-neovim": 1
     },
+    "git.openRepositoryInParentFolders": "never",
     "files.exclude": {
         "**/.DS_Store": false,
         "**/.git": false,
@@ -39,20 +39,21 @@
         "**/.svn": false,
         "**/Thumbs.db": false
     },
+    "terminal.external.linuxExec": "footclient",
     "window.titleBarStyle": "native",
     "window.restoreWindows": "none",
     "window.confirmBeforeClose": "always",
-    "window.menuStyle": "custom",
     "window.menuBarVisibility": "classic",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "GitHub Dark Default",
     "workbench.sideBar.location": "right",
-    "workbench.navigationControl.enabled": false,
-    "terminal.external.linuxExec": "footclient",
-    "git.openRepositoryInParentFolders": "never",
-    "cmake.deleteBuildDirOnCleanConfigure": true,
-    "cmake.debugConfig": {
-        "type": "lldb",
-    },
+    "debug.console.closeOnEnd": true,
+    "debug.inlineValues": "on",
+    "debug.internalConsoleOptions": "neverOpen",
+    "debug.openDebug": "openOnSessionStart",
+    "debug.openExplorerOnEnd": true,
+    "debug.showVariableTypes": true,
+    "debug.terminal.clearBeforeReusing": true,
+    "debug.toolBarLocation": "commandCenter"
 }
