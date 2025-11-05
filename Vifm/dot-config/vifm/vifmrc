@@ -3,6 +3,7 @@ set syscalls
 set trash
 set nofollowlinks
 set dotdirs=treeleafsparent
+set nowrap
 
 set fastrun
 set norunexec
