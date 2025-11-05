@@ -17,7 +17,7 @@ return {
             groups = {
                 all = {
                     TelescopeBorder = { fg = 'bg2' },
-                    TelescopePromptTitle = { bg = 'palette.red', fg = 'bg0'},
+                    TelescopePromptTitle = { bg = 'palette.blue', fg = 'bg0'},
                     TelescopePreviewTitle = { bg = 'palette.blue', fg = 'bg0'},
                     NoiceCmdlinePopupBorderCmdline = { fg = 'bg2' },
                     NoiceCmdlinePopupBorderHelp = { fg = 'bg2' },
