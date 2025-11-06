@@ -51,11 +51,11 @@ return {
             },
             sections = {
                 lualine_a = { 'mode' },
-                lualine_b = { 'branch' },
+                lualine_b = { 'filename', 'branch', 'diff' },
                 lualine_c = {
                     {
                         'diagnostics',
-                        update_in_insert = false,
+                        update_in_insert = true,
                     },
                     {
                         require('noice').api.statusline.mode.get,
@@ -63,8 +63,8 @@ return {
                         color = { fg = '#7ee787' },
                     }
                 },
-                lualine_x = { 'diff' },
-                lualine_y = { 'filetype', 'progress' },
+                lualine_x = { 'selectioncount', 'progress', 'location' },
+                lualine_y = { 'filetype' },
                 lualine_z = { 'fileformat' }
             }
         })
