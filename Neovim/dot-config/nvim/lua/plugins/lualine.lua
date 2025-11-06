@@ -47,9 +47,9 @@ return {
                 icons_enabled = true,
                 section_separators = '',
                 component_separators = '',
+                globalstatus = true,
             },
-            sections = {},
-            tabline = {
+            sections = {
                 lualine_a = { 'mode' },
                 lualine_b = { 'branch' },
                 lualine_c = {
@@ -68,7 +68,5 @@ return {
                 lualine_z = { 'fileformat' }
             }
         })
-
-        vim.opt.laststatus = 0
     end
 }
