@@ -51,12 +51,16 @@ return {
             },
             sections = {
                 lualine_a = { 'mode' },
-                lualine_b = { 'filename', 'branch', 'diff' },
-                lualine_c = {
+                lualine_b = {
+                    'filename',
                     {
                         'diagnostics',
                         update_in_insert = true,
-                    },
+                    }
+                },
+                lualine_c = {
+                    'branch',
+                    'diff',
                     {
                         require('noice').api.statusline.mode.get,
                         cond = require('noice').api.statusline.mode.has,
