@@ -9,51 +9,22 @@ return {
     'mfussenegger/nvim-dap',
     config = function()
         local dap = require('dap')
-        local dapui = require('dapui')
+
+        dap.adapters.gdb = {
+            type = "executable",
+            command = "gdb",
+            args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
+        }
 
         dap.adapters.lldb = {
             type = 'executable',
             command = 'lldb-dap',
-            name = 'lldb'
         }
 
         dap.adapters.coreclr = {
             type = 'executable',
             command = 'netcoredbg',
-            args = { '--interpreter=vscode' }
+            args = { '--interpreter=vscode' },
         }
-
-        local lldb = {
-            name = 'Launch lldb',
-            type = 'lldb',
-            request = 'launch',
-            cwd = '${workspaceFolder}',
-            program = function()
-                if BuildTarget == nil then
-                    return vim.fn.input('Path to executable', vim.fn.getcwd(), 'file')
-                else
-                    return BuildTarget
-                end
-            end,
-            stopOnEntry = false,
-        }
-
-        local netcoredbg = {
-            name = 'Launch netcoredbg',
-            type = 'coreclr',
-            request = 'launch',
-            cwd = '${workspaceFolder}',
-            program = function()
-                if BuildTarget == nil then
-                    return vim.fn.input('Path to executable', vim.fn.getcwd(), 'file')
-                else
-                    return BuildTarget
-                end
-            end,
-        }
-
-        dap.configurations.c = { lldb }
-        dap.configurations.cpp = { lldb }
-        dap.configurations.cs = { netcoredbg }
     end,
 }
