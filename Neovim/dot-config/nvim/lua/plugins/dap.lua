@@ -7,6 +7,9 @@ vim.keymap.set({ 'n', 'i', 'x' }, '<f12>', function() require('dap').step_out() 
 
 return {
     'mfussenegger/nvim-dap',
+    opts = function()
+        require("overseer").enable_dap()
+    end,
     config = function()
         local dap = require('dap')
 
