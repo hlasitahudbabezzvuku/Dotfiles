@@ -19,6 +19,7 @@ return {
                     TelescopeBorder = { fg = 'bg2' },
                     TelescopePromptTitle = { bg = 'palette.blue', fg = 'bg0' },
                     TelescopePreviewTitle = { bg = 'palette.blue', fg = 'bg0' },
+                    TelescopeSelection = { bg = 'sel0' },
                     NoiceCmdlinePopupBorderCmdline = { fg = 'bg2' },
                     NoiceCmdlinePopupBorderHelp = { fg = 'bg2' },
                     NoiceCmdlinePopupBorderLua = { fg = 'bg2' },
