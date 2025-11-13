@@ -10,7 +10,7 @@ return {
             virtual_text = { prefix = ' ' },
             underline = true,
             update_in_insert = true,
-            severity_sort = false,
+            severity_sort = true,
             signs = {
                 text = {
                     [vim.diagnostic.severity.ERROR] = '',
