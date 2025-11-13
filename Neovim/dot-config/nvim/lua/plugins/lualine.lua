@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    lazy = false,
+    event = 'VimEnter',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         local theme = require('lualine.themes.auto')

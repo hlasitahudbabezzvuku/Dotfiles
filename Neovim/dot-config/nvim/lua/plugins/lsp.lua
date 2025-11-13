@@ -2,8 +2,19 @@ return {
     'neovim/nvim-lspconfig',
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-        "mason.nvim",
-        "mason-org/mason-lspconfig.nvim",
+        'mason.nvim',
+        'mason-org/mason-lspconfig.nvim',
+    },
+    keys = {
+        {'<f2>', vim.lsp.buf.rename, mode = { 'n', 'i', 'x' }},
+        {'<f3>', vim.lsp.buf.code_action, mode = { 'n', 'i', 'x' }},
+        {'<f4>', vim.lsp.buf.format, mode = { 'n', 'i', 'x' }},
+        {'gd', vim.lsp.buf.definition},
+        {'gD', vim.lsp.buf.declaration},
+        {'gi', vim.lsp.buf.implementation},
+        {'go', vim.lsp.buf.type_definition},
+        {'gr', vim.lsp.buf.references},
+        {'gs', vim.lsp.buf.signature_help},
     },
     config = function ()
         vim.diagnostic.config({
@@ -19,20 +30,6 @@ return {
                     [vim.diagnostic.severity.HINT] = '',
                 },
             },
-        })
-        vim.api.nvim_create_autocmd('LspAttach', {
-            callback = function(event)
-                local opts = { buffer = event.buf }
-                vim.keymap.set({ 'n', 'i', 'x' }, '<f2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-                vim.keymap.set({ 'n', 'i', 'x' }, '<f3>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-                vim.keymap.set({ 'n', 'i', 'x' }, '<f4>', '<cmd>lua vim.lsp.buf.format()<cr>', opts)
-                vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-                vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-                vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-                vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-                vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
-                vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
-            end,
         })
     end
 }
