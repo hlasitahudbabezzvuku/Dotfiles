@@ -5,11 +5,11 @@ return {
     dependecies = { 'nvim-tree/nvim-web-devicons' },
     cmd = 'Telescope',
     keys = {
-        { '<leader>;', function() require('telescope.builtin').builtin() end },
-        { '<leader>f', function() require('telescope.builtin').find_files() end },
-        { '<leader>g', function() require('telescope.builtin').live_grep() end },
-        { '<leader>b', function() require('telescope.builtin').buffers() end },
-        { '<leader>k', function() require('telescope.builtin').diagnostics() end },
+        { '<leader>f', function() require('telescope.builtin').find_files() end,  desc = 'Find files' },
+        { '<leader>g', function() require('telescope.builtin').live_grep() end,   desc = 'Live grep' },
+        { '<leader>b', function() require('telescope.builtin').buffers() end,     desc = 'Find buffers' },
+        { '<leader>k', function() require('telescope.builtin').diagnostics() end, desc = 'Find diagnostics' },
+        { '<leader>;', function() require('telescope.builtin').builtin() end,     desc = 'Telescope' },
     },
     opts = {
         defaults = {

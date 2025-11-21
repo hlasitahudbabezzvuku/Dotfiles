@@ -7,7 +7,7 @@ return {
         'nvim-treesitter/nvim-treesitter',
     },
     keys = {
-        { '<leader>n', function() require('noice').cmd('pick') end },
+        { '<leader>n', function() require('noice').cmd('pick') end, desc = 'Notifications' },
     },
     opts = {
         commands = { history = { view = 'popup', } },
