@@ -1,5 +1,6 @@
 return {
     'mrjones2014/smart-splits.nvim',
+    event = 'VimEnter',
     keys = {
         { '<a-h>',             function() require('smart-splits').resize_left() end },
         { '<a-j>',             function() require('smart-splits').resize_down() end },
