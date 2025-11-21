@@ -58,6 +58,9 @@ return {
                     NotifyINFOBody                 = { fg = 'fg1' },
                     NotifyDEBUGBody                = { fg = 'fg1' },
                     NotifyTRACEBody                = { fg = 'fg1' },
+
+                    WhichKeyTitle                  = { bg = 'palette.red', fg = 'bg0' },
+                    WhichKeySeparator              = { fg = 'bg2' },
                 },
             },
         })
