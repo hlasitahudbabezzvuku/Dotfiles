@@ -5,11 +5,15 @@ return {
         win = {
             no_overlap = false,
             width = 80,
-            height = { min = 20, max = 48 },
+            height = { min = 20, max = 32 },
+            padding = { 2, 4 },
             col = 0.5,
             row = 7,
             border = 'rounded',
         },
-        icons = { keys = { Space = '+Leader' } },
+        layout = {
+            width = 80,
+            spacing = 0,
+        },
     },
 }
