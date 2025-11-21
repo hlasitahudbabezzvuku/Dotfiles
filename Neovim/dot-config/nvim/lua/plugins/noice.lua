@@ -6,6 +6,9 @@ return {
         'rcarriga/nvim-notify',
         'nvim-treesitter/nvim-treesitter',
     },
+    keys = {
+        { '<leader>n', function() require("noice").cmd("pick") end },
+    },
     opts = {
         commands = { history = { view = "popup", } },
         lsp = {
