@@ -11,9 +11,9 @@ return {
         local dap = require('dap')
 
         dap.adapters.gdb = {
-            type = "executable",
-            command = "gdb",
-            args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
+            type = 'executable',
+            command = 'gdb',
+            args = { '--interpreter=dap', '--eval-command', 'set print pretty on' },
         }
 
         dap.adapters.lldb = {
@@ -27,6 +27,6 @@ return {
             args = { '--interpreter=vscode' },
         }
 
-        require("overseer").enable_dap()
+        require('overseer').enable_dap()
     end,
 }
