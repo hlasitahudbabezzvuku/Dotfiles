@@ -19,7 +19,7 @@ vim.opt.expandtab = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes:3'
 
 vim.opt.cursorline = false
 vim.opt.splitbelow = true
