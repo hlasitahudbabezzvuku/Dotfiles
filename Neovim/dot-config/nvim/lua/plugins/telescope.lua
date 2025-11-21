@@ -3,6 +3,7 @@
 return {
     'nvim-telescope/telescope.nvim',
     dependecies = { 'nvim-tree/nvim-web-devicons' },
+    cmd = 'Telescope',
     keys = {
         { '<leader>;', function() require('telescope.builtin').builtin() end },
         { '<leader>f', function() require('telescope.builtin').find_files() end },
