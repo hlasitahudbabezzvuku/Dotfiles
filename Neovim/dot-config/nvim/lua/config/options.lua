@@ -3,6 +3,9 @@ vim.g.maplocalleader = '\\'
 
 vim.g.have_nerd_font = true
 
+vim.g.netrw_banner = false
+vim.g.netrw_liststyle = 3
+
 vim.opt.termguicolors = true
 
 vim.opt.clipboard = 'unnamedplus'
