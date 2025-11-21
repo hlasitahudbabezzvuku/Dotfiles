@@ -19,7 +19,7 @@ return {
                     key = 'f',
                     key_hl = 'Comment',
                     key_format = ' [%s]',
-                    action = 'lua require("telescope.builtin").find_files()'
+                    action = 'Telescope find_files'
                 },
                 {
                     icon = '  ',
