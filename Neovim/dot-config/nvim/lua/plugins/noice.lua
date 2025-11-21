@@ -3,10 +3,11 @@ return {
     lazy = false,
     dependencies = {
         'MunifTanjim/nui.nvim',
-        -- 'rcarriga/nvim-notify',
+        'rcarriga/nvim-notify',
         'nvim-treesitter/nvim-treesitter',
     },
     opts = {
+        commands = { history = { view = "popup", } },
         lsp = {
             override = {
                 ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
