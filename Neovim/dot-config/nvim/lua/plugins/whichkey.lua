@@ -2,6 +2,7 @@ return {
     'folke/which-key.nvim',
     event = 'VeryLazy',
     opts = {
+        delay = 750,
         win = {
             no_overlap = false,
             width = 80,
@@ -15,5 +16,6 @@ return {
             width = 80,
             spacing = 0,
         },
+        icons = { mappings = false }
     },
 }

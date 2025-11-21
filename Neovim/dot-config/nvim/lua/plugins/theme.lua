@@ -60,6 +60,7 @@ return {
                     NotifyTRACEBody                = { fg = 'fg1' },
 
                     WhichKeyTitle                  = { bg = 'palette.red', fg = 'bg0' },
+                    WhichKeyDesc                   = { fg = 'fg2' },
                     WhichKeySeparator              = { fg = 'bg2' },
                 },
             },
