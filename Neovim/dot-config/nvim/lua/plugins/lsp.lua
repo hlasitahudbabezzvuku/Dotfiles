@@ -18,7 +18,8 @@ return {
     },
     config = function()
         vim.diagnostic.config({
-            virtual_text = { prefix = ' ' },
+            virtual_lines = { current_line = true },
+            virtual_text = false,
             underline = true,
             update_in_insert = true,
             severity_sort = true,
