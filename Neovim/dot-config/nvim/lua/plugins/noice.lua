@@ -20,11 +20,11 @@ return {
         },
         views = {
             cmdline_popup = {
-                position = { row = 14, col = '50%' },
+                position = { row = 8, col = '50%' },
                 size = { width = 76, height = 'auto' },
             },
             popupmenu = {
-                position = { row = 17, col = '50%' },
+                position = { row = 11, col = '50%' },
                 size = { width = 76, height = 12 },
                 border = {
                     style = 'rounded',
