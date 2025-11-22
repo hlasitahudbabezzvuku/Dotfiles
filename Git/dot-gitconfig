@@ -1,7 +1,6 @@
 [user]
 	name = hlasitahudbabezzvuku
 	email = frantisek.lednicky@outlook.com
-	signingkey = CC80D4E3FD766F39
 [core]
 	editor = nvim
 	excludesfile = ~/.gitglobalignore
@@ -17,3 +16,5 @@
 	recurseSubmodules = on-demand
 [submodule]
 	recurse = true
+[include]
+    path = ~/.gitlocal
