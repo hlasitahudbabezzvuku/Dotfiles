@@ -43,7 +43,6 @@
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "window.titleBarStyle": "native",
     "window.restoreWindows": "none",
-    "window.confirmBeforeClose": "always",
     "window.menuBarVisibility": "classic",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
@@ -58,5 +57,10 @@
     "debug.terminal.clearBeforeReusing": true,
     "debug.toolBarLocation": "commandCenter",
     "debug.onTaskErrors": "abort",
-    "debug.closeReadonlyTabsOnEnd": true
+    "debug.closeReadonlyTabsOnEnd": true,
+    "projectManager.git.baseFolders": [
+        "~/Master/IIRA",
+        "~/Master/HlasitaHudbaBezZvuku",
+        "~/Master/Horizon"
+    ]
 }
