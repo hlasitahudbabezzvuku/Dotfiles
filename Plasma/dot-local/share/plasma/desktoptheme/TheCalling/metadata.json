@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "frantisek.lednicky@outlook.com",
+                "Name": "HlasitaHudbaBezZvuku"
+            }
+        ],
+        "Category": "",
+        "Description": "Breeze by HlasitaHudbaBezZvuku",
+        "EnabledByDefault": true,
+        "Id": "thecalling",
+        "License": "LGPL",
+        "Name": "TheCalling",
+        "Version": "0.1.0"
+    },
+    "X-Plasma-API": "5.0"
+}
