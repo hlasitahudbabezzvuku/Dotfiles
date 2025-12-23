@@ -29,7 +29,7 @@ fi
 ### Enviroment ###
 ##################
 
-for dir in "${HOME}"/Applications/*; do
+for dir in "${HOME}"/Resources/Applications/*; do
     if ! [[ "${PATH}" =~ "${dir}" ]] && [[ -d "${dir}" ]]; then
         PATH="${dir}:${PATH}"
     fi
