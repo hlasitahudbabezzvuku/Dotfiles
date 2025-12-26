@@ -1,0 +1,27 @@
+{
+    "clock": {
+        "format": "<b>{:%A, %d %B %Y - %H:%M}</b>"
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%    ⏻ {time}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "backlight/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    }
+}

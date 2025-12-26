@@ -1,0 +1,21 @@
+[
+    {
+        "name": "main",
+        "position": "top",
+        "layer": "top",
+
+        "include": [
+            "~/.config/waybar/modules.jsonc"
+        ],
+
+        "modules-left": ["battery"],
+        "modules-center": ["clock"],
+        "modules-right": ["backlight/slider", "pulseaudio/slider"]
+    },
+    {
+        "name": "secondary",
+        "position": "top",
+        "layer": "bottom",
+        "exclusive": false
+    }
+]
