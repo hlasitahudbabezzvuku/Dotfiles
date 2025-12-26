@@ -101,3 +101,20 @@ highlight {
     background: #ffffff;
 }
 
+
+/***********/
+/* MODULES */
+/***********/
+
+#battery.full {
+    color: #7ee787;
+}
+
+#battery.warning {
+    color: #ffa657;
+}
+
+#battery.critical {
+    color: #ff7b72;
+}
+
