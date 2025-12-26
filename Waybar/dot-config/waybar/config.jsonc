@@ -10,7 +10,7 @@
 
         "modules-left": ["battery"],
         "modules-center": ["clock"],
-        "modules-right": ["backlight/slider", "pulseaudio/slider"]
+        "modules-right": ["pulseaudio/slider", "backlight/slider"]
     },
     {
         "name": "secondary",
