@@ -1,0 +1,49 @@
+[Desktop Entry]
+Type=Application
+Name=Workspace
+Icon=preferences-desktop-workspaces
+Exec=notify-send error
+Terminal=false
+StartupNotify=false
+Actions=desktop-1;desktop-2;desktop-3;desktop-4;desktop-5;desktop-6;desktop-7;desktop-8;desktop-9;desktop-10;
+
+[Desktop Action desktop-1]
+Name=Desktop 1
+Exec=~/.local/bin/workspace.sh 1
+
+[Desktop Action desktop-2]
+Name=Desktop 2
+Exec=~/.local/bin/workspace.sh 2
+
+[Desktop Action desktop-3]
+Name=Desktop 3
+Exec=~/.local/bin/workspace.sh 3
+
+[Desktop Action desktop-4]
+Name=Desktop 4
+Exec=~/.local/bin/workspace.sh 4
+
+[Desktop Action desktop-5]
+Name=Desktop 5
+Exec=~/.local/bin/workspace.sh 5
+
+[Desktop Action desktop-6]
+Name=Desktop 6
+Exec=~/.local/bin/workspace.sh 6
+
+[Desktop Action desktop-7]
+Name=Desktop 7
+Exec=~/.local/bin/workspace.sh 7
+
+[Desktop Action desktop-8]
+Name=Desktop 8
+Exec=~/.local/bin/workspace.sh 8
+
+[Desktop Action desktop-9]
+Name=Desktop 9
+Exec=~/.local/bin/workspace.sh 9
+
+[Desktop Action desktop-10]
+Name=Desktop 10
+Exec=~/.local/bin/workspace.sh 10
+
