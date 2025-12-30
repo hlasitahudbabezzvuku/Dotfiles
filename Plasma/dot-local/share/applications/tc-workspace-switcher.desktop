@@ -5,45 +5,52 @@ Icon=preferences-desktop-workspaces
 Exec=notify-send error
 Terminal=false
 StartupNotify=false
-Actions=desktop-1;desktop-2;desktop-3;desktop-4;desktop-5;desktop-6;desktop-7;desktop-8;desktop-9;desktop-10;
+Actions=switch-desktop-1;switch-desktop-2;switch-desktop-3;switch-desktop-4;move-desktop-1;move-desktop-2;move-desktop-3;move-desktop-4;switch-up;switch-down;move-up;move-down;
 
-[Desktop Action desktop-1]
-Name=Desktop 1
+[Desktop Action switch-desktop-1]
+Name=Switch to Alpha
 Exec=~/.local/bin/tc-workspace-switcher.sh 1
 
-[Desktop Action desktop-2]
-Name=Desktop 2
+[Desktop Action switch-desktop-2]
+Name=Switch to Bravo
 Exec=~/.local/bin/tc-workspace-switcher.sh 2
 
-[Desktop Action desktop-3]
-Name=Desktop 3
+[Desktop Action switch-desktop-3]
+Name=Switch to Charlie
 Exec=~/.local/bin/tc-workspace-switcher.sh 3
 
-[Desktop Action desktop-4]
-Name=Desktop 4
+[Desktop Action switch-desktop-4]
+Name=Switch to Delta
 Exec=~/.local/bin/tc-workspace-switcher.sh 4
 
-[Desktop Action desktop-5]
-Name=Desktop 5
-Exec=~/.local/bin/tc-workspace-switcher.sh 5
+[Desktop Action move-desktop-1]
+Name=Move to Alpha
+Exec=~/.local/bin/tc-workspace-switcher.sh 1 move
 
-[Desktop Action desktop-6]
-Name=Desktop 6
-Exec=~/.local/bin/tc-workspace-switcher.sh 6
+[Desktop Action move-desktop-2]
+Name=Move to Bravo
+Exec=~/.local/bin/tc-workspace-switcher.sh 2 move
 
-[Desktop Action desktop-7]
-Name=Desktop 7
-Exec=~/.local/bin/tc-workspace-switcher.sh 7
+[Desktop Action move-desktop-3]
+Name=Move to Charlie
+Exec=~/.local/bin/tc-workspace-switcher.sh 3 move
 
-[Desktop Action desktop-8]
-Name=Desktop 8
-Exec=~/.local/bin/tc-workspace-switcher.sh 8
+[Desktop Action move-desktop-4]
+Name=Move to Delta
+Exec=~/.local/bin/tc-workspace-switcher.sh 4 move
 
-[Desktop Action desktop-9]
-Name=Desktop 9
-Exec=~/.local/bin/tc-workspace-switcher.sh 9
+[Desktop Action switch-up]
+Name=Switch one desktop up
+Exec=~/.local/bin/tc-workspace-switcher.sh up
 
-[Desktop Action desktop-10]
-Name=Desktop 10
-Exec=~/.local/bin/tc-workspace-switcher.sh 10
+[Desktop Action switch-down]
+Name=Switch one desktop down
+Exec=~/.local/bin/tc-workspace-switcher.sh down
 
+[Desktop Action move-up]
+Name=Move one desktop up
+Exec=~/.local/bin/tc-workspace-switcher.sh up move
+
+[Desktop Action move-down]
+Name=Move one desktop down
+Exec=~/.local/bin/tc-workspace-switcher.sh down move
