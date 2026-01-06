@@ -9,18 +9,15 @@ require('config.keybinds')
 
 require('config.lazy')
 
-vim.api.nvim_create_autocmd('VimEnter', {
-    callback = function ()
-        local current_root = vim.fn.fnamemodify(vim.fn.expand('%:p'), ':h')
-        local git_root = vim.fs.root(current_root, { '.git' }, 20)
-
-        if git_root then
-            vim.api.nvim_set_current_dir(git_root)
-        else
-            vim.api.nvim_set_current_dir(current_root)
-        end
-
-        vim.notify('Neovim root set to ' .. current_root, vim.log.levels.INFO)
-    end
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+      for _, file in ipairs(vim.api.nvim_get_runtime_file("lua/modules/*.lua", true)) do
+          local ok, module = pcall(require, "modules." .. vim.fn.fnamemodify(file, ":t:r"))
+          if ok and type(module) == "table" and module.setup then
+              module.setup()
+          end
+      end
+  end,
 })
 
