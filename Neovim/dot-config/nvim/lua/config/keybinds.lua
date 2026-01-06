@@ -1,5 +1,5 @@
 -- Files
-vim.keymap.set('n', '<leader>e', '<cmd>Explore<cr>', { noremap = true, silent = true, desc = "Open netrw" })
+vim.keymap.set('n', '<leader>e', '<cmd>Explore<cr>', { noremap = true, silent = true, desc = 'Open netrw' })
 
 vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-s>', '<cmd>write<cr>', { noremap = true, silent = true, desc = 'Save the current buffer' })
 vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-q>', '<cmd>quitall<cr>', { noremap = true, silent = true, desc = 'Quit the current buffer'  })
