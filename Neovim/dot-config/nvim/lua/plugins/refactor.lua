@@ -5,6 +5,8 @@ return {
         'nvim-lua/plenary.nvim',
         'nvim-treesitter/nvim-treesitter',
     },
-    lazy = false,
+    keys = {
+        { '<leader>r', function() require('refactoring').select_refactor() end, desc = 'Refactoring tools' },
+    },
     opts = {},
 }
