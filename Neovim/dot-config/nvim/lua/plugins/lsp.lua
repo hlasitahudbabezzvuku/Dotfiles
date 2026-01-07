@@ -32,5 +32,12 @@ return {
                 },
             },
         })
+        vim.api.nvim_create_autocmd('BufWritePre', {
+            pattern = '*',
+            callback = function()
+                vim.lsp.buf.format({ timeout_ms = 2000 })
+            end,
+            group = vim.api.nvim_create_augroup('FormatOnSave', {}),
+        })
     end
 }
