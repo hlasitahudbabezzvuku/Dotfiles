@@ -16,10 +16,6 @@ ShowViewMode=false
 [DetailsMode]
 ExpandableFolders=false
 
-[FileDialogSize]
-2 screens: Height=584
-2 screens: Width=824
-
 [General]
 BrowseThroughArchives=true
 ConfirmClosingMultipleTabs=false
@@ -30,6 +26,7 @@ OpenExternallyCalledFolderInNewTab=true
 RememberOpenedTabs=false
 ShowFullPath=true
 ShowSelectionToggle=false
+ShowStatusBar=FullWidth
 UseTabForSwitchingSplitView=true
 Version=202
 ViewPropsTimestamp=2025,9,6,10,11,40.072
