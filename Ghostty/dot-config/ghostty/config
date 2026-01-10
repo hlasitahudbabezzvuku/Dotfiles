@@ -1,0 +1,5 @@
+theme = TheCalling
+
+shell-integration = none
+
+quit-after-last-window-closed = false
