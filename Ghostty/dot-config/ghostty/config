@@ -1,5 +1,34 @@
+############
+### Font ###
+############
+
+font-family = MonaspiceNe Nerd Font
+font-size = 10.5
+
+adjust-cell-width =
+adjust-cell-height = 20%
+
+
+#####################
+### Customization ###
+#####################
+
+title = Terminal
 theme = TheCalling
 
-shell-integration = none
+background-opacity = 0.85
+unfocused-split-opacity = 1
+
+window-padding-x = 6
+window-padding-y = 4
+window-padding-balance = true
+
+
+#######################
+### Genreal Options ###
+#######################
 
 quit-after-last-window-closed = false
+shell-integration = none
+command = ~/Resources/Applications/Belora/belora
+
