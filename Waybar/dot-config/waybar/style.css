@@ -15,8 +15,7 @@ window#waybar {
 /**********/
 
 window#waybar.main {
-    font-size: 13px;
-    font-family: "JetBrainsMono Nerd Font Propo", monospace;
+    font-family: "Lexend", "JetBrainsMono Nerd Font Propo", sans-serif;
     background-color: #000000;
 }
 
@@ -49,16 +48,16 @@ window#waybar.secondary .modules-center {
     min-width: 384px;
 }
 
-window#waybar.secondary .modules-left  {
+window#waybar.secondary .modules-left {
     background-image: url("src/CornerLeftTop.svg");
 }
 
-window#waybar.secondary .modules-center  {
+window#waybar.secondary .modules-center {
     background-image: url("src/CenterTop.svg");
     background-position: top;
 }
 
-window#waybar.secondary .modules-right  {
+window#waybar.secondary .modules-right {
     background-image: url("src/CornerRightTop.svg");
 }
 
@@ -117,4 +116,3 @@ highlight {
 #battery.critical {
     color: #ff7b72;
 }
-

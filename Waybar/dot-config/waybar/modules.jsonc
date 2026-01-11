@@ -1,6 +1,6 @@
 {
     "clock": {
-        "format": "<b>{:%A, %d %B %Y - %H:%M}</b>"
+        "format": "{:%A, %d %B %Y   -   %H:%M}"
     },
 
     "battery": {
@@ -10,7 +10,7 @@
             "warning": 15,
             "critical": 5
         },
-        "format": "{icon} {capacity}%   ⏻ {time}   󰓅 {power}W",
+        "format": "{icon}  {capacity}%       ⏻  {time}       󰓅  {power}W",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""]
     },
