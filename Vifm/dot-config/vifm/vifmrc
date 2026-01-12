@@ -15,10 +15,10 @@ set sortnumbers
 
 colorscheme TheCalling
 
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-    \ img2sixel -S -w $((%pw*9)) %c %pd,
-    \ convert -identify %f -verbose /dev/null
-set previewoptions=hardgraphicsclear
+fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm}
+    \ kitten icat --silent --transfer-mode=stream --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
+    \ %pc
+    \ kitten icat --clear --silent >/dev/tty </dev/tty %N
 
 set timefmt=%d.%m.%y\ %H:%M
 
