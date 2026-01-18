@@ -8,9 +8,9 @@
             "~/.config/waybar/modules.jsonc"
         ],
 
-        "modules-left": ["battery"],
+        "modules-left": ["pulseaudio/slider", "backlight/slider"],
         "modules-center": ["clock"],
-        "modules-right": ["pulseaudio/slider", "backlight/slider"]
+        "modules-right": ["battery"]
     },
     {
         "name": "secondary",

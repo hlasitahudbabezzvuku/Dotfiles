@@ -10,7 +10,7 @@
             "warning": 15,
             "critical": 5
         },
-        "format": "{icon}  {capacity}%       ⏻  {time}       󰓅  {power}W",
+        "format": "{icon}  {capacity}%      ⏻  {time}      󰓅  {power}W",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""]
     },
