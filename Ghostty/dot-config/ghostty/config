@@ -4,6 +4,7 @@
 
 font-family = MonaspiceNe Nerd Font
 font-size = 10.5
+font-feature = +calt, +liga, +dlig
 
 adjust-cell-width =
 adjust-cell-height = 20%
