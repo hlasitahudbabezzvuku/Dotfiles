@@ -18,6 +18,7 @@ title = Terminal
 theme = TheCalling
 
 background-opacity = 0.85
+background-blur = true
 unfocused-split-opacity = 1
 
 window-padding-x = 6
