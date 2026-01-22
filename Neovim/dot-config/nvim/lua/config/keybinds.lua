@@ -1,12 +1,16 @@
 -- Files
 vim.keymap.set('n', '<leader>e', '<cmd>Explore<cr>', { noremap = true, silent = true, desc = 'Open netrw' })
 
-vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-s>', '<cmd>write<cr>', { noremap = true, silent = true, desc = 'Save the current buffer' })
-vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-q>', '<cmd>quitall<cr>', { noremap = true, silent = true, desc = 'Quit the current buffer'  })
+vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-s>', '<cmd>wa<cr>',
+    { noremap = true, silent = true, desc = 'Save the current buffer' })
+vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-q>', '<cmd>qa<cr>',
+    { noremap = true, silent = true, desc = 'Quit the current buffer' })
 
 -- Directories
-vim.keymap.set('n', '<leader>cc', function() vim.cmd('cd ' .. vim.fn.expand('%:p:h')) end, { noremap = true, silent = true, desc = 'Change root to this file'  })
-vim.keymap.set('n', '<leader>cu', function() vim.cmd('cd ' .. vim.fn.expand('..')) end, { noremap = true, silent = true, desc = 'Change root to one directory up'  })
+vim.keymap.set('n', '<leader>cc', function() vim.cmd('cd ' .. vim.fn.expand('%:p:h')) end,
+    { noremap = true, silent = true, desc = 'Change root to this file' })
+vim.keymap.set('n', '<leader>cu', function() vim.cmd('cd ' .. vim.fn.expand('..')) end,
+    { noremap = true, silent = true, desc = 'Change root to one directory up' })
 
 -- QoL
 vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
@@ -26,4 +30,3 @@ vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-k>', '<up>', { noremap = true, sile
 vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-j>', '<down>', { noremap = true, silent = true })
 vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-h>', '<left>', { noremap = true, silent = true })
 vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-l>', '<right>', { noremap = true, silent = true })
-
