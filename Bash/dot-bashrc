@@ -8,6 +8,7 @@
 readonly BASHRC_SESSION=true # Enable session integration (needed for most other modules)
 readonly BASHRC_BELORA=true  # Enable automatic tmux sessions via Belora (https://github.com/hlasitahudbabezzvuku/Belora)
 readonly BASHRC_BLESH=true   # Enable ble.sh integration
+readonly BASHRC_UWSM=true    # Enable UWSM integration
 
 
 # If not running interactively, don't do anything
@@ -77,20 +78,21 @@ done
 unset software_required
 
 
-###############
-### Updates ###
-###############
-
-if ${BASHRC_BLESH} && ${BASHRC_SESSION} && [[ ${XDG_SESSION_TYPE} != "wayland" ]] && [[ -z ${_bashrc_first_login+x} ]]; then
-    ( bash "$HOME"/.local/share/blesh/ble.sh --update )
-fi
-
-
 #############
 ### Login ###
 #############
 
-[[ ${BASHRC_SESSION} ]] && [[ -z ${_bashrc_first_login+x} ]] && export _bashrc_first_login=false
+if [[ ${BASHRC_SESSION} ]] && [[ -z ${_bashrc_first_login+x} ]]; then
+    export _bashrc_first_login=false
+    
+    if ${BASHRC_BLESH} && ${BASHRC_SESSION}; then
+        ( bash "$HOME"/.local/share/blesh/ble.sh --update )
+    fi
+
+    if "${BASHRC_UWSM}" && type uwsm &> /dev/null && uwsm check may-start && uwsm select; then
+        exec uwsm start default
+    fi
+fi
 
 
 ####################
