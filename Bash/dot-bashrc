@@ -85,7 +85,7 @@ unset software_required
 if [[ ${BASHRC_SESSION} ]] && [[ -z ${_bashrc_first_login+x} ]]; then
     export _bashrc_first_login=false
     
-    if ${BASHRC_BLESH} && ${BASHRC_SESSION}; then
+    if ${BASHRC_BLESH} && ${BASHRC_SESSION} && [[ "${XDG_SESSION_TYPE}" != "wayland" ]]; then
         ( bash "$HOME"/.local/share/blesh/ble.sh --update )
     fi
 
