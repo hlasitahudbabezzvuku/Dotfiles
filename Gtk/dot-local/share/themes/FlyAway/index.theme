@@ -1,6 +1,0 @@
-[X-GNOME-Metatheme]
-Name=FlyAway
-Type=X-GNOME-Metatheme
-Comment=Custom version of the adw-gtk3-dark theme
-Encoding=UTF-8
-GtkTheme=flyaway
