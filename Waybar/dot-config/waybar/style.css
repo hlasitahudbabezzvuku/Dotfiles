@@ -15,21 +15,19 @@ window#waybar {
 /**********/
 
 window#waybar.main {
-    font-family: "Lexend", "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
     background-color: #000000;
 }
 
 window#waybar.main .module {
-    padding: 4px 8px 0 8px;
+    margin: 2px 0 6px 0;
+    padding: 0 24px;
+    min-height: 24px;
+    border-radius: 100px;
 }
 
-window#waybar.main .modules-left,
-window#waybar.main .modules-right {
-    padding: 0 6px;
-}
-
-window#waybar.secondary {
+window#waybar.rounding {
     background-color: transparent;
 }
 
@@ -42,20 +40,8 @@ window#waybar.secondary .modules-right {
     min-width: 256px;
 }
 
-window#waybar.secondary .modules-center {
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 8px;
-    min-width: 384px;
-}
-
 window#waybar.secondary .modules-left {
     background-image: url("src/CornerLeftTop.svg");
-}
-
-window#waybar.secondary .modules-center {
-    background-image: url("src/CenterTop.svg");
-    background-position: top;
 }
 
 window#waybar.secondary .modules-right {
@@ -106,14 +92,19 @@ highlight {
 /* MODULES */
 /***********/
 
-#battery.full {
-    color: #7ee787;
+#clock {
+    background-color: #1f1f1f;
+    border: 1px solid #2a2a2a;
 }
 
 #battery.warning {
-    color: #ffa657;
+    background-color: #ffa657;
+    border: 1px solid #ffc680;
+    color: #000000;
 }
 
 #battery.critical {
-    color: #ff7b72;
+    background-color: #ff7b72;
+    border: 1px solid #ffa198;
+    color: #000000;
 }
