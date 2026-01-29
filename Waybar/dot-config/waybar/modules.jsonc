@@ -7,12 +7,14 @@
         "interval": 5,
         "full-at": 99,
         "states": {
-            "warning": 15,
+            "warning": 10,
             "critical": 5
         },
-        "format": "{icon}  {capacity}%      ⏻  {time}      󰓅  {power}W",
-        "format-time": "{H}:{M}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon}  {capacity}%         {time}       󰠠  {power}W",
+        "format-charging": "{icon}  {capacity}%         {time}       󰠠  {power}W",
+        "format-full": "{icon}  {capacity}%         Full       󰠠  {power}W",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h {M}m"
     },
 
     "backlight/slider": {
