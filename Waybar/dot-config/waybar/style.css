@@ -10,29 +10,46 @@ window#waybar {
 }
 
 
-/**********/
-/* WAYBAR */
-/**********/
+/************/
+/* MAIN BAR */
+/************/
 
 window#waybar.main {
-    font-family: "Lexend", sans-serif;
+    font-family: "Lexend", "Symbols Nerd Font", sans-serif;
     font-weight: 600;
     background-color: #000000;
 }
 
 window#waybar.main .module {
-    margin: 2px 0 6px 0;
-    padding: 0 24px;
+    margin: 3px 0 6px 0;
     min-height: 24px;
     border-radius: 100px;
 }
+
+window#waybar.main .modules-left .module,
+window#waybar.main .modules-right .module {
+    padding: 0 12px;
+}
+
+window#waybar.main .modules-left > widget:first-child .module {
+    margin-left: 6px;
+}
+
+window#waybar.main .modules-right > widget:last-child .module {
+    margin-right: 6px;
+}
+
+
+/****************/
+/* ROUNDING BAR */
+/****************/
 
 window#waybar.rounding {
     background-color: transparent;
 }
 
-window#waybar.secondary .modules-left,
-window#waybar.secondary .modules-right {
+window#waybar.rounding .modules-left,
+window#waybar.rounding .modules-right {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -40,11 +57,11 @@ window#waybar.secondary .modules-right {
     min-width: 256px;
 }
 
-window#waybar.secondary .modules-left {
+window#waybar.rounding .modules-left {
     background-image: url("src/CornerLeftTop.svg");
 }
 
-window#waybar.secondary .modules-right {
+window#waybar.rounding .modules-right {
     background-image: url("src/CornerRightTop.svg");
 }
 
@@ -93,18 +110,19 @@ highlight {
 /***********/
 
 #clock {
+    padding: 0 24px;
     background-color: #1f1f1f;
     border: 1px solid #2a2a2a;
 }
 
-#battery.warning {
-    background-color: #ffa657;
-    border: 1px solid #ffc680;
+#battery.warning:not(.charging) {
+    background-color: #ffc680;
+    border: 1px solid #ffa657;
     color: #000000;
 }
 
-#battery.critical {
-    background-color: #ff7b72;
-    border: 1px solid #ffa198;
+#battery.critical:not(.charging) {
+    background-color: #ffa198;
+    border: 1px solid #ff7b72;
     color: #000000;
 }
