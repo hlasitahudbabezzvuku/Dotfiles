@@ -15,7 +15,7 @@ adjust-cell-height = 20%
 #####################
 
 title = Terminal
-theme = TheCalling
+theme = master
 
 background-opacity = 0.85
 background-blur = true
