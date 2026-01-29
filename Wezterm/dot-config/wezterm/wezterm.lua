@@ -7,6 +7,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 config.line_height = 1.1
+config.warn_about_missing_glyphs = false
 
 config.colors = {
     foreground = '#c9d1d9',
