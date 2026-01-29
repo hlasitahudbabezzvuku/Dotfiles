@@ -13,7 +13,7 @@ set undolevels=100
 
 set sortnumbers
 
-colorscheme TheCalling
+colorscheme master
 
 fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm}
     \ kitten icat --silent --transfer-mode=stream --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
