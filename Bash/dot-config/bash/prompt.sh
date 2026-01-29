@@ -9,7 +9,7 @@ PS1+="\$( if [[ -d .git/ ]] &> /dev/null; then tput setab 1; tput setaf 0; print
 
 PS1+="$( tput sgr0 )"
 PS1+="\n$( tput setaf 7 )└─["
-PS1+="\$( pwd | sed -e \"s/\/home\/${USER}/ 󰮧/\" -e \"s/\// $( tput setaf 4 )  $( tput setaf 7 ) /g\" ) "
+PS1+="\$( pwd | sed -e \"s/\/var\/home\/${USER}/ 󰮧/\" -e \"s/\/home\/${USER}/ 󰮧/\" -e \"s/\// $( tput setaf 4 )  $( tput setaf 7 ) /g\" ) "
 PS1+="$( tput setaf 7 )]"
 
 PS1+="$( tput sgr0 )"
