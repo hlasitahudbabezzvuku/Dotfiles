@@ -27,6 +27,7 @@ config.colors = {
         '#d2a8ff',
         '#c9d1d9',
     },
+
     brights = {
         '#21262d',
         '#ffa198',
@@ -37,6 +38,44 @@ config.colors = {
         '#e2c5ff',
         '#f0f6fc',
     },
+
+    tab_bar = {
+        active_tab = {
+            bg_color = '#000000',
+            fg_color = '#ffffff',
+        },
+
+        inactive_tab = {
+            bg_color = '#000000',
+            fg_color = '#808080',
+        },
+
+        inactive_tab_hover = {
+            bg_color = '#000000',
+            fg_color = '#ffffff',
+        },
+
+        new_tab = {
+            bg_color = '#000000',
+            fg_color = '#808080',
+        },
+
+        new_tab_hover = {
+            bg_color = '#000000',
+            fg_color = '#ffffff',
+        },
+
+        inactive_tab_edge = '#000000',
+    },
+}
+
+config.window_background_opacity = 0.8
+
+config.window_frame = {
+    font = wezterm.font { family = 'Inter', weight = 'Bold' },
+    font_size = 11.0,
+    active_titlebar_bg = '#000000',
+    inactive_titlebar_bg = '#000000',
 }
 
 return config
