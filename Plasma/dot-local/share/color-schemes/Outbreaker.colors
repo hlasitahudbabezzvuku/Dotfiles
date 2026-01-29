@@ -32,13 +32,13 @@ IntensityEffect=0
 BackgroundAlternate=25,25,25
 BackgroundNormal=25,25,25
 
-DecorationFocus=121,126,249
-DecorationHover=121,126,249
+DecorationFocus=255,255,255
+DecorationHover=255,255,255
 
 ForegroundActive=61,174,233
 ForegroundInactive=199,199,199
 
-ForegroundLink=121,126,249
+ForegroundLink=255,255,255
 ForegroundNegative=255,123,114
 ForegroundNeutral=88,166,255
 ForegroundNormal=201,209,217
@@ -67,16 +67,16 @@ ForegroundVisited=61,174,230
 
 
 [Colors:Selection]
-BackgroundAlternate=121,126,249
-BackgroundNormal=121,126,249
+BackgroundAlternate=255,255,255
+BackgroundNormal=255,255,255
 
-DecorationFocus=121,126,249
-DecorationHover=121,126,249
+DecorationFocus=255,255,255
+DecorationHover=255,255,255
 
 ForegroundActive=0,0,0
 ForegroundInactive=0,0,0
 
-ForegroundLink=121,126,249
+ForegroundLink=255,255,255
 ForegroundNegative=255,123,114
 ForegroundNeutral=88,166,255
 ForegroundNormal=0,0,0
@@ -89,13 +89,13 @@ ForegroundVisited=210,168,255
 BackgroundAlternate=0,0,0
 BackgroundNormal=0,0,0
 
-DecorationFocus=121,126,249
-DecorationHover=121,126,249
+DecorationFocus=255,255,255
+DecorationHover=255,255,255
 
 ForegroundActive=61,174,233
 ForegroundInactive=199,199,199
 
-ForegroundLink=121,126,249
+ForegroundLink=255,255,255
 ForegroundNegative=255,123,114
 ForegroundNeutral=88,166,255
 ForegroundNormal=201,209,217
@@ -108,13 +108,13 @@ ForegroundVisited=210,168,255
 BackgroundAlternate=16,16,16
 BackgroundNormal=16,16,16
 
-DecorationFocus=121,126,249
-DecorationHover=121,126,249
+DecorationFocus=255,255,255
+DecorationHover=255,255,255
 
 ForegroundActive=61,174,233
 ForegroundInactive=199,199,199
 
-ForegroundLink=121,126,249
+ForegroundLink=255,255,255
 ForegroundNegative=255,123,114
 ForegroundNeutral=88,166,255
 ForegroundNormal=201,209,217
@@ -127,13 +127,13 @@ ForegroundVisited=210,168,255
 BackgroundAlternate=0,0,0
 BackgroundNormal=0,0,0
 
-DecorationFocus=121,126,249
-DecorationHover=121,126,249
+DecorationFocus=255,255,255
+DecorationHover=255,255,255
 
 ForegroundActive=61,174,233
 ForegroundInactive=199,199,199
 
-ForegroundLink=121,126,249
+ForegroundLink=255,255,255
 ForegroundNegative=255,123,114
 ForegroundNeutral=88,166,255
 ForegroundNormal=201,209,217
@@ -143,8 +143,8 @@ ForegroundVisited=210,168,255
 
 
 [General]
-ColorScheme=FlyAway
-Name=FlyAway
+ColorScheme=Outbreaker
+Name=Outbreaker
 shadeSortColumn=true
 
 
