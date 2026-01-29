@@ -6,6 +6,8 @@ config.font = wezterm.font_with_fallback({
     { family = 'Symbols Nerd Font Mono', scale = 0.75 },
 })
 
+config.line_height = 1.1
+
 config.colors = {
     foreground = '#c9d1d9',
     background = '#000000',
@@ -71,11 +73,19 @@ config.colors = {
 
 config.window_background_opacity = 0.8
 
+config.show_close_tab_button_in_tabs = false
+config.show_tab_index_in_tab_bar = false
+
 config.window_frame = {
     font = wezterm.font { family = 'Inter', weight = 'Bold' },
     font_size = 11.0,
     active_titlebar_bg = '#000000',
     inactive_titlebar_bg = '#000000',
+}
+
+config.window_content_alignment = {
+    horizontal = 'Center',
+    vertical = 'Center',
 }
 
 return config
