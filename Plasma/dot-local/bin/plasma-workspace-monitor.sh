@@ -24,14 +24,14 @@ do
 
     printf "%i" ${currnet_column} > ${CACHE_DIRECTORY}/${current_row}
 
-    printf "R%i: " "${current_row}"
+    printf "R%i       <span font_family=\"monospace\">" "$(( current_row + 1))"
     for ((i = 0; i < columns_count; i++)); do
         if [[ "${i}" == "${currnet_column}" ]]; then
             printf "━━━━ "
         else
-            printf "──── "
+            printf "<span color=\"#aaaaaa\">────</span> "
         fi
     done
-    printf "\n"
+    printf "</span>\n"
     
 done < <( dbus-monitor --session "type='signal',interface='org.kde.KWin.VirtualDesktopManager',member='currentChanged'" --profile )
