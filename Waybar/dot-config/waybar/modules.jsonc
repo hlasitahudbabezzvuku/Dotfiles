@@ -16,16 +16,23 @@
         "format-icons": ["", "", "", "", ""],
         "format-time": "{H}h {M}m"
     },
-
-    "backlight/slider": {
-        "min": 0,
-        "max": 100,
-        "orientation": "horizontal"
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": " {icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 2
     },
-
-    "pulseaudio/slider": {
-        "min": 0,
-        "max": 100,
-        "orientation": "horizontal"
+    "backlight": {
+        "format": "  {percent}%"
     }
 }

@@ -8,12 +8,12 @@
             "~/.config/waybar/modules.jsonc"
         ],
 
-        "modules-left": ["pulseaudio/slider", "backlight/slider"],
+        "modules-left": ["pulseaudio", "backlight"],
         "modules-center": ["clock"],
         "modules-right": ["battery"]
     },
     {
-        "name": "secondary",
+        "name": "rounding",
         "position": "top",
         "layer": "bottom",
         "exclusive": false
