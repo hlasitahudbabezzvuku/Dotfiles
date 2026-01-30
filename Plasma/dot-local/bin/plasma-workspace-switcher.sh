@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-readonly CACHE_DIRECTORY="/tmp/tc-workspace-monitor"
+readonly CACHE_DIRECTORY="/tmp/plasma-workspace-monitor"
 
 action="Switch"
 index=0
