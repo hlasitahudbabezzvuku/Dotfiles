@@ -53,8 +53,8 @@ window#waybar.rounding .modules-right {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    min-height: 32px;
-    min-width: 256px;
+    min-height: 24px;
+    min-width: 24px;
 }
 
 window#waybar.rounding .modules-left {
