@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Waybar
-Icon=wayland
-Exec=waybar
-Terminal=false
