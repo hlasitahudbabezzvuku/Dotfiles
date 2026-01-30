@@ -12,6 +12,8 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 
+alias ost='rpm-ostree'
+
 if type nvim &> /dev/null; then
     export EDITOR="nvim"
     export VISUAL="nvim"
