@@ -34,5 +34,9 @@
     },
     "backlight": {
         "format": "  {percent}%"
+    },
+    "custom/workspace": {
+        "exec": "~/.local/bin/plasma-workspace-monitor.sh",
+        "format": "{}"
     }
 }

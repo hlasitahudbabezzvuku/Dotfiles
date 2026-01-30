@@ -8,7 +8,7 @@
             "~/.config/waybar/modules.jsonc"
         ],
 
-        "modules-left": ["pulseaudio", "backlight"],
+        "modules-left": ["custom/workspace", "pulseaudio", "backlight"],
         "modules-center": ["clock"],
         "modules-right": ["battery"]
     },
