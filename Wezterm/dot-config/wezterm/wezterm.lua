@@ -1,6 +1,9 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+config.initial_cols = 140
+config.initial_rows = 32
+
 config.font = wezterm.font_with_fallback({
     'JetBrains Mono',
     { family = 'Symbols Nerd Font Mono', scale = 0.75 },
