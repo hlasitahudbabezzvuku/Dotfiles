@@ -16,12 +16,14 @@
         "name": "alt-top",
         "position": "top",
         "layer": "top",
-        "exclusive": false
+        "exclusive": false,
+        "passthrough": true
     },
     {
         "name": "alt-bottom",
         "position": "bottom",
         "layer": "top",
-        "exclusive": false
+        "exclusive": false,
+        "passthrough": true
     }
 ]
