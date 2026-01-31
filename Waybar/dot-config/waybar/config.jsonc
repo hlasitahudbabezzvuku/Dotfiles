@@ -13,9 +13,15 @@
         "modules-right": ["battery"]
     },
     {
-        "name": "rounding",
+        "name": "alt-top",
         "position": "top",
-        "layer": "bottom",
+        "layer": "top",
+        "exclusive": false
+    },
+    {
+        "name": "alt-bottom",
+        "position": "bottom",
+        "layer": "top",
         "exclusive": false
     }
 ]
