@@ -75,7 +75,7 @@ config.colors = {
     },
 }
 
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.7
 config.kde_window_background_blur = true
 
 config.show_close_tab_button_in_tabs = false
