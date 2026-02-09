@@ -3,13 +3,23 @@ DimDisplayIdleTimeoutSec=-1
 DimDisplayWhenIdle=false
 TurnOffDisplayIdleTimeoutSec=1800
 
+[AC][Performance]
+PowerProfile=performance
+
 [AC][SuspendAndShutdown]
 AutoSuspendAction=0
+
+[Activities][3237c844-81fc-4405-a764-6bd1c84ac71c]
+InhibitScreenManagement=false
+InhibitSuspend=false
 
 [Battery][Display]
 DimDisplayIdleTimeoutSec=-1
 DimDisplayWhenIdle=false
 TurnOffDisplayIdleTimeoutSec=1800
+
+[Battery][Performance]
+PowerProfile=balanced
 
 [Battery][SuspendAndShutdown]
 AutoSuspendIdleTimeoutSec=7200
@@ -18,3 +28,6 @@ AutoSuspendIdleTimeoutSec=7200
 DimDisplayIdleTimeoutSec=-1
 DimDisplayWhenIdle=false
 UseProfileSpecificDisplayBrightness=false
+
+[LowBattery][Performance]
+PowerProfile=power-saver
