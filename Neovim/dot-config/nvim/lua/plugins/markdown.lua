@@ -5,5 +5,7 @@ return {
         'nvim-tree/nvim-web-devicons'
     },
     ft = { 'markdown', 'quarto' },
-    opts = {}
+    opts = {
+        restart_highlighter = true,
+    }
 }
