@@ -26,6 +26,9 @@ return {
                 sorting_strategy = 'ascending',
                 path_display = { 'filename_first' }
             },
+            extensions = {
+                ['ui-select'] = { require('telescope.themes').get_dropdown {} }
+            }
         }
     },
     {
@@ -34,9 +37,16 @@ return {
             { '<leader>t', function() require('telescope-tabs').list_tabs() end, desc = 'Find tabs' },
         },
         config = function()
-            require('telescope').load_extension 'telescope-tabs'
+            require('telescope').load_extension('telescope-tabs')
             require('telescope-tabs').setup {}
         end,
         dependencies = { 'nvim-telescope/telescope.nvim' },
+    },
+    {
+        'nvim-telescope/telescope-ui-select.nvim',
+        event = 'VeryLazy',
+        config = function()
+            require('telescope').load_extension('ui-select')
+        end
     }
 }
