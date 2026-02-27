@@ -4,9 +4,10 @@ return {
     opts = {
         modes = {
             diagnostics = {
-                auto_open = true,
-                auto_close = true,
+                auto_open = false,
+                auto_close = false,
                 auto_preview = false,
+                open_no_results = true,
             },
         },
     },
