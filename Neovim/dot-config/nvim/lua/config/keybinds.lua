@@ -1,10 +1,22 @@
 -- Files
 vim.keymap.set('n', '<leader>e', '<cmd>Explore<cr>', { noremap = true, silent = true, desc = 'Open netrw' })
-
-vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-s>', '<cmd>wa<cr>',
-    { noremap = true, silent = true, desc = 'Save the current buffer' })
-vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-q>', '<cmd>qa<cr>',
+vim.keymap.set({ 'n', 'i', 'x', 'v', 't' }, '<c-q>', '<cmd>wqa<cr>',
     { noremap = true, silent = true, desc = 'Quit the current buffer' })
+vim.keymap.set(
+    { 'n', 'i', 'x', 'v', 't' },
+    '<c-s>',
+    function()
+        for _, client in ipairs(vim.lsp.get_clients()) do
+            if client.supports_method('textDocument/formatting') then
+                vim.lsp.buf.format({ timeout_ms = 2000 })
+                break
+            end
+        end
+        vim.cmd('wa')
+    end,
+    { noremap = true, silent = true, desc = 'Save the current buffer' }
+)
+
 
 -- Directories
 vim.keymap.set('n', '<leader>cc', function() vim.cmd('cd ' .. vim.fn.expand('%:p:h')) end,
