@@ -19,7 +19,7 @@ vim.opt.expandtab = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = 'yes:3'
+vim.opt.signcolumn = 'auto:1-3'
 
 vim.opt.cursorline = false
 vim.opt.splitbelow = true
@@ -49,4 +49,3 @@ vim.opt.foldcolumn = '1'
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
-
