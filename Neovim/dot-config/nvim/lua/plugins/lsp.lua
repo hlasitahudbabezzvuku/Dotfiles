@@ -18,8 +18,8 @@ return {
     },
     config = function()
         vim.diagnostic.config({
-            virtual_lines = true,
-            virtual_text = false,
+            virtual_lines = false,
+            virtual_text = true,
             underline = true,
             update_in_insert = true,
             severity_sort = true,
@@ -36,7 +36,6 @@ return {
             pattern = '*',
             callback = function(args)
                 local clients = vim.lsp.get_clients({ bufnr = args.buf })
-                vim.lsp.buf.format({})
 
                 for _, client in ipairs(clients) do
                     if client.supports_method('textDocument/formatting', args.buf) then
