@@ -8,6 +8,9 @@ return {
                 if not vim.tbl_contains({ 'gitcommit', 'gitrebase' }, ft) then
                     require('edgy').open()
                 end
+                if vim.tbl_contains({ 'c', 'cpp', 'lua', 'sh', 'bash' }, ft) then
+                    vim.cmd('Trouble diagnostics toggle focus=false')
+                end
             end,
         })
     end,
