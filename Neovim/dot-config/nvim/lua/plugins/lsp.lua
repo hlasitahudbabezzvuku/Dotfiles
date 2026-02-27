@@ -32,19 +32,5 @@ return {
                 },
             },
         })
-        vim.api.nvim_create_autocmd('BufWritePre', {
-            pattern = '*',
-            callback = function(args)
-                local clients = vim.lsp.get_clients({ bufnr = args.buf })
-
-                for _, client in ipairs(clients) do
-                    if client.supports_method('textDocument/formatting', args.buf) then
-                        vim.lsp.buf.format({ bufnr = args.buf, timeout_ms = 2000 })
-                        break
-                    end
-                end
-            end,
-            group = vim.api.nvim_create_augroup('FormatOnSave', {}),
-        })
     end
 }
