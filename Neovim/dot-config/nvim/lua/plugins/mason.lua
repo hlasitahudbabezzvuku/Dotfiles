@@ -19,7 +19,7 @@ return {
         'williamboman/mason-lspconfig.nvim',
         dependencies = { 'williamboman/mason.nvim' },
         opts = {
-            ensure_installed = { 'lua_ls' },
+            ensure_installed = { 'clangd', 'lua_ls', 'bashls' },
             automatic_installation = true,
             handlers = {
                 function(server_name)
