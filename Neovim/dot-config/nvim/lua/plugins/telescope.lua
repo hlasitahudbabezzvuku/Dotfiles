@@ -6,11 +6,13 @@ return {
         dependecies = { 'nvim-tree/nvim-web-devicons' },
         cmd = 'Telescope',
         keys = {
-            { '<leader>f', function() require('telescope.builtin').find_files() end,  desc = 'Find files' },
-            { '<leader>g', function() require('telescope.builtin').live_grep() end,   desc = 'Live grep' },
-            { '<leader>b', function() require('telescope.builtin').buffers() end,     desc = 'Find buffers' },
-            { '<leader>k', function() require('telescope.builtin').diagnostics() end, desc = 'Find diagnostics' },
-            { '<leader>;', function() require('telescope.builtin').builtin() end,     desc = 'Telescope' },
+            { '<leader>f', function() require('telescope.builtin').find_files() end,            desc = 'Find files' },
+            { '<leader>g', function() require('telescope.builtin').live_grep() end,             desc = 'Live grep' },
+            { '<leader>b', function() require('telescope.builtin').buffers() end,               desc = 'Find buffers' },
+            { '<leader>k', function() require('telescope.builtin').diagnostics() end,           desc = 'Find diagnostics' },
+            { '<leader>;', function() require('telescope.builtin').builtin() end,               desc = 'Telescope' },
+            { '<leader>j', function() require('telescope.builtin').lsp_document_symbols() end,  desc = 'LSP document symbols' },
+            { '<leader>h', function() require('telescope.builtin').lsp_workspace_symbols() end, desc = 'LSP workspace symbols' },
         },
         opts = {
             defaults = {
