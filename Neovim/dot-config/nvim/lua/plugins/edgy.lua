@@ -4,12 +4,8 @@ return {
     init = function()
         vim.api.nvim_create_autocmd('BufReadPost', {
             callback = function(args)
-                local ft = vim.bo[args.buf].filetype
-                if not vim.tbl_contains({ 'gitcommit', 'gitrebase' }, ft) then
+                if not vim.tbl_contains({ 'gitcommit', 'gitrebase' }, vim.bo[args.buf].filetype) then
                     require('edgy').open()
-                end
-                if vim.tbl_contains({ 'c', 'cpp', 'lua', 'sh', 'bash' }, ft) then
-                    vim.cmd('Trouble diagnostics toggle focus=false')
                 end
             end,
         })
@@ -40,10 +36,12 @@ return {
             {
                 title = 'Diagnostics',
                 ft = 'trouble',
+                pinned = true,
+                open = 'Trouble diagnostics toggle focus=false',
             },
             {
                 ft = 'qf',
-                title = 'QuickFix'
+                title = 'QuickFix',
             },
             {
                 ft = 'help',
