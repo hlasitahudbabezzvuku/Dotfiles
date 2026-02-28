@@ -12,6 +12,9 @@ return {
                 ignore_whitespace = true,
             },
         },
+        keys = {
+            { '<leader>d', '<cmd>Gitsigns diffthis<cr>', desc = 'Diagnostics', },
+        },
     },
     {
         'sindrets/diffview.nvim',
