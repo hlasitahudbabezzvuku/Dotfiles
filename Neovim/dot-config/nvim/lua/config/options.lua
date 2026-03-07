@@ -10,7 +10,7 @@ vim.opt.termguicolors = true
 
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-vim.opt.mouse = ''
+vim.opt.mouse = 'a'
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
