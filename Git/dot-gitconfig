@@ -1,20 +1,49 @@
 [user]
 	name = hlasitahudbabezzvuku
 	email = frantisek.lednicky@outlook.com
+	signingkey = /home/l3dnac3k/.ssh/id_ed25519_hlasitahudbabezzvuku.pub
+
 [core]
 	editor = nvim
 	excludesfile = ~/.gitglobalignore
+
+[status]
+	submoduleSummary = true
+
 [init]
 	defaultBranch = development
+
 [commit]
 	gpgsign = true
-[gpg]
-	program = gpg2
+
 [tag]
 	gpgSign = true
+
+[gpg]
+	format = ssh
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+	all = true
+
 [push]
 	recurseSubmodules = on-demand
+	autoSetupRemote = true
+
+[rebase]
+	autoStash = true
+
+[merge]
+	conflictStyle = zdiff3
+
+[branch]
+	sort = -committerdate
+
 [submodule]
 	recurse = true
-[include]
-    path = ~/.gitlocal
+
+[alias]
+	lg = log --graph --all
