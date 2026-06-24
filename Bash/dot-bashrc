@@ -108,26 +108,8 @@ fi
 ### ble.sh ###
 ##############
 
-if ${BASHRC_BLESH}; then
-    if [[ -f $HOME/.local/share/blesh/ble.sh ]]; then
-        source "$HOME"/.local/share/blesh/ble.sh
-    else
-        (
-            if [[ ! -d "/tmp/bashrc" ]]; then
-                mkdir -p "/tmp/bashrc"
-            fi
-
-            pushd "/tmp/bashrc" || exit
-
-            git clone --recursive https://github.com/akinomyoga/ble.sh.git && \
-                pushd ble.sh && \
-                make && \
-                make install && \
-                popd
-
-            popd && rm -rf "/tmp/bashrc/ble.sh"
-        )
-    fi
+if ${BASHRC_BLESH} && [[ -f $HOME/.local/share/blesh/ble.sh ]]; then
+    source "$HOME"/.local/share/blesh/ble.sh
 fi
 
 
