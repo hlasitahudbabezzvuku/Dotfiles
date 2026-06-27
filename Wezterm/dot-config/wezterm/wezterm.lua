@@ -5,7 +5,7 @@ config.initial_cols = 140
 config.initial_rows = 32
 
 config.font = wezterm.font_with_fallback({
-    'JetBrains Mono',
+    'Monaspace Neon',
     { family = 'Symbols Nerd Font Mono', scale = 0.75 },
     { family = 'Noto Color Emoji',       scale = 0.75 },
 })
@@ -83,7 +83,7 @@ config.show_close_tab_button_in_tabs = false
 config.show_tab_index_in_tab_bar = false
 
 config.window_frame = {
-    font = wezterm.font { family = 'Inter', weight = 'Bold' },
+    font = wezterm.font { family = 'Lexend', weight = 'Medium' },
     font_size = 11.0,
     active_titlebar_bg = '#000000',
     inactive_titlebar_bg = '#000000',
