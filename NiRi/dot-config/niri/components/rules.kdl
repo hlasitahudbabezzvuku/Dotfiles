@@ -1,0 +1,12 @@
+// Open the Firefox picture-in-picture player as floating window
+window-rule {
+    match title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Hide KeePassXC from scree capture
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    block-out-from "screen-capture"
+}
+

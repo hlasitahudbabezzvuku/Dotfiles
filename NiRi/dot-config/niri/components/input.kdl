@@ -1,0 +1,32 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,cz"
+	    variant ",coder"
+        }
+
+	// repeat-delay 600
+        numlock
+    }
+
+    touchpad {
+        tap
+
+        // accel-speed 0.2
+        accel-profile "flat"
+
+        natural-scroll
+        // scroll-factor 1.0
+        scroll-method "two-finger"
+    }
+
+    mouse {
+        // accel-speed 0.2
+        accel-profile "flat"
+
+	left-handed
+    }
+    
+    focus-follows-mouse
+}
+

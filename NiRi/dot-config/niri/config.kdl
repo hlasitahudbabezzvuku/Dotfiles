@@ -1,0 +1,19 @@
+include "components/input.kdl"
+include "components/layout.kdl"
+include "components/animations.kdl"
+include "components/rules.kdl"
+include "components/binds.kdl"
+
+spawn-at-startup "noctalia"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}

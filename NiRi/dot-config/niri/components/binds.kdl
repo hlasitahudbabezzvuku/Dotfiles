@@ -1,0 +1,169 @@
+binds {
+    //////////////////////
+    //// Applications ////
+    //////////////////////
+
+    Mod+Return hotkey-overlay-title="Open a Terminal"    { spawn "wezterm" "start"; }
+    Mod+Space  hotkey-overlay-title="Run an Application" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+
+
+    ////////////////////
+    //// Media Keys ////
+    ////////////////////
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioStop allow-when-locked=true { spawn "playerctl" "stop"; }
+    XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous"; }
+    XF86AudioNext allow-when-locked=true { spawn "playerctl" "next"; }
+
+    Mod+I       allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    Mod+U       allow-when-locked=true { spawn "playerctl" "previous"; }
+    Mod+O       allow-when-locked=true { spawn "playerctl" "next"; }
+    Mod+Shift+U allow-when-locked=true { spawn "playerctl" "position" "10-"; }
+    Mod+Shift+O allow-when-locked=true { spawn "playerctl" "position" "10+"; }
+
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+
+    ///////////////////////////
+    //// Window Management ////
+    ///////////////////////////
+
+    Mod+H { focus-column-left; }
+    Mod+J { focus-window-down; }
+    Mod+K { focus-window-up; }
+    Mod+L { focus-column-right; }
+
+    Mod+Ctrl+H { move-column-left; }
+    Mod+Ctrl+J { move-window-down; }
+    Mod+Ctrl+K { move-window-up; }
+    Mod+Ctrl+L { move-column-right; }
+
+    Mod+Home      { focus-column-first; }
+    Mod+End       { focus-column-last; }
+    Mod+Ctrl+Home { move-column-to-first; }
+    Mod+Ctrl+End  { move-column-to-last; }
+
+    Mod+V       { toggle-window-floating; }
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+C      { center-column; }
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+
+    Mod+T { toggle-column-tabbed-display; }
+    
+    Mod+Q repeat=false { close-window; }
+
+    
+    ///////////////////////
+    //// Window Sizing ////
+    ///////////////////////
+
+    Mod+R       { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-column-width-back; }
+
+    Mod+Ctrl+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R       { reset-window-height; }
+
+    Mod+Minus       { set-column-width "-10%"; }
+    Mod+Equal       { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    Mod+F       { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F  { expand-column-to-available-width; }
+    Mod+M       { maximize-window-to-edges; }
+
+    ////////////////////////////
+    //// Monitor Management ////
+    ////////////////////////////
+
+    Mod+Shift+H { focus-monitor-left; }
+    Mod+Shift+J { focus-monitor-down; }
+    Mod+Shift+K { focus-monitor-up; }
+    Mod+Shift+L { focus-monitor-right; }
+
+    Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+J { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+K { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+L { move-column-to-monitor-right; }
+
+    Mod+Shift+P { power-off-monitors; }
+
+    // And you can also move a whole workspace to another monitor:
+    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
+    // ...
+
+
+    //////////////////////////////
+    //// Workspace Management ////
+    //////////////////////////////
+
+    Mod+Alt+J      { focus-workspace-down; }
+    Mod+Alt+K      { focus-workspace-up; }
+    Mod+Alt+Ctrl+J { move-column-to-workspace-down; }
+    Mod+Alt+Ctrl+K { move-column-to-workspace-up; }
+
+    Mod+Alt+Shift+J { move-workspace-down; }
+    Mod+Alt+Shift+K { move-workspace-up; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+
+    /////////////////////////
+    //// Mouse Scrolling ////
+    /////////////////////////
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Shift+WheelScrollDown { focus-column-right; }
+    Mod+Shift+WheelScrollUp   { focus-column-left; }
+
+    Mod+Ctrl+WheelScrollRight      { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft       { move-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+
+    ////////////////////////
+    //// Screen Capture ////
+    ////////////////////////
+
+    Print      { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print  { screenshot-window; }
+
+
+    ///////////////////
+    //// Input Map ////
+    ///////////////////
+
+    Alt+Space       { switch-layout "next"; }
+    Alt+Shift+Space { switch-layout "prev"; }
+
+
+    ///////////////
+    //// Other ////
+    ///////////////
+
+    Ctrl+Alt+Delete { quit; }
+
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Tab repeat=false { toggle-overview; }
+}
