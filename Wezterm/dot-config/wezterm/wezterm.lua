@@ -10,7 +10,7 @@ config.font = wezterm.font_with_fallback({
     { family = 'Noto Color Emoji',       scale = 0.75 },
 })
 
-config.line_height = 1.1
+config.line_height = 1.2
 config.warn_about_missing_glyphs = false
 
 config.colors = {
