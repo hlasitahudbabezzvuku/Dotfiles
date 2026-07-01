@@ -1,5 +1,5 @@
 layout {
-    gaps 16
+    gaps 32
     
     center-focused-column "never"
 
@@ -12,27 +12,23 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 2
-        active-color "#80aaff"
-        inactive-color "#6080ee"
-    }
-
-    border {
         off
     }
 
-    shadow {
+    border {
         on
+        width 6
+
+        active-color "#80ff80"
+        inactive-color "#802020"
+        urgent-color "#ff6060"
+    }
+
+    shadow {
+        // on
         softness 30
         spread 5
         offset x=0 y=0
         color "#0007"
-    }
-
-    struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
     }
 }
