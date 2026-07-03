@@ -1,0 +1,5 @@
+[lockscreen]
+enabled = false
+fingerprint = true
+allow_empty_password = false
+blurred_desktop = false
