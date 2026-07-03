@@ -1,0 +1,18 @@
+output "eDP-1" {
+    variable-refresh-rate
+}
+
+output "Lenovo Group Limited L2250p Wide   6V639787" {
+    mode "1680x1050@74.892"
+    position x=0 y=0
+    scale 1
+    variable-refresh-rate
+}
+
+output "LG Electronics LG HDR WFHD 0x00032151" {
+    mode "2560x1080@74.991"
+    position x=1680 y=0
+    scale 1
+    variable-refresh-rate
+}
+
