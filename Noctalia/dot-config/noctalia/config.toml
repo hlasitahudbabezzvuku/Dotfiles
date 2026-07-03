@@ -1,0 +1,16 @@
+[include]
+autoload = false
+
+[shell]
+setup_wizard_enabled = false
+polkit_agent = true
+password_style = "random"
+settings_show_advanced = true
+launch_apps_as_systemd_services = true
+screen_time_enabled = true
+
+[theme]
+mode = "dark"
+
+[bar.main]
+position = "top"
