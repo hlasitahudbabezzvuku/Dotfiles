@@ -1,4 +1,5 @@
 [shell]
+font_family = "Lexend"
 setup_wizard_enabled = false
 polkit_agent = true
 password_style = "random"
