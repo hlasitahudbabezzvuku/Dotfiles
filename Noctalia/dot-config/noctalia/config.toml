@@ -9,6 +9,10 @@ settings_show_advanced = true
 launch_apps_as_systemd_services = true
 screen_time_enabled = true
 
+[shell.shadow]
+direction = "center"
+alpha = 0.25
+
 [theme]
 mode = "dark"
 
