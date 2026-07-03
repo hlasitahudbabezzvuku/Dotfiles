@@ -16,7 +16,7 @@ input {
         accel-profile "flat"
 
         natural-scroll
-        // scroll-factor 1.0
+        scroll-factor 0.25
         scroll-method "two-finger"
     }
 
