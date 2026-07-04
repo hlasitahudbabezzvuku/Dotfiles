@@ -3,15 +3,13 @@ position = "top"
 
 thickness = 38
 background_opacity = 1
-border = "surface_variant"
-border_width = 1
 
 radius = 0
 # radius_bottom_left = -24
 # radius_bottom_right = -24
 
 margin_ends = 0
-margin_edge = -1
+margin_edge = 0
 
 padding = 0
 widget_spacing = 0
