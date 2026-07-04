@@ -3,3 +3,6 @@ enabled = true
 fingerprint = true
 allow_empty_password = true
 blurred_desktop = false
+
+[lockscreen_widgets]
+enabled = true
