@@ -10,14 +10,21 @@ window-rule {
     block-out-from "screen-capture"
 }
 
-// Round all corners
-window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
-}
-
 // Apply Noctalia blur background
 layer-rule {
     match namespace="^noctalia-backdrop"
     place-within-backdrop true
 }
+
+// For all windows
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+
+    background-effect {
+        blur true
+	xray true
+    }
+
+}
+

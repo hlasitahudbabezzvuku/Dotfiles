@@ -1,5 +1,5 @@
 layout {
-    gaps 32
+    gaps 12
     
     center-focused-column "never"
 
@@ -17,11 +17,11 @@ layout {
 
     border {
         on
-        width 6
+        width 1
 
-        active-color "#80ff80"
-        inactive-color "#802020"
-        urgent-color "#ff6060"
+        active-color "#ffffff"
+        inactive-color "#161616"
+        urgent-color "#ff7070"
     }
 
     shadow {
