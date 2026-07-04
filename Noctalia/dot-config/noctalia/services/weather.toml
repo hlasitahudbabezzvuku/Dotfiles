@@ -1,0 +1,5 @@
+[weather]
+enabled = true
+refresh_minutes = 30
+unit = "metric"
+effects = true
