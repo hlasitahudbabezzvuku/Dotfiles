@@ -11,12 +11,12 @@ binds {
     //// Media Keys ////
     ////////////////////
 
-    XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.04+ -l 1.0"; }
-    XF86AudioLowerVolume       allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.04-"; }
-    Shift+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+ -l 1.0"; }
-    Shift+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
-    XF86AudioMute              allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute           allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-up 4"; }
+    XF86AudioLowerVolume       allow-when-locked=true { spawn-sh "noctalia msg volume-down 4"; }
+    Shift+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 1"; }
+    Shift+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 1"; }
+    XF86AudioMute              allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86AudioMicMute           allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
 
     XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioStop allow-when-locked=true { spawn "playerctl" "stop"; }
@@ -29,8 +29,10 @@ binds {
     Mod+Shift+U allow-when-locked=true { spawn "playerctl" "position" "10-"; }
     Mod+Shift+O allow-when-locked=true { spawn "playerctl" "position" "10+"; }
 
-    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp         allow-when-locked=true { spawn-sh "noctalia msg brightness-up 10"; }
+    XF86MonBrightnessDown       allow-when-locked=true { spawn-sh "noctalia msg brightness-down 10"; }
+    Shift+XF86MonBrightnessUp   allow-when-locked=true { spawn-sh "noctalia msg brightness-up 1"; }
+    Shift+XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down 1"; }
 
 
     ///////////////////////////
