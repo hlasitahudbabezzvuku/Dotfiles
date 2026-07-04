@@ -1,0 +1,33 @@
+[bar]
+order = [
+    "main",
+]
+
+[bar.main]
+position = "top"
+thickness = 40
+margin_ends = 0
+margin_edge = 0
+padding = 16
+radius = 0
+radius_bottom_left = -20
+radius_bottom_right = -20
+background_opacity = 1
+widget_spacing = 24
+capsule_border = "shadow"
+capsule_padding = 7
+start = ["control-center", "group:left"]
+center = ["volume", "brightness", "audio_visualizer", "workspaces", "clock", "battery", "sysmon"]
+end = ["group:right", "session"]
+
+[[bar.main.capsule_group]]
+id = "left"
+members = ["network", "bluetooth"]
+padding = 8
+border = "shadow"
+
+[[bar.main.capsule_group]]
+id = "right"
+members = ["tray", "notifications"]
+padding = 8
+border = "shadow"

@@ -3,12 +3,6 @@ autoload = false
 files = [
     "shell/",
     "services/",
-    "bars/",
-]
-
-[bar]
-order = [
-    "top",
-    "bottom",
+    "bar/",
 ]
 
