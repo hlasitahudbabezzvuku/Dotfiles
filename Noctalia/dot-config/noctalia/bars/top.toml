@@ -1,9 +1,5 @@
-[bar]
-order = ["main"]
-
-[bar.main]
+[bar.top]
 position = "top"
-layer = "top"
 
 thickness = 38
 background_opacity = 1

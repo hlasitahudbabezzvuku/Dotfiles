@@ -1,3 +1,13 @@
 [include]
-files = ["components/"]
 autoload = false
+files = [
+    "components/",
+    "bars/",
+]
+
+[bar]
+order = [
+    "top",
+    "bottom",
+]
+
