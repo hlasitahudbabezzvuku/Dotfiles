@@ -14,20 +14,24 @@ radius_bottom_left = -20
 radius_bottom_right = -20
 background_opacity = 1
 widget_spacing = 24
-capsule_border = "shadow"
+capsule_thickness = 0.70
 capsule_padding = 7
-start = ["control-center", "group:left"]
+capsule_border = "shadow"
+start = ["control-center", "group:left", "weather"]
 center = ["volume", "brightness", "audio_visualizer", "workspaces", "clock", "battery", "sysmon"]
-end = ["group:right", "session"]
+end = ["keyboard_layout", "group:right", "session"]
 
 [[bar.main.capsule_group]]
 id = "left"
-members = ["network", "bluetooth"]
-padding = 8
+members = ["network", "bluetooth", "notifications"]
+padding = 7
+thickness = 0.65
 border = "shadow"
 
 [[bar.main.capsule_group]]
 id = "right"
-members = ["tray", "notifications"]
-padding = 8
+members = ["tray"]
+thickness = 0.65
+padding = 7
 border = "shadow"
+
