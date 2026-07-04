@@ -4,5 +4,6 @@ files = [
     "shell/",
     "services/",
     "bar/",
+    "desktop/",
 ]
 
