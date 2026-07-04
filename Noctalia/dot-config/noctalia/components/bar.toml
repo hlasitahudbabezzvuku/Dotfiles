@@ -1,2 +1,19 @@
+[bar]
+order = ["main"]
+
 [bar.main]
 position = "top"
+layer = "top"
+
+thickness = 38
+background_opacity = 1
+
+radius = 0
+# radius_bottom_left = -20
+# radius_bottom_right = -20
+
+margin_ends = 0
+margin_edge = 0
+
+padding = 0
+widget_spacing = 0
