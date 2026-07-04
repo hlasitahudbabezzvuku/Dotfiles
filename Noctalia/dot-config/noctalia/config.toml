@@ -2,6 +2,7 @@
 autoload = false
 files = [
     "components/",
+    "services/",
     "bars/",
 ]
 

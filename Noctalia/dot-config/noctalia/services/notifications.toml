@@ -1,0 +1,7 @@
+[notification]
+position = "top_center"
+layer = "overlay"
+background_opacity = 1
+offset_x = 0
+offset_y = 48
+
