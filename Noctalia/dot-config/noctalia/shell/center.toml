@@ -1,4 +1,4 @@
 [control_center]
-sidebar = "full"
-sidebar_section = "full"
-width = 960
+sidebar = "none"
+sidebar_section = "none"
+width = 1280
