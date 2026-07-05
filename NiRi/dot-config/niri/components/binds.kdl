@@ -21,6 +21,7 @@ binds {
     Mod+Return { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
     Mod+N      { spawn "noctalia" "msg" "panel-toggle" "control-center" "notifications"; }
     Mod+M      { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
+    Mod+P      { spawn "noctalia" "msg" "panel-toggle" "control-center" "system"; }
 
 
 
