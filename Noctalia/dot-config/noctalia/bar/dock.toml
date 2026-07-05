@@ -1,0 +1,26 @@
+[dock]
+enabled = true
+position = "bottom"
+
+icon_size = 40
+main_axis_padding = 20
+cross_axis_padding = 10
+item_spacing = 12
+background_opacity = 1
+radius = 12
+margin_ends = 0
+margin_edge = 8
+
+active_scale = 1
+inactive_scale = 1
+magnification = false
+active_opacity = 1
+inactive_opacity = 1
+
+show_instance_count = true
+show_dots = true
+
+launcher_position = "none"
+launcher_icon = "grid-dots"
+
+pinned = ["steam", "vesktop", "firefox-aurora", "files", "wezterm"]
