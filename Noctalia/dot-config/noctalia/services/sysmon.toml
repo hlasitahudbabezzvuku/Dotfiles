@@ -1,0 +1,7 @@
+[system.monitor]
+enabled = true
+cpu_poll_seconds = 2.0
+gpu_poll_seconds = 4.0
+memory_poll_seconds = 2.0
+network_poll_seconds = 4.0
+disk_poll_seconds = 10.0
