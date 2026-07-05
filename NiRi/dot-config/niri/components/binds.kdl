@@ -1,10 +1,35 @@
 binds {
+    ///////////////
+    //// NiRi ////
+    ///////////////
+
+    Mod+Tab    repeat=false           { toggle-overview; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Slash                         { show-hotkey-overlay; }
+    Ctrl+Alt+Delete                   { quit; }
+    Mod+Alt+Shift+Ctrl+Return         { spawn "loginctl" "unlock-session"; }
+
+
+    //////////////////
+    //// Noctalia ////
+    //////////////////
+
+    Mod+Space { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    Mod+S     { spawn "noctalia" "msg" "panel-toggle" "session"; }
+    Mod+W     { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }
+
+    Mod+Return { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
+    Mod+N      { spawn "noctalia" "msg" "panel-toggle" "control-center" "notifications"; }
+    Mod+M      { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
+
+
+
     //////////////////////
     //// Applications ////
     //////////////////////
 
-    Mod+Return hotkey-overlay-title="Open a Terminal"    { spawn "wezterm" "start"; }
-    Mod+Space  hotkey-overlay-title="Run an Application" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    Mod+T { spawn "wezterm" "start" "--always-new-process"; }
+    Mod+E { spawn "nautilus"; }
 
 
     ////////////////////
@@ -63,8 +88,7 @@ binds {
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
 
-    Mod+T { toggle-column-tabbed-display; }
-    
+    Mod+Z repeat=false { toggle-column-tabbed-display; }
     Mod+Q repeat=false { close-window; }
 
     
@@ -82,9 +106,9 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     Mod+F       { maximize-column; }
-    // Mod+Shift+F { fullscreen-window; }
-    // Mod+Ctrl+F  { expand-column-to-available-width; }
-    // Mod+M       { maximize-window-to-edges; }
+    Mod+Alt+F   { fullscreen-window; }
+    Mod+Shift+F { maximize-window-to-edges; }
+    Mod+Ctrl+F  { expand-column-to-available-width; }
 
 
     ////////////////////////////
@@ -158,14 +182,4 @@ binds {
 
     Alt+Space       { switch-layout "next"; }
     Alt+Shift+Space { switch-layout "prev"; }
-
-
-    ///////////////
-    //// NiRi ////
-    ///////////////
-
-    Mod+Tab    repeat=false           { toggle-overview; }
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Slash                         { show-hotkey-overlay; }
-    Ctrl+Alt+Delete                   { quit; }
 }
