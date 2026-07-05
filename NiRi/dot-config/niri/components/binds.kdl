@@ -143,8 +143,8 @@ binds {
     Mod+Alt+Shift+J { move-column-to-workspace-down; }
     Mod+Alt+Shift+K { move-column-to-workspace-up; }
 
-    // Mod+Alt+Shift+J { move-workspace-down; }
-    // Mod+Alt+Shift+K { move-workspace-up; }
+    Mod+Alt+Ctrl+J { move-workspace-down; }
+    Mod+Alt+Ctrl+K { move-workspace-up; }
 
 
     /////////////////////////
