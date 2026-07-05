@@ -17,6 +17,9 @@ magnification = false
 active_opacity = 1
 inactive_opacity = 1
 
+launcher_position = "end"
+launcher_icon = "grid-dots"
+
 show_instance_count = true
 show_dots = true
 
