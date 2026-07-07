@@ -30,12 +30,6 @@ fi
 ### Enviroment ###
 ##################
 
-for dir in "${HOME}"/Resources/Applications/*; do
-    if ! [[ "${PATH}" =~ "${dir}" ]] && [[ -d "${dir}" ]]; then
-        PATH="${dir}:${PATH}"
-    fi
-done
-
 for dir in "$HOME"/.sdk/*/bin/; do
     if ! [[ "${PATH}" =~ "${dir}" ]] && [[ -d "${dir}" ]]; then
         PATH="${dir}:${PATH}"
