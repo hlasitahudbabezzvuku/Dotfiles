@@ -1,7 +1,15 @@
 // Open the Firefox picture-in-picture player as floating window
 window-rule {
     match title="^Picture-in-Picture$"
+    default-floating-position x=24 y=200 relative-to="top-right"
     open-floating true
+
+    default-column-width { fixed 400; }
+    default-window-height { fixed 225; }
+
+    border {
+        off
+    }
 }
 
 // Hide KeePassXC from scree capture
