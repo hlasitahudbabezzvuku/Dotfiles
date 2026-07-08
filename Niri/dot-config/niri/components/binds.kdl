@@ -75,15 +75,15 @@ binds {
     Mod+Shift+K { move-window-up; }
     Mod+Shift+L { move-column-right; }
 
-    Mod+Home      { focus-column-first; }
-    Mod+End       { focus-column-last; }
+    Mod+Home       { focus-column-first; }
+    Mod+End        { focus-column-last; }
     Mod+Shift+Home { move-column-to-first; }
     Mod+Shift+End  { move-column-to-last; }
 
     Mod+V       { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
-    Mod+C      { center-column; }
+    Mod+C       { center-column; }
     Mod+Shift+C { center-visible-columns; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
