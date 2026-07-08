@@ -5,8 +5,6 @@ include "components/animations.kdl"
 include "components/rules.kdl"
 include "components/binds.kdl"
 
-spawn-at-startup "noctalia"
-
 hotkey-overlay {
     skip-at-startup
 }
