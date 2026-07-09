@@ -1,3 +1,4 @@
+include "components/environment.kdl"
 include "components/input.kdl"
 include "components/output.kdl"
 include "components/layout.kdl"
