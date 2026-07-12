@@ -22,7 +22,7 @@ config.colors = {
     cursor_border = '#c9d1d9',
 
     selection_fg = '#000000',
-    selection_bg = '#5d63f0',
+    selection_bg = '#f0f6fc',
 
     ansi = {
         '#161b22',
