@@ -1,6 +1,8 @@
 local wezterm = require 'wezterm'
 local config = {}
 
+config.exit_behavior = "CloseOnCleanExit"
+
 config.initial_cols = 140
 config.initial_rows = 32
 
