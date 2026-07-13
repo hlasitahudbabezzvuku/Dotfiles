@@ -2,7 +2,7 @@
 enabled = true
 fingerprint = true
 allow_empty_password = true
-blurred_desktop = false
+blurred_desktop = true
 
 [lockscreen_widgets]
 enabled = true
