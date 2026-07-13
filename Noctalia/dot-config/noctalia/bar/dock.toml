@@ -7,9 +7,10 @@ main_axis_padding = 22
 cross_axis_padding = 6
 item_spacing = 18
 background_opacity = 1
-radius = 12
+
+radius = 15
 margin_ends = 0
-margin_edge = 12
+margin_edge = 0
 
 active_scale = 1
 inactive_scale = 1
