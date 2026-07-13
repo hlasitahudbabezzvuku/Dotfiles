@@ -19,7 +19,22 @@ session_placement = "attached"
 polkit_placement = "attached"
 
 [shell.launcher.dmenu.entry.ssh]
+label = "SSH"
 command = "grep -P '^Host ([^*]+)$' $HOME/.ssh/config | sed 's/Host //'"
 exec = "wezterm ssh {selection}"
 prefix = "/ssh"
 glyph = "server"
+
+[shell.launcher.dmenu.entry.ser]
+label = "Services"
+command = "systemctl --user list-units --type=service --no-legend --all | sed -e 's/^[[:space:]●○*]*//' -e 's/[[:space:]].*//' | grep -v -E '@'"
+exec = "wezterm -e bash -lc 'systemctl --user status \"{selection}\"'"
+prefix = "/ser"
+glyph = "terminal"
+
+[shell.launcher.dmenu.entry.apps]
+label = "Apps"
+command = "systemctl --user list-units --type=service --no-legend --all | sed -e 's/^[[:space:]●○*]*//' -e 's/[[:space:]].*//' | grep 'app-'"
+exec = "wezterm -e bash -lc 'systemctl --user status \"{selection}\"'"
+prefix = "/app"
+glyph = "terminal"
