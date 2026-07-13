@@ -2,19 +2,6 @@
 custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
 custom_image_colorize = false
 
-[widget.network]
-show_label = false
-
-[widget.bluetooth]
-show_label = false
-
-[widget.audio_visualizer]
-width = 142
-bands = 12
-show_when_idle = true
-color_1 = "primary"
-color_2 = "secondary"
-
 [widget.workspaces]
 active_pill_size = 3.8
 inactive_pill_size = 2.6
@@ -22,9 +9,3 @@ capsule = true
 
 [widget.clock]
 format = "{:%H:%M}  •  {:%d.%m.%Y}"
-
-[widget.sysmon]
-label_min_width = 32
-
-[widget.notifications]
-hide_when_no_unread = true
