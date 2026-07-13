@@ -23,7 +23,3 @@ command = "grep -P '^Host ([^*]+)$' $HOME/.ssh/config | sed 's/Host //'"
 exec = "wezterm ssh {selection}"
 prefix = "/ssh"
 glyph = "server"
-
-[shell.screen_corners]
-enabled = true
-size = 40
