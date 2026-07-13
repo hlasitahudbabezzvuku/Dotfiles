@@ -18,9 +18,6 @@ wallpaper_placement = "attached"
 session_placement = "attached"
 polkit_placement = "attached"
 
-[shell.launcher]
-categories = false
-
 [shell.launcher.dmenu.entry.ssh]
 command = "grep -P '^Host ([^*]+)$' $HOME/.ssh/config | sed 's/Host //'"
 exec = "wezterm ssh {selection}"
