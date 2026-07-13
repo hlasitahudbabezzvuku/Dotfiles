@@ -9,6 +9,7 @@ item_spacing = 18
 background_opacity = 1
 
 radius = 15
+concave_edge_corners = true
 margin_ends = 0
 margin_edge = 0
 
