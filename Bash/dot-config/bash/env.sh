@@ -1,5 +1,3 @@
-export GPG_TTY="$( tty )"
-
 export HISTFILESIZE=8192
 export PAGER=less
 
@@ -11,8 +9,6 @@ alias lr="ll -R"
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
-
-alias ost='rpm-ostree'
 
 if type nvim &> /dev/null; then
     export EDITOR="nvim"
