@@ -93,7 +93,7 @@ fi
 ### Tmux Session ###
 ####################
 
-if "${BASHRC_BELORA}" && type belora &> /dev/null && { [[ -n "${SSH_CONNECTION}" ]] || [[ "${XDG_SESSION_TYPE}" == "web" ]]; }; then
+if "${BASHRC_BELORA}" && type belora &> /dev/null && { [[ "${XDG_SESSION_TYPE}" == "web" ]]; }; then
     belora && exit
 fi
 
