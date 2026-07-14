@@ -2,10 +2,53 @@
 custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
 custom_image_colorize = false
 
+[widget.network]
+show_label = false
+
+[widget.bluetooth]
+show_label = false
+
+[widget.privacy]
+hide_inactive = false
+icon_spacing = 24
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+label_min_width = 28
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_pct"
+label_min_width = 28
+
+[widget.clock]
+format = "{:%H:%M}  •  {:%d.%m.%Y}"
+
+[widget.gpu]
+type = "sysmon"
+stat = "gpu_usage"
+label_min_width = 28
+
+[widget.vram]
+type = "sysmon"
+stat = "gpu_vram"
+label_min_width = 28
+
 [widget.workspaces]
 active_pill_size = 3.8
 inactive_pill_size = 2.6
 capsule = true
 
-[widget.clock]
-format = "{:%H:%M}  •  {:%d.%m.%Y}"
+[widget.tray]
+drawer = true
+drawer_columns = 3
+drawer_item_size = 20
+
+[widget.audio_visualizer]
+width = 142
+bands = 12
+centered = true
+show_when_idle = true
+color_1 = "secondary"
+color_2 = "primary"

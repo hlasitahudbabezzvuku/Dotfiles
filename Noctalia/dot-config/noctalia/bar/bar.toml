@@ -1,7 +1,5 @@
 [bar]
-order = [
-    "main",
-]
+order = ["main"]
 
 [bar.main]
 position = "top"
@@ -9,29 +7,33 @@ thickness = 40
 margin_ends = 0
 margin_edge = 0
 padding = 16
-radius = 0
-radius_bottom_left = -20
-radius_bottom_right = -20
-background_opacity = 1
 widget_spacing = 24
-capsule_thickness = 0.70
-capsule_padding = 7
+
+panel_overlap = 0
+background_opacity = 1
+
+radius = 0
+radius_bottom_left = 19
+radius_bottom_right = 19
+concave_edge_corners = true
+
+capsule_thickness = 0.65
+capsule_padding = 6
 capsule_border = "shadow"
-start = ["control-center", "group:left", "weather"]
-center = ["volume", "brightness", "audio_visualizer", "workspaces", "clock", "battery", "sysmon"]
-end = ["keyboard_layout", "group:right", "session"]
+start = ["control-center", "group:left", "clock", "notifications"]
+center = ["cpu", "ram", "workspaces", "gpu", "vram"]
+end = ["tray", "audio_visualizer", "group:right", "session"]
 
 [[bar.main.capsule_group]]
 id = "left"
-members = ["network", "bluetooth", "notifications"]
-padding = 7
-thickness = 0.65
+members = ["network", "bluetooth", "privacy"]
+padding = 12
+thickness = 0.6
 border = "shadow"
 
 [[bar.main.capsule_group]]
 id = "right"
-members = ["tray"]
-thickness = 0.65
-padding = 7
+members = ["volume", "keyboard_layout", "battery"]
+thickness = 0.6
+padding = 12
 border = "shadow"
-
