@@ -1,4 +1,8 @@
 (
+    if [[ -n ${SSH_TTY+x} ]] &> /dev/null; then
+        printf "\n"
+    fi
+
     readonly -a FETCH_CHARS=(               # List of names that are used for selecting the names of the Belora sessions
         "🬀" "🬁" "🬂" "🬃" "🬄"
         "🬅" "🬆" "🬇" "🬈" "🬉"
