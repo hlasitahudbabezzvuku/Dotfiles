@@ -8,7 +8,6 @@
         "🬚" "🬛" "🬜" "🬠" "🬡"
         "🬢" "🬣" "🬤" "🬥" "🬦"
         "🬧" "🬨" "🬩" "🬪" "🬫"
-        " " " " " " " " " "
     )
 
     noise ()
@@ -18,7 +17,7 @@
         done
     }
 
-    printf "%s╭────────────────────╮ ╭──────%s HlasitaHudbaBezZvuku %s──────╮\n" "$( rgb fg 255 255 255 )" "$( rgb fg 0 0 0 && rgb bg 255 255 255 )" "$( rgb reset && rgb fg 255 255 255 )"
+    printf "%s╭────────────────────╮ ╭──────%s HlasitaHudbaBezZvuku %s──────╮\n" "$( rgb fg 240 246 252 )" "$( rgb fg 0 0 0 && rgb bg 240 246 252 )" "$( rgb reset && rgb fg 240 246 252 )"
     printf "  %s     user:        %s\n"                      "$( noise )" "${USER}"
     printf "  %s     hostname:    %s\n"                      "$( noise )" "${HOSTNAME}"
     printf "  %s   ╰────────────────────────────────────╯\n" "$( noise )"
