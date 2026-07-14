@@ -19,7 +19,7 @@ concave_edge_corners = true
 
 capsule_thickness = 0.65
 capsule_padding = 6
-capsule_border = "shadow"
+capsule_border = "outline"
 start = ["control-center", "group:left", "clock", "notifications"]
 center = ["cpu", "ram", "workspaces", "gpu", "vram"]
 end = ["tray", "audio_visualizer", "group:right", "session"]
@@ -29,11 +29,11 @@ id = "left"
 members = ["network", "bluetooth", "privacy"]
 padding = 12
 thickness = 0.6
-border = "shadow"
+border = "on_primary"
 
 [[bar.main.capsule_group]]
 id = "right"
 members = ["volume", "keyboard_layout", "battery"]
 thickness = 0.6
 padding = 12
-border = "shadow"
+border = "on_primary"

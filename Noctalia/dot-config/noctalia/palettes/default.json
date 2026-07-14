@@ -1,7 +1,7 @@
 {
   "dark": {
     "mPrimary": "#ffffff",
-    "mOnPrimary": "#202020",
+    "mOnPrimary": "#404040",
     "mSecondary": "#aaaaaa",
     "mOnSecondary": "#202020",
     "mTertiary": "#aaccff",
@@ -12,10 +12,10 @@
 
     "mSurface": "#000000",
     "mOnSurface": "#cccccc",
-    "mSurfaceVariant": "#0e0e0e",
+    "mSurfaceVariant": "#121212",
     "mOnSurfaceVariant": "#808080",
 
-    "mOutline": "#303030",
+    "mOutline": "#202020",
     "mShadow": "#242424",
     "mHover": "#303030",
     "mOnHover": "#cccccc",
