@@ -33,7 +33,7 @@ border = "on_primary"
 
 [[bar.main.capsule_group]]
 id = "right"
-members = ["volume", "keyboard_layout", "battery"]
+members = ["keyboard_layout", "volume", "battery"]
 thickness = 0.6
 padding = 12
 border = "on_primary"
