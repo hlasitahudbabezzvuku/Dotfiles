@@ -119,21 +119,16 @@ binds {
     //// Monitor Management ////
     ////////////////////////////
 
-    Mod+Ctrl+H { focus-monitor-left; }
-    Mod+Ctrl+J { focus-monitor-down; }
-    Mod+Ctrl+K { focus-monitor-up; }
-    Mod+Ctrl+L { focus-monitor-right; }
+    Mod+Alt+H { focus-monitor-left; }
+    Mod+Alt+L { focus-monitor-right; }
 
-    Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+J { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+K { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+L { move-column-to-monitor-right; }
+    Mod+Alt+Shift+H { move-column-to-monitor-left; }
+    Mod+Alt+Shift+L { move-column-to-monitor-right; }
 
     Mod+Shift+P { power-off-monitors; }
 
-    // And you can also move a whole workspace to another monitor:
-    // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
-    // ...
+    Mod+Alt+Ctrl+H { move-workspace-to-monitor-left; }
+    Mod+Alt+Ctrl+L { move-workspace-to-monitor-right; }
 
 
     //////////////////////////////
