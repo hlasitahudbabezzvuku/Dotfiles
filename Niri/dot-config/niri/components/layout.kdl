@@ -12,16 +12,15 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        off
+        on
+        width 1
+
+        active-color "#cccccc"
+        urgent-color "#ff7070"
     }
 
     border {
-        on
-        width 2
-
-        active-color "#cccccc"
-        inactive-color "#161616"
-        urgent-color "#ff7070"
+        off
     }
 
     shadow {
