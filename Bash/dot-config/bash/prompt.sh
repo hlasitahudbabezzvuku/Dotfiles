@@ -1,16 +1,40 @@
 PS1=""
 
-PS1+="\n$( tput setaf 7 )┌─$( tput setab 0 && tput setaf 7 )  "
-PS1+="$( tput setab 7 && tput setaf 0 && tput bold ) \h "
-PS1+="\$( if [[ -n \${CONTAINER_ID+x} ]] &> /dev/null; then tput setab 6; printf \" \${CONTAINER_ID} \"; fi )"
-PS1+="$( tput sgr0 && tput setab 8 && tput setaf 7 ) \t "
-PS1+="$( tput setab 0 ) \$( jobs | wc -l ) "
-PS1+="\$( if [[ -d .git/ ]] &> /dev/null; then tput setab 1; tput setaf 0; printf \"  \"; fi )"
+rgb ()
+{
+    if [[ "${1}" == "reset" ]]; then
+        printf "\033[0m"
+    elif [[ "${1}" == "fg" ]]; then
+        printf "\033[38;2;%i;%i;%im" "${2}" "${3}" "${4}"
+    elif [[ "${1}" == "bg" ]]; then
+        printf "\033[48;2;%i;%i;%im" "${2}" "${3}" "${4}"
+    elif [[ "${1}" == "ansi_fg" ]]; then
+        printf "\033[0;3%im" "${2}"
+    elif [[ "${1}" == "ansi_bg" ]]; then
+        printf "\033[4%im" "${2}"
+    fi
+}
 
-PS1+="$( tput sgr0 )"
-PS1+="\n$( tput setaf 7 )└─["
-PS1+="\$( pwd | sed -e \"s/\/var\/home\/${USER}/ 󰮧/\" -e \"s/\/home\/${USER}/ 󰮧/\" -e \"s/\// $( tput setaf 4 )  $( tput setaf 7 ) /g\" ) "
-PS1+="$( tput setaf 7 )]"
+# Start Section
+PS1+="\n$( rgb reset && rgb fg 255 255 255 )╭─$( rgb fg 0 0 0 )$( rgb fg 255 255 255 && rgb bg 0 0 0 )   "
 
-PS1+="$( tput sgr0 )"
-PS1+="\n  "
+# Jobs Module
+PS1+="\$( if [[ \"\$( jobs )\" != \"\" ]] &> /dev/null; then rgb ansi_fg 2; printf \"\"; rgb fg 0 0 0 && rgb ansi_bg 2; printf \" \j \"; rgb fg 255 255 255; fi )"
+
+# Host Section
+PS1+="$( rgb fg 0 0 0 && rgb bg 255 255 255 ) \h $( rgb fg 255 255 255 )"
+
+# SSH Module
+PS1+="\$( if [[ -n \${SSH_TTY+x} ]] &> /dev/null; then rgb ansi_bg 5; printf \"\"; rgb fg 0 0 0; printf \" SSH \"; rgb ansi_fg 5; fi )"
+
+# Time Section
+PS1+="$( rgb bg 0 0 0 )$( rgb fg 255 255 255 )  \t $( rgb reset && rgb fg 0 0 0 )"
+
+# Git Module
+PS1+="\$( if [[ -d .git/ ]] &> /dev/null; then rgb ansi_bg 1; printf \"  \"; rgb reset && rgb ansi_fg 1; fi )"
+
+# Path Section
+PS1+="  $( rgb fg 170 170 170 )\w$( rgb reset )"
+
+# End Section
+PS1+="\n$( rgb fg 255 255 255 )╰─$( rgb reset ) "
