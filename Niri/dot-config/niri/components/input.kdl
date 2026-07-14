@@ -1,8 +1,8 @@
 input {
     keyboard {
         xkb {
-            layout "us,cz"
-	    variant ",coder"
+            layout "cz,us,cz"
+	    variant "coder,,qwerty"
         }
 
 	// repeat-delay 600
