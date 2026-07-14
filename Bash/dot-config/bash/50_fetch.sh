@@ -1,5 +1,8 @@
 (
     readonly -a FETCH_CHARS=(               # List of names that are used for selecting the names of the Belora sessions
+        "🬀" "🬁" "🬂" "🬃" "🬄"
+        "🬅" "🬆" "🬇" "🬈" "🬉"
+        "🬊" "🬋" "🬏" "🬞" "🬟"
         "🬐" "🬑" "🬒" "🬓" "🬔"
         "🬕" "🬖" "🬗" "🬘" "🬙"
         "🬚" "🬛" "🬜" "🬠" "🬡"
@@ -10,24 +13,22 @@
 
     noise ()
     {
-        for ((i = 0; i < 20; i++)); do
-            printf "%s" "${FETCH_CHARS[ $RANDOM % ${#FETCH_CHARS[@]} ]}"
-            done
+        for ((i = 0; i < 18; i++)); do
+            printf "%s" "${FETCH_CHARS[ ${RANDOM} % ${#FETCH_CHARS[@]} ]}"
+        done
     }
 
-    printf "\n%s   ╭─────────── HlasitaHudbaBezZvuku ───────────╮" "$( noise )"
-    printf "\n%s     user:        %s"                              "$( noise )" "${USER}"
-    printf "\n%s     hostname:    %s"                              "$( noise )" "${HOSTNAME}"
-    printf "\n%s   ╰────────────────────────────────────────────╯" "$( noise )"
+    printf "%s╭────────────────────╮ ╭──────%s HlasitaHudbaBezZvuku %s──────╮\n" "$( rgb fg 255 255 255 )" "$( rgb fg 0 0 0 && rgb bg 255 255 255 )" "$( rgb reset && rgb fg 255 255 255 )"
+    printf "  %s     user:        %s\n"                      "$( noise )" "${USER}"
+    printf "  %s     hostname:    %s\n"                      "$( noise )" "${HOSTNAME}"
+    printf "  %s   ╰────────────────────────────────────╯\n" "$( noise )"
 
     if [ -f /etc/os-release ]; then
         source /etc/os-release
-        printf "\n%s   ╭────────────────────────────────────────────╮" "$( noise )"
-        printf "\n%s     name:        %s"                              "$( noise )" "${NAME}"
-        printf "\n%s     variant:     %s"                              "$( noise )" "${VARIANT}"
-        printf "\n%s     version:     %s"                              "$( noise )" "${VERSION_ID}"
-        printf "\n%s   ╰────────────────────────────────────────────╯" "$( noise )"
+        printf "  %s   ╭────────────────────────────────────╮\n" "$( noise )"
+        printf "  %s     name:        %s\n"                      "$( noise )" "${NAME}"
+        printf "  %s     variant:     %s\n"                      "$( noise )" "${VARIANT}"
+        printf "  %s     version:     %s\n"                      "$( noise )" "${VERSION_ID}"
+        printf "╰────────────────────╯ ╰────────────────────────────────────╯\n"
     fi
-
-    printf "\n"
 )
