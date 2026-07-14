@@ -1,0 +1,25 @@
+[desktop_widgets]
+enabled = true
+
+[desktop_widgets.widget.clock]
+type = "clock"
+cx = 960
+cy = 260
+
+[desktop_widgets.widget.clock.settings]
+format = "{:%H:%M}"
+background = false
+color = "surface"
+shadow = false
+
+[desktop_widgets.widget.media]
+type = "media_player"
+cx = 960
+cy = 740
+
+[desktop_widgets.widget.media.settings]
+layout = "horizontal"
+background_radius = 15
+color = "on_surface"
+shadow = false
+hide_when_no_media = true
