@@ -13,3 +13,7 @@ rgb ()
     fi
 }
 
+bell ()
+{
+    printf "\e]777;notify;%s;%s\e\\" "${1}" "${2}"
+}
