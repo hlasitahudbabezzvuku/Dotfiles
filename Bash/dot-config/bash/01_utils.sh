@@ -15,5 +15,5 @@ rgb ()
 
 bell ()
 {
-    printf "\e]777;notify;%s;%s\e\\" "${1}" "${2}"
+    printf "\e]777;notify;%s;%s\e\\" "${1:-Terminal Notification}" "${2:-Default terminal notification}"
 }
