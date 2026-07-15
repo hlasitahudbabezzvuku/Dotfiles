@@ -22,10 +22,13 @@ binds {
     Mod+W     { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }
 
     Mod+Return { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
-    Mod+N      { spawn "noctalia" "msg" "panel-toggle" "control-center" "notifications"; }
     Mod+M      { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
     Mod+P      { spawn "noctalia" "msg" "panel-toggle" "control-center" "system"; }
 
+    Mod+N         { spawn "noctalia" "msg" "panel-toggle" "control-center" "notifications"; }
+    Mod+Alt+N     { spawn "noctalia" "msg" "notification-invoke-latest"; }
+    Mod+Shift+N   { spawn "noctalia" "msg" "notification-clear-active"; }
+    Mod+Control+N { spawn "noctalia" "msg" "notification-clear-history"; }
 
 
     //////////////////////
