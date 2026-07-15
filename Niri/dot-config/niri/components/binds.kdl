@@ -25,10 +25,10 @@ binds {
     Mod+M      { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
     Mod+P      { spawn "noctalia" "msg" "panel-toggle" "control-center" "system"; }
 
-    Mod+N         { spawn "noctalia" "msg" "panel-toggle" "control-center" "notifications"; }
-    Mod+Alt+N     { spawn "noctalia" "msg" "notification-invoke-latest"; }
-    Mod+Shift+N   { spawn "noctalia" "msg" "notification-clear-active"; }
-    Mod+Control+N { spawn "noctalia" "msg" "notification-clear-history"; }
+    Mod+N       { spawn "noctalia" "msg" "panel-toggle" "control-center" "notifications"; }
+    Mod+Alt+N   { spawn "noctalia" "msg" "notification-invoke-latest"; }
+    Mod+Shift+N { spawn "noctalia" "msg" "notification-clear-active"; }
+    Mod+Ctrl+N  { spawn "noctalia" "msg" "notification-clear-history"; }
 
 
     //////////////////////
@@ -103,19 +103,18 @@ binds {
     //// Window Sizing ////
     ///////////////////////
 
-    Mod+R            { switch-preset-column-width; }
-    Mod+Shift+R      { switch-preset-window-height; }
-    Mod+Shift+Ctrl+R { reset-window-height; }
+    Mod+R       { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R  { reset-window-height; }
 
-    Mod+Minus       { set-column-width "-10%"; }
-    Mod+Equal       { set-column-width "+10%"; }
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Ctrl+H { set-column-width "-10%"; }
+    Mod+Ctrl+L { set-column-width "+10%"; }
+    Mod+Ctrl+J { set-window-height "-10%"; }
+    Mod+Ctrl+K { set-window-height "+10%"; }
 
     Mod+F       { maximize-column; }
     Mod+Alt+F   { fullscreen-window; }
     Mod+Shift+F { maximize-window-to-edges; }
-    Mod+Ctrl+F  { expand-column-to-available-width; }
 
 
     ////////////////////////////
