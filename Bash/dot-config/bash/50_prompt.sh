@@ -22,4 +22,4 @@ PS1+="\$( if [[ -d .git/ ]] &> /dev/null; then rgb ansi_bg 1; printf \"  \
 PS1+="  $( rgb fg 131 138 146 )\w$( rgb reset )"
 
 # End Section
-PS1+="\n$( rgb fg 240 246 252 )╰─$( rgb reset ) "
+PS1+="\n\[$( rgb fg 240 246 252 )\]╰─\[$( rgb reset )\] "
