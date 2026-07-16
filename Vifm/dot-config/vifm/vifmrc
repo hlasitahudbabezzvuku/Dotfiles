@@ -16,9 +16,7 @@ set sortnumbers
 colorscheme master
 
 fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm}
-    \ kitten icat --silent --transfer-mode=stream --place=%pwx%ph@%pxx%py %c >/dev/tty </dev/tty %N
-    \ %pc
-    \ kitten icat --clear --silent >/dev/tty </dev/tty %N
+    \ wezterm imgcat --tmux-passthru detect --width %pw --height %ph --position %px$(printf '\054')%py %c >/dev/tty </dev/tty %N
 
 set timefmt=%d.%m.%y\ %H:%M
 
