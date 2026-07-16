@@ -1,3 +1,6 @@
+[widget.spacer]
+length = 12
+
 [widget.control-center]
 custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
 custom_image_colorize = false
