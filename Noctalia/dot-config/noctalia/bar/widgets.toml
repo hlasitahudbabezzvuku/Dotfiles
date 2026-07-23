@@ -2,7 +2,7 @@
 length = 12
 
 [widget.control-center]
-custom_image = "/usr/share/noctalia/assets/images/distros/fedora.svg"
+custom_image = "/usr/share/icons/hicolor/16x16/apps/fedora-logo-icon.png"
 custom_image_colorize = false
 
 [widget.network]
