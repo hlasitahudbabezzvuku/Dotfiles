@@ -1,3 +1,15 @@
+// For all windows
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+
+    background-effect {
+        blur true
+	xray true
+    }
+
+}
+
 // Open the Firefox picture-in-picture player as floating window
 window-rule {
     match title="^Picture-in-Picture$"
@@ -18,21 +30,27 @@ window-rule {
     block-out-from "screen-capture"
 }
 
+// Indicate screencasted windows
+window-rule {
+    match is-window-cast-target=true
+
+    focus-ring {
+        active-color "#ff7070"
+        inactive-color "#601010"
+    }
+
+    border {
+        inactive-color "#601010"
+    }
+
+    shadow {
+        color "#60101080"
+    }
+}
+
 // Apply Noctalia blur background
 layer-rule {
     match namespace="^noctalia-backdrop"
     place-within-backdrop true
-}
-
-// For all windows
-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
-
-    background-effect {
-        blur true
-	xray true
-    }
-
 }
 
