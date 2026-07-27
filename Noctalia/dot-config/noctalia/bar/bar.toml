@@ -29,11 +29,11 @@ id = "left"
 members = ["network", "bluetooth", "privacy"]
 padding = 12
 thickness = 0.6
-border = "outline"
+border = "on_primary"
 
 [[bar.main.capsule_group]]
 id = "right"
 members = ["keyboard_layout", "volume", "battery"]
 thickness = 0.6
 padding = 12
-border = "outline"
+border = "on_primary"
