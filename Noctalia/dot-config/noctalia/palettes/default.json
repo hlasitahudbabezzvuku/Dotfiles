@@ -4,8 +4,8 @@
     "mOnPrimary": "#404040",
     "mSecondary": "#aaaaaa",
     "mOnSecondary": "#202020",
-    "mTertiary": "#aaccff",
-    "mOnTertiary": "#202020",
+    "mTertiary": "#2080ff",
+    "mOnTertiary": "#ffffff",
 
     "mError": "#ff7070",
     "mOnError": "#202020",
