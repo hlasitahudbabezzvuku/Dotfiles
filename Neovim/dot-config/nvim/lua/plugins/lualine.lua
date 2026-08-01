@@ -45,12 +45,17 @@ return {
             options = {
                 theme = theme,
                 icons_enabled = true,
-                section_separators = '',
+                section_separators = { left = '', right = '' },
                 component_separators = '',
                 globalstatus = true,
             },
             sections = {
-                lualine_a = { 'mode' },
+                lualine_a = {
+                    {
+                        'mode',
+                        separator = { left = '', right = '' }
+                    }
+                },
                 lualine_b = {
                     'filename',
                     {
@@ -69,7 +74,12 @@ return {
                 },
                 lualine_x = { 'selectioncount', 'progress', 'location' },
                 lualine_y = { 'filetype' },
-                lualine_z = { 'fileformat' }
+                lualine_z = {
+                    {
+                        'fileformat',
+                        separator = { left = '', right = '' }
+                    }
+                }
             }
         })
     end
