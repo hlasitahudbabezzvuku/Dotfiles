@@ -16,15 +16,15 @@ return {
             },
             groups = {
                 all = {
-                    TelescopeBorder                = { fg = 'bg2' },
+                    TelescopeBorder                = { fg = 'bg3' },
                     TelescopePromptTitle           = { bg = 'palette.blue', fg = 'bg0' },
                     TelescopePreviewTitle          = { bg = 'palette.blue', fg = 'bg0' },
                     TelescopeSelection             = { bg = 'sel0' },
 
-                    NoiceCmdlinePopupBorderCmdline = { fg = 'bg2' },
-                    NoiceCmdlinePopupBorderHelp    = { fg = 'bg2' },
-                    NoiceCmdlinePopupBorderLua     = { fg = 'bg2' },
-                    NoiceCmdlinePopupBorderSearch  = { fg = 'bg2' },
+                    NoiceCmdlinePopupBorderCmdline = { fg = 'bg3' },
+                    NoiceCmdlinePopupBorderHelp    = { fg = 'bg3' },
+                    NoiceCmdlinePopupBorderLua     = { fg = 'bg3' },
+                    NoiceCmdlinePopupBorderSearch  = { fg = 'bg3' },
 
                     NoiceCmdlinePopupTitleCmdline  = { bg = 'palette.red', fg = 'bg0' },
                     NoiceCmdlinePopupTitleHelp     = { bg = 'palette.blue', fg = 'bg0' },
@@ -35,11 +35,11 @@ return {
                     NoiceCmdlineIconCmdline        = { fg = 'palette.red' },
                     NoiceCmdlineIconSearch         = { fg = 'palette.orange' },
 
-                    NotifyERRORBorder              = { fg = 'bg2' },
-                    NotifyWARNBorder               = { fg = 'bg2' },
-                    NotifyINFOBorder               = { fg = 'bg2' },
-                    NotifyDEBUGBorder              = { fg = 'bg2' },
-                    NotifyTRACEBorder              = { fg = 'bg2' },
+                    NotifyERRORBorder              = { fg = 'bg3' },
+                    NotifyWARNBorder               = { fg = 'bg3' },
+                    NotifyINFOBorder               = { fg = 'bg3' },
+                    NotifyDEBUGBorder              = { fg = 'bg3' },
+                    NotifyTRACEBorder              = { fg = 'bg3' },
 
                     NotifyERRORIcon                = { fg = 'palette.red' },
                     NotifyWARNIcon                 = { fg = 'palette.yellow' },
@@ -61,7 +61,8 @@ return {
 
                     WhichKeyTitle                  = { bg = 'palette.red', fg = 'bg0' },
                     WhichKeyDesc                   = { fg = 'fg2' },
-                    WhichKeySeparator              = { fg = 'bg2' },
+                    WhichKeySeparator              = { fg = 'bg3' },
+                    WhichKeyBorder                 = { fg = 'bg3' },
                 },
             },
         })
