@@ -50,6 +50,17 @@ binds {
     XF86AudioMute              allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
     XF86AudioMicMute           allow-when-locked=true { spawn "noctalia" "msg" "mic-mute"; }
 
+    Mod+Shift+1 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "10%"; }
+    Mod+Shift+2 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "20%"; }
+    Mod+Shift+3 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "30%"; }
+    Mod+Shift+4 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "40%"; }
+    Mod+Shift+5 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "50%"; }
+    Mod+Shift+6 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "60%"; }
+    Mod+Shift+7 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "70%"; }
+    Mod+Shift+8 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "80%"; }
+    Mod+Shift+9 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "90%"; }
+    Mod+Shift+0 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "100%"; }
+
     XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioStop allow-when-locked=true { spawn "playerctl" "stop"; }
     XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous"; }
@@ -61,10 +72,21 @@ binds {
     Mod+Shift+U allow-when-locked=true { spawn "playerctl" "position" "10-"; }
     Mod+Shift+O allow-when-locked=true { spawn "playerctl" "position" "10+"; }
 
-    XF86MonBrightnessUp         allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "10"; }
-    XF86MonBrightnessDown       allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "10"; }
-    Shift+XF86MonBrightnessUp   allow-when-locked=true { spawn "noctalia" "msg" "brightness-up" "1"; }
-    Shift+XF86MonBrightnessDown allow-when-locked=true { spawn "noctalia" "msg" "brightness-down" "1"; }
+    XF86MonBrightnessUp         allow-when-locked=true { spawn "brightnessctl" "-e" "set" "5%+"; }
+    XF86MonBrightnessDown       allow-when-locked=true { spawn "brightnessctl" "-e" "set" "5%-"; }
+    Shift+XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "-e" "set" "1%+"; }
+    Shift+XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "-e" "set" "1%-"; }
+
+    Mod+Alt+1 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "10%"; }
+    Mod+Alt+2 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "20%"; }
+    Mod+Alt+3 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "30%"; }
+    Mod+Alt+4 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "40%"; }
+    Mod+Alt+5 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "50%"; }
+    Mod+Alt+6 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "60%"; }
+    Mod+Alt+7 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "70%"; }
+    Mod+Alt+8 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "80%"; }
+    Mod+Alt+9 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "90%"; }
+    Mod+Alt+0 allow-when-locked=true { spawn "brightnessctl" "-e" "set" "100%"; }
 
 
     ///////////////////////////
