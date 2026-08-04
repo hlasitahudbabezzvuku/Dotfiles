@@ -61,6 +61,17 @@ binds {
     Mod+Shift+9 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "90%"; }
     Mod+Shift+0 allow-when-locked=true { spawn "noctalia" "msg" "volume-set" "100%"; }
 
+    Mod+Ctrl+1 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "10%"; }
+    Mod+Ctrl+2 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "20%"; }
+    Mod+Ctrl+3 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "30%"; }
+    Mod+Ctrl+4 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "40%"; }
+    Mod+Ctrl+5 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "50%"; }
+    Mod+Ctrl+6 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "60%"; }
+    Mod+Ctrl+7 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "70%"; }
+    Mod+Ctrl+8 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "80%"; }
+    Mod+Ctrl+9 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "90%"; }
+    Mod+Ctrl+0 allow-when-locked=true { spawn "noctalia" "msg" "mic-volume-set" "100%"; }
+
     XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioStop allow-when-locked=true { spawn "playerctl" "stop"; }
     XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous"; }
