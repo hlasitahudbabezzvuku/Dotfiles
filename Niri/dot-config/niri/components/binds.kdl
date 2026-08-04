@@ -3,10 +3,10 @@ binds {
     //// NiRi ////
     ///////////////
 
-    Ctrl+Alt+Delete                             { quit; }
-    Mod+Tab    repeat=false           { toggle-overview; }
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Slash                         { show-hotkey-overlay; }
+    Ctrl+Alt+Delete                        { quit; }
+    Mod+Slash                              { show-hotkey-overlay; }
+    Mod+Tab         repeat=false           { toggle-overview; }
+    Mod+Escape      allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Alt+S            allow-when-locked=true { spawn "systemctl" "suspend"; }
     Mod+Shift+S          allow-when-locked=true { spawn "loginctl" "lock-session"; }
