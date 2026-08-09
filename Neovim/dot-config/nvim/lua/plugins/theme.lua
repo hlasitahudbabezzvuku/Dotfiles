@@ -16,10 +16,27 @@ return {
             },
             groups = {
                 all = {
+                    Pmenu                          = { bg = 'none' },
+                    PmenuBorder                    = { fg = 'bg3' },
+                    FloatBorder                    = { fg = 'bg3' },
+
                     TelescopeBorder                = { fg = 'bg3' },
                     TelescopePromptTitle           = { bg = 'palette.blue', fg = 'bg0' },
                     TelescopePreviewTitle          = { bg = 'palette.blue', fg = 'bg0' },
                     TelescopeSelection             = { bg = 'sel0' },
+
+                    BlinkCmpMenu                   = { bg = "none" },
+                    BlinkCmpDoc                    = { bg = "none" },
+                    BlinkCmpMenuBorder             = { fg = 'fg3' },
+                    BlinkCmpDocBorder              = { fg = 'fg3' },
+
+                    BlinkCmpKindClass              = { fg = "syntax.type" },
+                    BlinkCmpKindConstant           = { fg = "syntax.const" },
+                    BlinkCmpKindField              = { fg = "syntax.field" },
+                    BlinkCmpKindFunction           = { fg = "syntax.func" },
+                    BlinkCmpKindKeyword            = { fg = "syntax.keyword" },
+                    BlinkCmpKindStruct             = { fg = "syntax.type" },
+                    BlinkCmpKindVariable           = { fg = "syntax.variable" },
 
                     NoiceCmdlinePopupBorderCmdline = { fg = 'bg3' },
                     NoiceCmdlinePopupBorderHelp    = { fg = 'bg3' },
