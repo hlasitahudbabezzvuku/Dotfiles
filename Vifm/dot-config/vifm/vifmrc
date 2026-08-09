@@ -15,10 +15,10 @@ set sortnumbers
 
 colorscheme master
 
-fileviewer {*.tar,*.tar.gz}
+fileviewer {*.gz,*.bz2,*.xz,*.tar,*.tgz,*.tbz2,*.rpm,*.deb}
     \ tar -tvf %c
 
-fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm}
+fileviewer {*.jpg,*.jpeg,*.png,*.gif,*.tiff,*.bmp,*.webp,*.xpm}
     \ wezterm imgcat --tmux-passthru detect --width %pw --height %ph --position %px$(printf '\054')%py %c >/dev/tty </dev/tty %N
 
 fileviewer {*}
