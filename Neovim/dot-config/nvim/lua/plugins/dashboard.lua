@@ -24,7 +24,16 @@ return {
                 {
                     icon = '  ',
                     icon_hl = 'Keyword',
-                    desc = 'Open Lazy',
+                    desc = 'Grep File',
+                    key = 'g',
+                    key_hl = 'Comment',
+                    key_format = ' [%s]',
+                    action = 'Telescope live_grep'
+                },
+                {
+                    icon = '  ',
+                    icon_hl = 'Keyword',
+                    desc = 'Lazy',
                     key = 'l',
                     key_hl = 'Comment',
                     key_format = ' [%s]',
@@ -33,16 +42,7 @@ return {
                 {
                     icon = '  ',
                     icon_hl = 'Keyword',
-                    desc = 'Open Mason',
-                    key = 'm',
-                    key_hl = 'Comment',
-                    key_format = ' [%s]',
-                    action = 'Mason'
-                },
-                {
-                    icon = '  ',
-                    icon_hl = 'Keyword',
-                    desc = 'Quit Neovim',
+                    desc = 'Quit',
                     key = 'q',
                     key_hl = 'Comment',
                     key_format = ' [%s]',
