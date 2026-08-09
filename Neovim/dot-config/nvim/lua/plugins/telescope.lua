@@ -3,7 +3,7 @@
 return {
     {
         'nvim-telescope/telescope.nvim',
-        dependecies = { 'nvim-tree/nvim-web-devicons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         cmd = 'Telescope',
         keys = {
             { '<leader>f', function() require('telescope.builtin').find_files() end,            desc = 'Find files' },
@@ -28,9 +28,6 @@ return {
                 sorting_strategy = 'ascending',
                 path_display = { 'filename_first' }
             },
-            extensions = {
-                ['ui-select'] = { require('telescope.themes').get_dropdown {} }
-            }
         }
     },
     {
@@ -48,7 +45,15 @@ return {
         'nvim-telescope/telescope-ui-select.nvim',
         event = 'VeryLazy',
         config = function()
-            require('telescope').load_extension('ui-select')
+	    local telescope = require('telescope')
+            telescope.setup({
+                extensions = {
+                    ['ui-select'] = {
+                        require('telescope.themes').get_dropdown {}
+                    }
+                }
+            })
+            telescope.load_extension('ui-select')
         end
     }
 }
