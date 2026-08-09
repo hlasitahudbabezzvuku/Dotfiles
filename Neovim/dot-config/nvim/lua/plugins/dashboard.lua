@@ -33,11 +33,11 @@ return {
                 {
                     icon = '  ',
                     icon_hl = 'Keyword',
-                    desc = 'Lazy',
-                    key = 'l',
+                    desc = 'Commands',
+                    key = ';',
                     key_hl = 'Comment',
                     key_format = ' [%s]',
-                    action = 'Lazy'
+                    action = 'Telescope builtin'
                 },
                 {
                     icon = '  ',
