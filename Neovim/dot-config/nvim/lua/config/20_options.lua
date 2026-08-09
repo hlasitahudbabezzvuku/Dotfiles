@@ -20,6 +20,7 @@ vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = 'yes:2'
+vim.opt.foldenable = false
 
 vim.opt.cursorline = false
 vim.opt.splitbelow = true
@@ -45,8 +46,3 @@ vim.opt.smartcase = true
 
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 500
-
-vim.opt.foldcolumn = '1'
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-vim.opt.foldenable = true
