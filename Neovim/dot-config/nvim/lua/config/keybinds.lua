@@ -27,10 +27,6 @@ vim.keymap.set('n', '<leader>cu', function() vim.cmd('cd ' .. vim.fn.expand('..'
 -- QoL
 vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
 
--- Tools
-vim.keymap.set('n', '<leader>ll', '<cmd>Lazy<cr>', { noremap = true, silent = true, desc = 'Open Lazy' })
-vim.keymap.set('n', '<leader>lm', '<cmd>Mason<cr>', { noremap = true, silent = true, desc = 'Open Mason' })
-
 -- Disable arrows
 vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<up>', '<nop>', { noremap = true, silent = true })
 vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<down>', '<nop>', { noremap = true, silent = true })
