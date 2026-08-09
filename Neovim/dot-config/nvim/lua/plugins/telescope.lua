@@ -45,7 +45,7 @@ return {
         'nvim-telescope/telescope-ui-select.nvim',
         event = 'VeryLazy',
         config = function()
-	    local telescope = require('telescope')
+            local telescope = require('telescope')
             telescope.setup({
                 extensions = {
                     ['ui-select'] = {
