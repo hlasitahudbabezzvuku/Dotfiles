@@ -2,3 +2,4 @@
 .vscode
 .stfolder
 .cache
+.gdb_history
