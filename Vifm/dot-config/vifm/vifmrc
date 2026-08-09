@@ -15,8 +15,14 @@ set sortnumbers
 
 colorscheme master
 
+fileviewer {*.tar,*.tar.gz}
+    \ tar -tvf %c
+
 fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm}
     \ wezterm imgcat --tmux-passthru detect --width %pw --height %ph --position %px$(printf '\054')%py %c >/dev/tty </dev/tty %N
+
+fileviewer {*}
+    \ bat --color=always --decorations=always --paging=never -- %c
 
 set timefmt=%d.%m.%y\ %H:%M
 
