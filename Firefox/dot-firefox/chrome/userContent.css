@@ -9,3 +9,8 @@
     .logo-and-wordmark .logo { display: none !important; }
     .logo-and-wordmark .wordmark { margin: 0 !important; }
 }
+
+@-moz-document domain("startpage.com") {
+    body { background: rgb(14, 14, 20) !important; }
+    header { background: rgb(8, 8, 12) !important; }
+}
