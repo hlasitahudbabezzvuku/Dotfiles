@@ -34,15 +34,6 @@ window-rule {
 window-rule {
     match is-window-cast-target=true
 
-    focus-ring {
-        active-color "#ff7070"
-        inactive-color "#601010"
-    }
-
-    border {
-        inactive-color "#601010"
-    }
-
     shadow {
         color "#60101080"
     }
