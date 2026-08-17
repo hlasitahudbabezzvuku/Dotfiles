@@ -4,4 +4,4 @@ pure_black_dark = true
 
 [theme.templates]
 enable_builtin_templates = true
-builtin_ids = ["gtk3", "gtk4", "kcolorscheme"]
+builtin_ids = ["gtk3", "gtk4", "kcolorscheme", "niri"]
