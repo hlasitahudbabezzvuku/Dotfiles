@@ -2,3 +2,7 @@
 mode = "dark"
 source = "custom"
 custom_palette = "default"
+
+[theme.templates]
+enable_builtin_templates = true
+builtin_ids = ["gtk3", "gtk4"]
