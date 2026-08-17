@@ -1,0 +1,11 @@
+@-moz-document url("about:home"), url("about:newtab") {
+    .search-handoff-button {
+        padding: 0 !important;
+        background: rgb(16, 16, 16) !important;
+        border: 1px solid rgb(32, 32, 32) !important;
+    }
+    
+    .fake-textbox { text-align: center !important; }
+    .logo-and-wordmark .logo { display: none !important; }
+    .logo-and-wordmark .wordmark { margin: 0 !important; }
+}
