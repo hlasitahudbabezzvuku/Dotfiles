@@ -1,11 +1,11 @@
 // For all windows
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 14
     clip-to-geometry true
 
     background-effect {
         blur true
-	xray true
+        xray true
     }
 
 }
