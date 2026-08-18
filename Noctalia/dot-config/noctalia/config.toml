@@ -3,7 +3,7 @@ autoload = false
 files = [
     "shell/",
     "services/",
-    "bar/",
+    "widgets/",
     "desktop/",
 ]
 
