@@ -15,12 +15,16 @@ enabled = true
 size = 38
 
 [shell.panel]
-launcher_placement = "attached"
-clipboard_placement = "attached"
-control_center_placement = "attached"
-wallpaper_placement = "attached"
-session_placement = "attached"
-polkit_placement = "attached"
+transparency_mode = "solid"
+floating_layer = "overlay"
+floating_offset = 24
+
+launcher_placement = "floating"
+clipboard_placement = "floating"
+control_center_placement = "floating"
+wallpaper_placement = "floating"
+session_placement = "floating"
+polkit_placement = "floating"
 
 [shell.launcher.dmenu.entry.ssh]
 label = "SSH"
