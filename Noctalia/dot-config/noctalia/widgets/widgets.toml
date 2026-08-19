@@ -1,9 +1,26 @@
-[widget.spacer]
+[widget.gap]
+type = "spacer"
+length = 52
+
+[widget.gap_s]
+type = "spacer"
 length = 12
 
-[widget.control-center]
-custom_image = "/usr/share/icons/hicolor/16x16/apps/fedora-logo-icon.png"
-custom_image_colorize = false
+[widget.gap_l]
+type = "spacer"
+length = 60
+
+[widget.clock]
+format = "{:%H:%M}  •  {:%d.%m.%Y}"
+
+[widget.privacy]
+hide_inactive = false
+icon_spacing = 24
+
+[widget.tray]
+drawer = true
+drawer_columns = 3
+drawer_item_size = 20
 
 [widget.network]
 show_label = false
@@ -11,9 +28,25 @@ show_label = false
 [widget.bluetooth]
 show_label = false
 
-[widget.privacy]
-hide_inactive = false
-icon_spacing = 24
+[widget.workspaces]
+active_pill_size = 3.8
+inactive_pill_size = 2.6
+capsule = true
+
+[widget.audio_visualizer]
+width = 142
+bands = 12
+centered = true
+show_when_idle = true
+color_1 = "secondary"
+color_2 = "primary"
+
+[widget.active_window]
+max_length = 200
+icon_size = 17
+title_scroll = "on_hover"
+display = "icon_and_text"
+show_empty_label = true
 
 [widget.cpu]
 type = "sysmon"
@@ -25,8 +58,20 @@ type = "sysmon"
 stat = "ram_pct"
 label_min_width = 28
 
-[widget.clock]
-format = "{:%H:%M}  •  {:%d.%m.%Y}"
+[widget.swap]
+type = "sysmon"
+stat = "swap_pct"
+label_min_width = 28
+
+[widget.taskbar]
+group_by_workspace = true
+workspace_label_placement = "inside"
+hide_empty_workspaces = true
+workspace_group_capsule = false
+workspace_group_content = "dots"
+
+occupied_color = "outline"
+empty_color = "outline"
 
 [widget.gpu]
 type = "sysmon"
@@ -38,20 +83,7 @@ type = "sysmon"
 stat = "gpu_vram"
 label_min_width = 28
 
-[widget.workspaces]
-active_pill_size = 3.8
-inactive_pill_size = 2.6
-capsule = true
-
-[widget.tray]
-drawer = true
-drawer_columns = 3
-drawer_item_size = 20
-
-[widget.audio_visualizer]
-width = 142
-bands = 12
-centered = true
-show_when_idle = true
-color_1 = "secondary"
-color_2 = "primary"
+[widget.disk]
+type = "sysmon"
+stat = "disk_used_pct"
+label_min_width = 28

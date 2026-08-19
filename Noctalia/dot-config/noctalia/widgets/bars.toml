@@ -1,47 +1,68 @@
 [bar]
-order = ["top", "bottom"]
+order = ["main", "alt"]
 
-[bar.top]
+[bar.main]
 position = "top"
 thickness = 36
-margin_ends = 240
+margin_ends = 200
 margin_edge = 0
-padding = 16
-
+padding = 26
 radius = 19
-concave_edge_corners = true
 
 widget_spacing = 24
 panel_overlap = 0
 background_opacity = 1
 
-capsule_thickness = 0.65
-capsule_padding = 6
+capsule_thickness = 0.67
+capsule_padding = 5
 capsule_border = "outline"
 
-start = []
-center = []
-end = []
+start = ["clock", "group:left"]
+center = ["network", "spacer", "bluetooth", "gap_l", "workspaces", "gap_l", "notifications", "spacer", "session"]
+end = ["group:right", "audio_visualizer"]
 
-[bar.bottom]
+[[bar.main.capsule_group]]
+id = "left"
+members = ["privacy", "tray"]
+padding = 16
+thickness = 0.6
+border = "outline"
+
+[[bar.main.capsule_group]]
+id = "right"
+members = ["volume", "battery"]
+padding = 16
+thickness = 0.6
+border = "outline"
+
+[bar.alt]
 position = "bottom"
 thickness = 36
-margin_ends = 240
+margin_ends = 200
 margin_edge = 0
-padding = 16
-
+padding = 22
 radius = 19
-concave_edge_corners = true
 
 widget_spacing = 24
 panel_overlap = 0
 background_opacity = 1
 
-capsule_thickness = 0.65
-capsule_padding = 6
-capsule_border = "outline"
+capsule_thickness = 0.67
 
-start = []
-center = []
-end = []
+start = ["active_window"]
+center = ["group:left", "gap_l", "taskbar", "gap", "group:right"]
+end = ["weather"]
 
+[[bar.alt.capsule_group]]
+id = "left"
+members = ["cpu", "spacer", "ram", "spacer", "swap"]
+padding = 16
+thickness = 0.6
+border = "outline"
+
+[[bar.alt.capsule_group]]
+id = "right"
+members = ["gpu", "spacer", "vram", "spacer", "disk"]
+padding = 16
+thickness = 0.6
+border = "outline"
