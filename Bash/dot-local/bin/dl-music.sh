@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 declare -r DOWNLOADER="yt-dlp"
+declare -r LOCATION="/tmp/music"
+
+mkdir -p "${LOCATION}"
 
 for url in "${@}"; do
     while ! ${DOWNLOADER} \
@@ -18,7 +21,7 @@ for url in "${@}"; do
         --embed-metadata \
         --convert-thumbnails jpg \
         --ppa 'EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop="'"'"'if(gt(ih,iw),iw,ih)'"':'"'if(gt(iw,ih),ih,iw)'"'"'"' \
-        --output '~/Media/Music/%(playlist|artist)s/%(playlist_index&{}. |)s%(title)s.%(ext)s' \
+        --output "${LOCATION}/%(playlist|artist)s/%(playlist_index&{}. |)s%(title)s.%(ext)s" \
         "${url}"
     do
         sleep $(( 60 * 5 ))
