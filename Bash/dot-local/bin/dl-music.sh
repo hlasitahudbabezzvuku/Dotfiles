@@ -19,10 +19,7 @@ for url in "${@}"; do
         --extract-audio \
         --audio-format mp3 \
         --audio-quality 5 \
-        --embed-thumbnail \
         --embed-metadata \
-        --convert-thumbnails jpg \
-        --ppa 'EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop="'"'"'if(gt(ih,iw),iw,ih)'"':'"'if(gt(iw,ih),ih,iw)'"'"'"' \
         --output "${LOCATION}/%(playlist|artist)s/%(playlist_index&{}. |)s%(title)s.%(ext)s" \
         "${url}"
     do
