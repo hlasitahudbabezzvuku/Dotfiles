@@ -6,6 +6,12 @@ import:
 
 plugins:
   - musicbrainz
+  - scrub
   - fetchart
+  - embedart
+  - thumbnails
   - lastgenre
 
+fetchart:
+    enforce_ratio: yes
+    store_source: yes
