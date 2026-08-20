@@ -9,6 +9,8 @@ for url in "${@}"; do
     while ! ${DOWNLOADER} \
         --abort-on-error \
         --force-ipv4 \
+        --cookies-from-browser firefox:~/.firefox \
+        --remote-components ejs:github \
         --no-flat-playlist \
         --yes-playlist \
         --continue \
@@ -24,7 +26,7 @@ for url in "${@}"; do
         --output "${LOCATION}/%(playlist|artist)s/%(playlist_index&{}. |)s%(title)s.%(ext)s" \
         "${url}"
     do
-        sleep $(( 60 * 5 ))
+        sleep $(( 60 * 2 ))
     done
 
     sleep 30
