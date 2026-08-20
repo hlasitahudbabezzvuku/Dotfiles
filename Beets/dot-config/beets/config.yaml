@@ -1,0 +1,11 @@
+directory: ~/Media/Music
+library: ~/.sync/musiclibrary.db
+
+import:
+    move: yes
+
+plugins:
+  - musicbrainz
+  - fetchart
+  - lastgenre
+
