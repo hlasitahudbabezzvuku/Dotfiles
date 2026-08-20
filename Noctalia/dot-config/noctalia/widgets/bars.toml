@@ -4,7 +4,7 @@ order = ["main", "alt"]
 [bar.main]
 position = "top"
 thickness = 36
-margin_ends = 200
+margin_ends = 160
 margin_edge = 0
 padding = 26
 radius = 19
@@ -38,7 +38,7 @@ border = "outline"
 [bar.alt]
 position = "bottom"
 thickness = 36
-margin_ends = 200
+margin_ends = 160
 margin_edge = 0
 padding = 22
 radius = 19
