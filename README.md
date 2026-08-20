@@ -1,8 +1,9 @@
 # HlasitaHudbaBezZvuku's Dotfiles
 
-My personal dotfiles from my laptop, Termux and RPi server.
+This repository contains my personal dotfiles from my laptop, Termux and RPi server.
 
-This is the new repo I made after migrating to KDE Plasma. The old dotfiles from my Hyprland desktop are not avalible any more.
+> [!IMPORTANT]
+> This is the new repo I made after migrating from Hyprland in 2024. The old dotfiles from my Hyprland desktop are not available anymore.
 
 ## Hyprland x KDE Plasma
 
