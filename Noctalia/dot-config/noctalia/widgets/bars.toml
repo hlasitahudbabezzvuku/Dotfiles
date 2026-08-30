@@ -4,10 +4,14 @@ order = ["main", "alt"]
 [bar.main]
 position = "top"
 thickness = 36
-margin_ends = 160
+margin_ends = 0
 margin_edge = 0
 padding = 26
-radius = 19
+
+radius_top_left    = 0
+radius_top_right   = 0
+radius_bottom_left = 19
+radius_bottom_right = 19
 
 widget_spacing = 24
 panel_overlap = 0
@@ -38,10 +42,14 @@ border = "outline"
 [bar.alt]
 position = "bottom"
 thickness = 36
-margin_ends = 160
+margin_ends = 0
 margin_edge = 0
 padding = 22
-radius = 19
+
+radius_top_left    = 19
+radius_top_right   = 19
+radius_bottom_left = 0
+radius_bottom_right = 0
 
 widget_spacing = 24
 panel_overlap = 0
