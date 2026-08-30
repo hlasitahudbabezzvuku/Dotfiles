@@ -1,5 +1,5 @@
 layout {
-    gaps 12
+    gaps 10
 
     center-focused-column "never"
 

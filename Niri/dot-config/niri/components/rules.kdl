@@ -1,6 +1,6 @@
 // For all windows
 window-rule {
-    geometry-corner-radius 14
+    geometry-corner-radius 13
     clip-to-geometry true
 
     background-effect {
