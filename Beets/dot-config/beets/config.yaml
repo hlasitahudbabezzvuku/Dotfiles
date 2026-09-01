@@ -5,6 +5,7 @@ import:
     move: yes
 
 plugins:
+  - edit
   - musicbrainz
   - scrub
   - fetchart
