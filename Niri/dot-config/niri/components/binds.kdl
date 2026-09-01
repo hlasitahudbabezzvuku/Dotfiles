@@ -35,8 +35,9 @@ binds {
     //// Applications ////
     //////////////////////
 
-    Mod+T { spawn "wezterm" "start" "--always-new-process"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn    "nautilus"; }
+    Mod+T { spawn    "wezterm" "start" "--always-new-process"; }
+    Mod+Y { spawn-sh "wezterm -e nvim ~/.sync/TODO/todo.txt"; }
 
 
     ////////////////////
