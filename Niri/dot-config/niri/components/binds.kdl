@@ -39,6 +39,11 @@ binds {
     Mod+T { spawn    "wezterm" "start" "--always-new-process"; }
     Mod+Y { spawn-sh "wezterm -e nvim ~/.sync/TODO/todo.txt"; }
 
+    Mod+F1       { spawn-sh "wezterm -e ping 192.168.0.1"; }
+    // TODO: Some way I can ping it even when not on my network (REST API probably)
+    Mod+F2       { spawn-sh "systemctl --user restart rclone-sync.service"; }
+    Mod+Shift+F2 { spawn-sh "wezterm -e ~/.local/bin/rclone-fix.sh"; }
+
 
     ////////////////////
     //// Media Keys ////
