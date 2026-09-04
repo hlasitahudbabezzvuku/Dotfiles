@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 # The quotes ware taken from:
 # 1. https://www.junauza.com/2010/12/top-50-programming-quotes-of-all-time.html
