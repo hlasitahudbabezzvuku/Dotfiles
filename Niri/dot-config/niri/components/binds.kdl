@@ -49,8 +49,8 @@ binds {
     //// Media Keys ////
     ////////////////////
 
-    XF86AudioRaiseVolume       allow-when-locked=true { spawn "noctalia" "msg" "volume-up" "4"; }
-    XF86AudioLowerVolume       allow-when-locked=true { spawn "noctalia" "msg" "volume-down" "4"; }
+    XF86AudioRaiseVolume       allow-when-locked=true { spawn "noctalia" "msg" "volume-up" "2"; }
+    XF86AudioLowerVolume       allow-when-locked=true { spawn "noctalia" "msg" "volume-down" "2"; }
     Shift+XF86AudioRaiseVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-up" "1"; }
     Shift+XF86AudioLowerVolume allow-when-locked=true { spawn "noctalia" "msg" "volume-down" "1"; }
     XF86AudioMute              allow-when-locked=true { spawn "noctalia" "msg" "volume-mute"; }
