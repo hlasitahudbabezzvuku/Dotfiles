@@ -5,12 +5,10 @@
         border: 1px solid rgb(32, 32, 32) !important;
     }
     
-    .fake-textbox { text-align: center !important; }
-    .logo-and-wordmark .logo { display: none !important; }
-    .logo-and-wordmark .wordmark { margin: 0 !important; }
+    .content-main { display: none !important; }
 }
 
 @-moz-document domain("startpage.com") {
-    body { background: rgb(14, 14, 20) !important; }
+    body   { background: rgb(14, 14, 20) !important; }
     header { background: rgb(8, 8, 12) !important; }
 }
