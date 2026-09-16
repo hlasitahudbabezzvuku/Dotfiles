@@ -12,12 +12,21 @@
 #nav-bar { border-color: transparent !important; }
 
 
+/*****************/
+/*** Headerbar ***/
+/*****************/
+
+toolbarbutton {
+    margin: 3px !important;
+}
+
+
 /***************/
 /*** Sidebar ***/
 /***************/
 
 #main-button {
-    margin: 2px 0;
+    margin: 4px 3px !important;
 }
 
 #main-button .button-background {
