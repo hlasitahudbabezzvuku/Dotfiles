@@ -11,17 +11,6 @@
 /* Hide top window border */
 #nav-bar { border-color: transparent !important; }
 
-/* Adjust sidebar splitter size */
-#sidebar-splitter {
-    --splitter-width: 3px !important;
-    min-width: var(--splitter-width) !important;
-    width: var(--splitter-width) !important;
-    padding: 0 !important;
-    margin: 0 calc(-1*var(--splitter-width) + 1px) 0 0 !important;
-    border: 0 !important;
-    opacity: 0 !important;
-}
-
 
 /***************/
 /*** Sidebar ***/
