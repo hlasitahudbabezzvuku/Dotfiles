@@ -23,6 +23,20 @@
 }
 
 
+/***************/
+/*** Sidebar ***/
+/***************/
+
+#main-button {
+    margin: 2px 0;
+}
+
+#main-button .button-background {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+
 /*************/
 /*** Other ***/
 /*************/
