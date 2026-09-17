@@ -37,7 +37,7 @@ binds {
 
     Mod+E { spawn    "nautilus"; }
     Mod+T { spawn    "wezterm" "start" "--always-new-process"; }
-    Mod+Y { spawn-sh "wezterm -e nvim ~/.sync/TODO/todo.txt"; }
+    Mod+Y { spawn-sh "wezterm -e nvim ~/.resources/todo/todo.txt"; }
 
     Mod+F1       { spawn-sh "wezterm -e ping 192.168.0.1"; }
     // TODO: Some way I can ping it even when not on my network (REST API probably)
