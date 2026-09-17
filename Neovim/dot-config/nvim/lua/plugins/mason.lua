@@ -4,7 +4,7 @@ return {
         event = 'BufRead',
         opts = {
             automatic_enable = true,
-            ensure_installed = { "lua_ls" },
+            ensure_installed = { 'lua_ls' },
         },
         dependencies = {
             'mason-org/mason.nvim',
