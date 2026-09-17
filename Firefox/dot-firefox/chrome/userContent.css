@@ -5,7 +5,9 @@
         border: 1px solid rgb(32, 32, 32) !important;
     }
     
-    .content-main { display: none !important; }
+    .fake-textbox                { text-align: center !important; }
+    .logo-and-wordmark .logo     { display: none !important; }
+    .logo-and-wordmark .wordmark { margin: 0 !important; }
 }
 
 @-moz-document domain("startpage.com") {
