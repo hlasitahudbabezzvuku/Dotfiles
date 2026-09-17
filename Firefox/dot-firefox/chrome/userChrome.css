@@ -34,16 +34,16 @@ toolbarbutton {
     border-color: transparent !important;
 }
 
-
-/*************/
-/*** Other ***/
-/*************/
+/* Hide settings icon from sidebar */
+.wrapper .buttons-wrapper .bottom-actions.actions-list { display: none !important; }
 
 /* Move sidebar buttons to center */
 .wrapper .buttons-wrapper { justify-content: center !important; }
 
-/* Hide settings icon from sidebar */
-.wrapper .buttons-wrapper .bottom-actions.actions-list { display: none !important; }
+
+/*************/
+/*** Other ***/
+/*************/
 
 /* Hide search mode swithcer */
 .searchmode-switcher { display: none !important; }
