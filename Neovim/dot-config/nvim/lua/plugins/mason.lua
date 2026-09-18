@@ -1,7 +1,7 @@
 return {
     {
         'mason-org/mason-lspconfig.nvim',
-        event = 'BufRead',
+        event = 'BufReadPre',
         opts = {
             automatic_enable = true,
             ensure_installed = { 'lua_ls' },
@@ -14,7 +14,6 @@ return {
     {
         'mason-org/mason.nvim',
         cmd = 'Mason',
-        event = 'VeryLazy',
         opts = {
             ui = {
                 border = 'rounded',
