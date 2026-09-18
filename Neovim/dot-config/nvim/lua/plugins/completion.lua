@@ -23,6 +23,7 @@ return {
                 window = { border = 'rounded' },
                 auto_show = true,
             },
+            ghost_text = { enabled = true },
         },
         signature = { window = { border = 'rounded' } },
         fuzzy = { implementation = 'rust' },
