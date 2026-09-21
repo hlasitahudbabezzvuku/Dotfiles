@@ -20,6 +20,7 @@ binds {
     Mod+Space { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
     Mod+S     { spawn "noctalia" "msg" "panel-toggle" "session"; }
     Mod+W     { spawn "noctalia" "msg" "panel-toggle" "wallpaper"; }
+    Mod+D     { spawn "noctalia" "msg" "desktop-widgets-toggle"; }
 
     Mod+Return { spawn "noctalia" "msg" "panel-toggle" "control-center"; }
     Mod+M      { spawn "noctalia" "msg" "panel-toggle" "control-center" "media"; }
