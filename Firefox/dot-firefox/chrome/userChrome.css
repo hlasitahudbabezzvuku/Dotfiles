@@ -8,27 +8,29 @@
 /* Hide horizontal native tabs toolbar */
 #TabsToolbar > * { display: none !important; }
 
-/* Hide top window border */
-#nav-bar { border-color: transparent !important; }
-
 
 /*****************/
 /*** Headerbar ***/
 /*****************/
 
-toolbarbutton {
-    margin: 3px !important;
+/* Hide top window border and add magrin */
+#nav-bar {
+    border-color: transparent !important;
+    margin: 3px 3px 2px 3px;
 }
+
+/* Add margin to headerbar buttons */
+toolbarbutton { margin: 3px !important; }
 
 
 /***************/
 /*** Sidebar ***/
 /***************/
 
-#main-button {
-    margin: 4px 3px !important;
-}
+/* Add margin to sidebar buttons */
+#main-button { margin: 6px 5px !important; }
 
+/* Remove background and border from sidebar buttons */
 #main-button .button-background {
     background-color: transparent !important;
     border-color: transparent !important;
