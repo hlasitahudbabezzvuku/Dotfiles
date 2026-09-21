@@ -1,5 +1,5 @@
 [desktop_widgets]
-enabled = true
+enabled = false
 
 [desktop_widgets.widget.clock]
 type = "clock"
