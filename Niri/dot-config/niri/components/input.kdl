@@ -24,7 +24,7 @@ input {
         // accel-speed 0.2
         accel-profile "flat"
 
-	left-handed
+        left-handed
     }
     
     focus-follows-mouse
