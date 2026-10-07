@@ -50,6 +50,9 @@ toolbarbutton { margin: 3px !important; }
 /* Hide search mode swithcer */
 .searchmode-switcher { display: none !important; }
 
+/* Hide extension page notice */
+.extensionPage { display: none !important; }
+
 /* Center URL search bar */
 .urlbar-input-box { text-align: center !important; }
 
