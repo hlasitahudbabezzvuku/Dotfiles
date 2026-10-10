@@ -28,11 +28,6 @@ show_label = false
 [widget.bluetooth]
 show_label = false
 
-[widget.workspaces]
-active_pill_size = 3.8
-inactive_pill_size = 2.6
-capsule = true
-
 [widget.audio_visualizer]
 width = 142
 bands = 12
