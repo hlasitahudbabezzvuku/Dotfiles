@@ -1,21 +1,9 @@
 [widget.gap]
 type = "spacer"
-length = 52
-
-[widget.gap_s]
-type = "spacer"
-length = 12
-
-[widget.gap_l]
-type = "spacer"
-length = 60
+length = 72
 
 [widget.clock]
-format = "{:%H:%M}  •  {:%d.%m.%Y}"
-
-[widget.privacy]
-hide_inactive = false
-icon_spacing = 24
+format = "{:%H:%M}   •   {:%d.%m.%Y}"
 
 [widget.tray]
 drawer = true
@@ -36,33 +24,11 @@ show_when_idle = true
 color_1 = "secondary"
 color_2 = "primary"
 
-[widget.active_window]
-max_length = 200
-icon_size = 17
-title_scroll = "on_hover"
-display = "icon_and_text"
-show_empty_label = true
-
-[widget.cpu]
-type = "sysmon"
-stat = "cpu_usage"
-label_min_width = 28
-
-[widget.ram]
-type = "sysmon"
-stat = "ram_pct"
-label_min_width = 28
-
-[widget.swap]
-type = "sysmon"
-stat = "swap_pct"
-label_min_width = 28
-
 [widget.desktop]
 type = "taskbar"
 group_by_workspace = true
 workspace_label_placement = "inside"
-hide_empty_workspaces = true
+hide_empty_workspaces = false
 workspace_group_capsule = false
 workspace_group_content = "dots"
 
@@ -70,24 +36,8 @@ occupied_color = "outline"
 empty_color = "outline"
 
 [widget.taskbar]
-pinned = ["firefox", "wezterm"]
-pinned_opacity = 1
-icon_scale = 2
-item_spacing = 16
+icon_scale = 1.8
+item_spacing = 20
+show_active_indicator = false
 active_opacity = 1
-inactive_opacity = 1
-
-[widget.gpu]
-type = "sysmon"
-stat = "gpu_usage"
-label_min_width = 28
-
-[widget.vram]
-type = "sysmon"
-stat = "gpu_vram"
-label_min_width = 28
-
-[widget.disk]
-type = "sysmon"
-stat = "disk_used_pct"
-label_min_width = 28
+inactive_opacity = 0.5

@@ -1,5 +1,5 @@
 [osd]
-position = "top_center"
+position = "top_left"
 background_opacity = 1
-offset_x = 0
+offset_x = 48
 offset_y = 48

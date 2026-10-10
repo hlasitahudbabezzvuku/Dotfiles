@@ -1,8 +1,8 @@
 [notification]
-position = "top_center"
+position = "top_left"
 layer = "overlay"
 background_opacity = 1
-offset_x = 0
+offset_x = 24
 offset_y = 24
 
 show_app_name = true
