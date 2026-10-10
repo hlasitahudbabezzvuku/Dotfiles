@@ -1,10 +1,10 @@
 [desktop_widgets]
-enabled = false
+enabled = true
 
 [desktop_widgets.widget.clock]
 type = "clock"
 cx = 960
-cy = 620
+cy = 460
 
 [desktop_widgets.widget.clock.settings]
 background_radius = 17
@@ -16,7 +16,7 @@ format = "  -  {:%H:%M}  -  "
 [desktop_widgets.widget.media]
 type = "media_player"
 cx = 960
-cy = 800
+cy = 640
 
 [desktop_widgets.widget.media.settings]
 background_radius = 17
