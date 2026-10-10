@@ -1,4 +1,4 @@
-if ! [[ "${PATH}" =~ "${HOME}/.local/share/JetBrains/Toolbox/scripts" ]]; then
-    PATH="${PATH}:${HOME}/.local/share/JetBrains/Toolbox/scripts"
+if ! [[ "${PATH}" =~ "${HOME}/.local/opt/idea-oss/bin" ]]; then
+    PATH="${PATH}:${HOME}/.local/opt/idea-oss/bin"
 fi
 
