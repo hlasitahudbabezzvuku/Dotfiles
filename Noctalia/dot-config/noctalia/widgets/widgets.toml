@@ -63,7 +63,8 @@ type = "sysmon"
 stat = "swap_pct"
 label_min_width = 28
 
-[widget.taskbar]
+[widget.desktop]
+type = "taskbar"
 group_by_workspace = true
 workspace_label_placement = "inside"
 hide_empty_workspaces = true
@@ -72,6 +73,14 @@ workspace_group_content = "dots"
 
 occupied_color = "outline"
 empty_color = "outline"
+
+[widget.taskbar]
+pinned = ["firefox", "wezterm"]
+pinned_opacity = 1
+icon_scale = 2
+item_spacing = 16
+active_opacity = 1
+inactive_opacity = 1
 
 [widget.gpu]
 type = "sysmon"
