@@ -12,6 +12,10 @@ config.font = wezterm.font_with_fallback({
     { family = 'Noto Color Emoji',       scale = 0.75 },
 })
 
+config.freetype_load_target = 'Normal'
+config.freetype_render_target = 'HorizontalLcd'
+config.anti_alias_custom_block_glyphs = false
+
 config.line_height = 1.2
 config.warn_about_missing_glyphs = false
 
