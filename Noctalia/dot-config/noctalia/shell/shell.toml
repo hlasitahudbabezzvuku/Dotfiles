@@ -22,6 +22,10 @@ wallpaper_placement = "floating"
 session_placement = "floating"
 polkit_placement = "floating"
 
+[shell.screen_corners]
+enabled = true
+size = 38
+
 [shell.launcher.dmenu.entry.ssh]
 label = "SSH"
 command = "grep -P '^Host ([^*]+)$' $HOME/.ssh/config | sed 's/Host //'"
