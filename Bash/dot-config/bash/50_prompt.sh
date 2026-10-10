@@ -16,7 +16,7 @@ PS1+="\$( if [[ -n \${SSH_TTY+x} ]] &> /dev/null; then rgb ansi_bg 5; printf \"�
 PS1+="\[$( rgb bg 0 0 0 )\]\[$( rgb fg 240 246 252 )\]  \t \[$( rgb reset && rgb fg 0 0 0 )\]"
 
 # Git Module
-PS1+="\$( if [[ -d .git/ ]] &> /dev/null; then rgb ansi_bg 1; printf \"  \"; rgb reset && rgb ansi_fg 1; fi )"
+PS1+="\$( if git rev-parse --is-inside-work-tree &> /dev/null; then rgb ansi_bg 1; printf \"  \"; rgb reset && rgb ansi_fg 1; fi )"
 
 # Path Section
 PS1+="  \[$( rgb fg 131 138 146 )\]\w\[$( rgb reset )\]"
