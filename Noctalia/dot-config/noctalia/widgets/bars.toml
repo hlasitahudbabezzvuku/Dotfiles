@@ -15,7 +15,7 @@ panel_overlap = 0
 background_opacity = 1
 
 start = ["audio_visualizer", "gap", "clock"]
-center = ["network", "bluetooth", "gap", "desktop", "gap", "notifications", "tray"]
+center = ["network", "bluetooth", "gap", "desktop", "gap", "notifications", "session"]
 end = ["volume", "battery", "gap", "audio_visualizer"]
 
 [bar.alt]
@@ -33,4 +33,4 @@ background_opacity = 1
 
 start = ["media"]
 center = ["taskbar"]
-end = ["session"]
+end = ["tray"]
