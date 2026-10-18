@@ -4,23 +4,22 @@ enabled = true
 [desktop_widgets.widget.clock]
 type = "clock"
 cx = 960
-cy = 460
+cy = 245
 
 [desktop_widgets.widget.clock.settings]
-background_radius = 17
-background_padding = 0
-color = "primary"
+background = false
+color = "surface"
 shadow = false
-format = "  -  {:%H:%M}  -  "
+format = "--  {:%H:%M}  --"
 
 [desktop_widgets.widget.media]
 type = "media_player"
 cx = 960
-cy = 640
+cy = 560
 
 [desktop_widgets.widget.media.settings]
 background_radius = 17
-background_padding = 26
+background_padding = 16
 color = "on_surface"
 shadow = false
 hide_when_no_media = true
