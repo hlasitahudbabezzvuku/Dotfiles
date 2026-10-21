@@ -68,7 +68,9 @@ box ()
     done
 
     for i in "${write_list[@]}"; do
-        args+=(--bind "${i}" "${i}")
+        if [[ -d "${i}" ]]; then
+            args+=(--bind "${i}" "${i}")
+        fi
     done
 
     mkdir -p "/tmp/pi"
