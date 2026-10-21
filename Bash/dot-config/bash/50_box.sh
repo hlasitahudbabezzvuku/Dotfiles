@@ -27,21 +27,25 @@ box ()
         "$HOME/.ssh"
         "$HOME/.gnupg"
         "$HOME/.bash_history"
-        "$HOME/.sync"
+        "$HOME/.var"
         "$HOME/.firefox"
         "$HOME/.thunderbird"
         "$HOME/.mozilla"
         "$HOME/.steam"
         "$HOME/.steampath"
         "$HOME/.steampid"
+        "$HOME/.prefix"
     )
 
     declare -a write_list=(
         "$HOME/.pi"
+        "$HOME/.agents"
         "$HOME/.cache"
         "$HOME/.cargo"
         "$HOME/.local/state"
         "$HOME/.npm"
+        "$HOME/.nuget"
+        "$HOME/.dotnet"
     )
 
     declare -a args=(
