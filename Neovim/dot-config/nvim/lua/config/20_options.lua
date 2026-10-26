@@ -39,6 +39,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 vim.opt.autoread = true
+vim.opt.exrc = true
 
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
