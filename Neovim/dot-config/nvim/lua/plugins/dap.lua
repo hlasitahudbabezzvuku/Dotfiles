@@ -47,5 +47,7 @@ return {
             local mod_name = vim.fn.fnamemodify(file, ':t:r')
             require('debuggers.' .. mod_name)
         end
+
+        vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointColor', linehl = '', numhl = '' })
     end
 }
