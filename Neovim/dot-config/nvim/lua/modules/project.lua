@@ -15,7 +15,8 @@ function M.configure()
     local exec_path = vim.fn.input('Executable path: ', '${workspaceFolder}/', 'file')
     if exec_path == '' then return false end
 
-    local ok, tmpl_lines = pcall(vim.fn.readfile, vim.fs.joinpath(vim.fn.stdpath('config'), 'templates', 'nvim.lua'))
+    local ok, tmpl_lines = pcall(vim.fn.readfile,
+        vim.fs.joinpath(vim.fn.stdpath('config'), 'lua', 'templates', 'nvim.lua'))
     if not ok then
         return false
     end
