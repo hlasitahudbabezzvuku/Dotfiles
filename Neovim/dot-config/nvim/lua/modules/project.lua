@@ -9,23 +9,35 @@ function M.configure()
         return false
     end
 
+    local lang = vim.fn.input('Language: ', vim.bo.filetype ~= '' and vim.bo.filetype or 'c')
+    if lang == '' then return false end
+
+    local adapter = vim.fn.input('DAP adapter (type): ', 'codelldb')
+    if adapter == '' then return false end
+
     local build_cmd = vim.fn.input('Build command: ')
     if build_cmd == '' then return false end
 
     local exec_path = vim.fn.input('Executable path: ', '${workspaceFolder}/', 'file')
     if exec_path == '' then return false end
 
-    local ok, tmpl_lines = pcall(vim.fn.readfile,
-        vim.fs.joinpath(vim.fn.stdpath('config'), 'lua', 'templates', 'nvim.lua'))
-    if not ok then
-        return false
-    end
+    local ok, template = pcall(vim.fn.readfile, vim.fs.joinpath(vim.fn.stdpath('config'), 'lua', 'templates', 'nvim.lua'))
+    if not ok then return false end
 
     local parts = vim.split(build_cmd, '%s+', { trimempty = true })
     local cmd = string.format('%q', parts[1] or '')
     local args = vim.iter(parts):skip(1):map(function(v) return string.format('%q', v) end):join(', ')
 
-    vim.fn.writefile(vim.split(string.format(table.concat(tmpl_lines, '\n'), cmd, args, exec_path), '\n'), '.nvim.lua')
+    local content = string.format(
+        table.concat(template, '\n'),
+        cmd,
+        args,
+        string.format('%q', lang),
+        string.format('%q', adapter),
+        exec_path
+    )
+
+    vim.fn.writefile(vim.split(content, '\n'), '.nvim.lua')
     vim.notify('.nvim.lua created and loaded', vim.log.levels.INFO)
 
     dofile('.nvim.lua')

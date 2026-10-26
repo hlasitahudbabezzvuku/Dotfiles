@@ -15,10 +15,10 @@ overseer.register_template({
 })
 
 -- 2. Debugger configuration
-dap.configurations.c = {
+dap.configurations.%s = {
     {
         name = 'Debug',
-        type = 'codelldb',
+        type = '%s',
         request = 'launch',
         program = '%s',
         cwd = '${workspaceFolder}',
