@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    event = 'BufRead',
+    event = 'VimEnter',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         local winbar_cfg = {
@@ -110,6 +110,7 @@ return {
                 icons_enabled = true,
                 section_separators = { left = '', right = '' },
                 component_separators = { left = '    ', right = '    ' },
+                disabled_filetypes = { 'dashboard' },
                 globalstatus = true,
             },
             sections = sections_cfg,
