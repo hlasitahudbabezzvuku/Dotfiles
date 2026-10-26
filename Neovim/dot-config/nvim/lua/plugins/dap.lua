@@ -9,8 +9,9 @@ return {
             {
                 '<f5>',
                 function()
-                    require('modules.project').configure()
-                    require('dap').continue()
+                    if require('modules.project').configure() then
+                        require('dap').continue()
+                    end
                 end,
                 desc = 'Launch project'
             },
