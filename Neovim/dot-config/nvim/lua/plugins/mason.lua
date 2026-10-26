@@ -2,14 +2,22 @@ return {
     {
         'mason-org/mason-lspconfig.nvim',
         event = 'BufReadPre',
-        opts = {
-            automatic_enable = true,
-            ensure_installed = { 'lua_ls' },
-        },
         dependencies = {
             'mason-org/mason.nvim',
             'neovim/nvim-lspconfig',
         },
+        opts = {
+            automatic_enable = true,
+            ensure_installed = { 'lua_ls' },
+        },
+    },
+    {
+        'jay-babu/mason-nvim-dap.nvim',
+        opts = { handlers = {} },
+        dependencies = {
+            'williamboman/mason.nvim',
+            'mfussenegger/nvim-dap',
+        }
     },
     {
         'mason-org/mason.nvim',
