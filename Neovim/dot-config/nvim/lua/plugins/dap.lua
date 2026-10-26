@@ -4,7 +4,27 @@ return {
         {
             'rcarriga/nvim-dap-ui',
             dependencies = { 'nvim-neotest/nvim-nio' },
-            opts = {},
+            opts = {
+                layouts = {
+                    {
+                        position = 'right',
+                        size = 36,
+                        elements = {
+                            { id = 'stacks',  size = 0.25 },
+                            { id = 'scopes',  size = 0.50 },
+                            { id = 'watches', size = 0.25 },
+                        },
+                    },
+                    {
+                        position = 'bottom',
+                        size = 12,
+                        elements = {
+                            { id = 'console', size = 0.5 },
+                            { id = 'repl',    size = 0.5 },
+                        },
+                    },
+                },
+            },
         }
     },
     config = function()
