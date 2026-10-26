@@ -31,6 +31,7 @@ vim.opt.updatetime = 500
 
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 vim.opt.showcmd = true
 vim.opt.showmode = false
 
