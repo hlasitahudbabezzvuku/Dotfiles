@@ -1,7 +1,10 @@
 return {
     {
         'https://codeberg.org/mfussenegger/nvim-dap',
-        dependencies = { 'rcarriga/nvim-dap-ui' },
+        dependencies = {
+            'rcarriga/nvim-dap-ui',
+            'jay-babu/mason-nvim-dap.nvim',
+        },
         keys = {
             { '<f5>',  function() require('dap').continue() end,          desc = 'DAP continue' },
             { '<f9>',  function() require('dap').toggle_breakpoint() end, desc = 'DAP toggle breakpoint' },
