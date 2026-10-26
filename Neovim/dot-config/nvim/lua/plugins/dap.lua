@@ -1,8 +1,11 @@
 return {
     'https://codeberg.org/mfussenegger/nvim-dap',
     dependencies = {
-        'rcarriga/nvim-dap-ui',
-        'nvim-neotest/nvim-nio',
+        {
+            'rcarriga/nvim-dap-ui',
+            dependencies = { 'nvim-neotest/nvim-nio' },
+            opts = {},
+        }
     },
     config = function()
         local dap = require('dap')
