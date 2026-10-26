@@ -27,6 +27,13 @@ return {
             },
         }
     },
+    keys = {
+        { '<f5>',  function() require('step_overdap').continue() end, desc = 'DAP continue' },
+        { '<f9>',  function() require('dap').toggle_breakpoint() end, desc = 'DAP toggle breakpoint' },
+        { '<f10>', function() require('dap').step_over() end,         desc = 'DAP step-over' },
+        { '<f11>', function() require('dap').step_into() end,         desc = 'DAP step-into' },
+        { '<f12>', function() require('dap').step_out() end,          desc = 'DAP step-out' },
+    },
     config = function()
         local dap = require('dap')
         local dapui = require('dapui')
