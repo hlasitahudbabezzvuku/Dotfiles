@@ -9,30 +9,10 @@ return {
             {
                 '<f5>',
                 function()
-                    if not vim.uv.fs_stat('.nvim.lua') then
-                        if vim.fn.input('No .nvim.lua found. Generate one? [y/N]: '):lower() ~= 'y' then return end
-
-                        local build_cmd = vim.fn.input('Build command: ')
-                        if build_cmd == '' then return end
-
-                        local exec_path = vim.fn.input('Executable path: ', '${workspaceFolder}/', 'file')
-                        if exec_path == '' then return end
-
-                        local list = vim.split(build_cmd, '%s+', { trimempty = true })
-                        local cmd = string.format('%q', list[1] or '')
-                        local args = vim.iter(list):skip(1):map(function(a) return string.format('%q', a) end):join(', ')
-
-                        local raw = table.concat(vim.fn.readfile(vim.fn.stdpath('config') .. '/templates/nvim.lua'), '\n')
-                        local final = string.format(raw, cmd, args, exec_path)
-
-                        vim.fn.writefile(vim.split(final, '\n'), '.nvim.lua')
-                        dofile('.nvim.lua')
-                        vim.notify('.nvim.lua created and loaded', vim.log.levels.INFO)
-                    end
-
+                    require('modules.project').configure()
                     require('dap').continue()
                 end,
-                desc = 'DAP project'
+                desc = 'Launch project'
             },
             { '<f6>',  function() require('dap').continue() end,          desc = 'DAP continue' },
             { '<f9>',  function() require('dap').toggle_breakpoint() end, desc = 'DAP toggle breakpoint' },
