@@ -1,28 +1,16 @@
 local M = {}
 
-local function get_all_adapters()
-    local set = {}
-
-    for k in pairs(require('dap').adapters) do set[k] = true end
-
-    local ok, mason = pcall(require, 'mason-nvim-dap')
-    if ok then
-        for _, k in ipairs(mason.get_installed_sources()) do set[k] = true end
-    end
-
-    local list = vim.tbl_keys(set)
-    table.sort(list)
-
-    return #list > 0 and list or { 'codelldb', 'gdb' }
-end
-
-function M.configure()
+function M.configure(adapters)
     if vim.uv.fs_stat('.nvim.lua') then
         return true
     end
 
     if vim.fn.confirm('No .nvim.lua found. Generate one?', '&Yes\n&No', 2) ~= 1 then
-        return false
+        if vim.fn.confirm('Use default configuration?', '&Yes\n&No', 2) ~= 1 then
+            return true
+        else
+            return false
+        end
     end
 
     local lang = vim.fn.input('Language: ', vim.bo.filetype ~= '' and vim.bo.filetype or 'c')
@@ -61,7 +49,7 @@ function M.configure()
         cmd,
         args,
         lang,
-        adapter(get_all_adapters()),
+        adapter(adapters),
         exec_path
     )
 

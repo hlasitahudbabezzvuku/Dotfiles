@@ -9,7 +9,14 @@ return {
             {
                 '<f6>',
                 function()
-                    if require('modules.project').configure() then
+                    local set = {}
+
+                    for k in pairs(require('dap').adapters) do set[k] = true end
+                    for _, k in ipairs(require('mason-nvim-dap').get_installed_sources()) do set[k] = true end
+
+                    local list = vim.tbl_keys(set)
+
+                    if require('modules.project').configure(#list > 0 and list or { 'codelldb', 'gdb' }) then
                         require('dap').continue()
                     end
                 end,
