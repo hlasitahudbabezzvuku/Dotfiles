@@ -1,6 +1,6 @@
 return {
     'rcarriga/nvim-notify',
-    lazy = false,
+    event = 'VimEnter',
     opts = {
         background_colour = '#000000',
         timeout = 2000,

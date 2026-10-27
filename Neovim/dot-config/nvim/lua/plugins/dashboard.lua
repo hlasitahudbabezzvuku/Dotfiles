@@ -1,6 +1,7 @@
 return {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
         theme = 'doom',
         config = {
@@ -33,11 +34,11 @@ return {
                 {
                     icon = '  ',
                     icon_hl = 'Keyword',
-                    desc = 'Commands',
-                    key = ';',
+                    desc = 'Lazy',
+                    key = 'l',
                     key_hl = 'Comment',
                     key_format = ' [%s]',
-                    action = 'Telescope builtin'
+                    action = 'Lazy'
                 },
                 {
                     icon = '  ',
@@ -56,5 +57,4 @@ return {
             vertical_center = true
         }
     },
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
 }

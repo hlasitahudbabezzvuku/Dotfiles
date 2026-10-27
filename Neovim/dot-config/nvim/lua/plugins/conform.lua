@@ -1,9 +1,7 @@
 return {
     'stevearc/conform.nvim',
-    event = 'BufRead',
-    keys = {
-        { 'grf', function() require('conform').format() end, desc = 'conform.format()' },
-    },
+    event = 'BufWritePre',
+    keys = { { 'grf', function() require('conform').format() end, desc = 'conform.format()' } },
     opts = {
         default_format_opts = {
             lsp_format = 'fallback',

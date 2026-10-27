@@ -5,18 +5,6 @@ return {
         'nvim-telescope/telescope.nvim',
         dependencies = {
             'nvim-tree/nvim-web-devicons',
-            {
-                'nvim-telescope/telescope-ui-select.nvim',
-                config = function()
-                    local telescope = require('telescope')
-                    telescope.setup({
-                        extensions = {
-                            ['ui-select'] = { require('telescope.themes').get_dropdown {} }
-                        }
-                    })
-                    telescope.load_extension('ui-select')
-                end
-            }
         },
         cmd = 'Telescope',
         keys = {
@@ -46,13 +34,30 @@ return {
     },
     {
         'LukasPietzschmann/telescope-tabs',
-        keys = {
-            { '<leader>t', function() require('telescope-tabs').list_tabs() end, desc = 'Find tabs' },
-        },
+        keys = { { '<leader>t', function() require('telescope-tabs').list_tabs() end, desc = 'Find tabs' } },
         config = function()
             require('telescope').load_extension('telescope-tabs')
             require('telescope-tabs').setup {}
         end,
         dependencies = { 'nvim-telescope/telescope.nvim' },
+    },
+    {
+        'nvim-telescope/telescope-ui-select.nvim',
+        init = function()
+            ---@diagnostic disable-next-line: duplicate-set-field
+            vim.ui.select = function(...)
+                require('lazy').load({ plugins = { 'telescope-ui-select.nvim' } })
+                vim.ui.select(...)
+            end
+        end,
+        config = function()
+            local telescope = require('telescope')
+            telescope.setup({
+                extensions = {
+                    ['ui-select'] = { require('telescope.themes').get_dropdown {} }
+                }
+            })
+            telescope.load_extension('ui-select')
+        end
     },
 }

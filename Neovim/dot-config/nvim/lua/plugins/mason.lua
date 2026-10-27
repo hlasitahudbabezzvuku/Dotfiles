@@ -1,27 +1,7 @@
 return {
     {
-        'mason-org/mason-lspconfig.nvim',
-        event = 'BufReadPre',
-        dependencies = {
-            'mason-org/mason.nvim',
-            'neovim/nvim-lspconfig',
-        },
-        opts = {
-            automatic_enable = true,
-            ensure_installed = { 'lua_ls' },
-        },
-    },
-    {
-        'jay-babu/mason-nvim-dap.nvim',
-        opts = { handlers = {} },
-        dependencies = {
-            'williamboman/mason.nvim',
-            'mfussenegger/nvim-dap',
-        }
-    },
-    {
         'mason-org/mason.nvim',
-        cmd = 'Mason',
+        cmd = { 'Mason', 'MasonInstall', 'MasonUpdate', 'MasonLog' },
         opts = {
             ui = {
                 border = 'rounded',
@@ -34,5 +14,25 @@ return {
                 }
             }
         }
-    }
+    },
+    {
+        'mason-org/mason-lspconfig.nvim',
+        event = { 'BufReadPost', 'BufNewFile' },
+        dependencies = {
+            'neovim/nvim-lspconfig',
+            'mason-org/mason.nvim'
+        },
+        opts = {
+            automatic_enable = true,
+            ensure_installed = { 'lua_ls' },
+        },
+    },
+    {
+        'jay-babu/mason-nvim-dap.nvim',
+        dependencies = {
+            'williamboman/mason.nvim',
+            'mfussenegger/nvim-dap',
+        },
+        opts = { handlers = {} },
+    },
 }
