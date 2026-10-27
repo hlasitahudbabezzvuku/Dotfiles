@@ -5,6 +5,7 @@ return {
         'MunifTanjim/nui.nvim',
         'rcarriga/nvim-notify',
         'nvim-treesitter/nvim-treesitter',
+        'nvim-telescope/telescope-ui-select.nvim',
     },
     keys = {
         { '<leader>n', function() require('noice').cmd('pick') end, desc = 'Notifications' },
