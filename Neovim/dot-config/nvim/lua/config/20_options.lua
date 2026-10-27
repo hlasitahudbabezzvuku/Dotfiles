@@ -26,6 +26,7 @@ vim.opt.cursorline = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = 'screen'
+vim.opt.showtabline = 0
 vim.opt.updatetime = 500
 
 vim.opt.wrap = false
@@ -33,8 +34,6 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.showcmd = true
 vim.opt.showmode = false
-vim.opt.showtabline = 0
-vim.opt.laststatus = 0
 
 vim.opt.swapfile = false
 vim.opt.backup = false
