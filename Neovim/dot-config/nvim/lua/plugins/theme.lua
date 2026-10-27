@@ -20,6 +20,9 @@ return {
                     PmenuBorder                    = { fg = 'bg3' },
                     FloatBorder                    = { fg = 'bg3' },
 
+                    StatusLine                     = { bg = 'none' },
+                    StatusLineNC                   = { bg = 'none' },
+
                     TelescopeBorder                = { fg = 'bg3' },
                     TelescopePromptTitle           = { bg = 'palette.blue', fg = 'bg0' },
                     TelescopePreviewTitle          = { bg = 'palette.blue', fg = 'bg0' },
