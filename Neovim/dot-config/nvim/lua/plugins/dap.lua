@@ -7,7 +7,7 @@ return {
         },
         keys = {
             {
-                '<f5>',
+                '<f6>',
                 function()
                     if require('modules.project').configure() then
                         require('dap').continue()
@@ -15,7 +15,6 @@ return {
                 end,
                 desc = 'Launch project'
             },
-            { '<f6>',  function() require('dap').continue() end,          desc = 'DAP continue' },
             { '<f9>',  function() require('dap').toggle_breakpoint() end, desc = 'DAP toggle breakpoint' },
             { '<f10>', function() require('dap').step_over() end,         desc = 'DAP step-over' },
             { '<f11>', function() require('dap').step_into() end,         desc = 'DAP step-into' },
