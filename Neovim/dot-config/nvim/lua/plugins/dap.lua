@@ -9,8 +9,18 @@ return {
             {
                 '<f6>',
                 function()
-                    local adapters = {} -- Should be list of available adapters
-                    local tasks = {}    -- Should be list of available tasks
+                    local adapters = {}
+                    for k in pairs(require('dap').adapters or {}) do
+                        table.insert(adapters, k)
+                    end
+
+                    local tasks = {}
+                    for _, p in ipairs(vim.api.nvim_get_runtime_file('lua/overseer/template/*.lua', true)) do
+                        local name = vim.fn.fnamemodify(p, ':t:r')
+                        if name ~= 'task' then
+                            table.insert(tasks, name)
+                        end
+                    end
 
                     if require('modules.project').configure(adapters, tasks) then
                         require('dap').continue()
