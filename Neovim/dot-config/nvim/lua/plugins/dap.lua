@@ -9,14 +9,10 @@ return {
             {
                 '<f6>',
                 function()
-                    local set = {}
+                    local adapters = {} -- Should be list of available adapters
+                    local tasks = {}    -- Should be list of available tasks
 
-                    for k in pairs(require('dap').adapters) do set[k] = true end
-                    for _, k in ipairs(require('mason-nvim-dap').get_installed_sources()) do set[k] = true end
-
-                    local list = vim.tbl_keys(set)
-
-                    if require('modules.project').configure(#list > 0 and list or { 'codelldb', 'gdb' }) then
+                    if require('modules.project').configure(adapters, tasks) then
                         require('dap').continue()
                     end
                 end,
