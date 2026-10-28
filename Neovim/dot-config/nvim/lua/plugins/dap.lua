@@ -22,9 +22,7 @@ return {
                         end
                     end
 
-                    if require('modules.project').configure(adapters, tasks) then
-                        require('dap').continue()
-                    end
+                    require('modules.project').configure(adapters, tasks, function() require('dap').continue() end)
                 end,
                 desc = 'Launch project'
             },
