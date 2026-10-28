@@ -5,7 +5,6 @@ dap.configurations['%s'] = {
         request = 'launch',
         program = '%s',
         cwd = '${workspaceFolder}',
-        stopOnEntry = false,
-        preLaunchTask = '%s',
+        stopOnEntry = false,%s
     }
 }
