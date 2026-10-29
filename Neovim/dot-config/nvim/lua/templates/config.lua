@@ -5,6 +5,6 @@ dap.configurations.%s = {
         request = 'launch',
         program = %s,
         cwd = '${workspaceFolder}',
-        stopOnEntry = false,%s
-    }
+        stopOnEntry = false,
+%s    }
 }
