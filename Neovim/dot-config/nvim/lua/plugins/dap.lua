@@ -15,14 +15,17 @@ return {
                     end
 
                     local tasks = {}
-                    for _, p in ipairs(vim.api.nvim_get_runtime_file('lua/overseer/template/*.lua', true)) do
-                        local name = vim.fn.fnamemodify(p, ':t:r')
-                        if name ~= 'task' then
-                            table.insert(tasks, name)
+                    require('overseer.template').list({ dir = vim.fn.getcwd() }, function(templates)
+                        local seen = {}
+                        for _, tmpl in ipairs(templates or {}) do
+                            if tmpl.name and not seen[tmpl.name] then
+                                seen[tmpl.name] = true
+                                table.insert(tasks, tmpl.name)
+                            end
                         end
-                    end
+                    end)
 
-                    require('modules.project').configure(adapters, tasks, function() require('dap').continue() end)
+                    require('modules.project').configure(adapters, tasks, require('dap').continue)
                 end,
                 desc = 'Launch project'
             },
