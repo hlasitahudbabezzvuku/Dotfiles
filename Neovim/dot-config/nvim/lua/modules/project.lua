@@ -15,7 +15,12 @@ local function select(items, opts)
 end
 
 function M.configure(adapters, tasks, callback)
-    callback()
+    local file = vim.fn.getcwd() .. '/.nvim.lua'
+
+    if vim.uv.fs_stat(file) then
+        callback()
+        return
+    end
 end
 
 return M
