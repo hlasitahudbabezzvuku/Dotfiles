@@ -6,29 +6,6 @@ return {
             'jay-babu/mason-nvim-dap.nvim',
         },
         keys = {
-            {
-                '<f5>',
-                function()
-                    local adapters = {}
-                    for k in pairs(require('dap').adapters or {}) do
-                        table.insert(adapters, k)
-                    end
-
-                    local tasks = {}
-                    require('overseer.template').list({ dir = vim.fn.getcwd() }, function(templates)
-                        local seen = {}
-                        for _, tmpl in ipairs(templates or {}) do
-                            if tmpl.name and not seen[tmpl.name] then
-                                seen[tmpl.name] = true
-                                table.insert(tasks, tmpl.name)
-                            end
-                        end
-                    end)
-
-                    require('modules.project').configure(adapters, tasks, require('dap').continue)
-                end,
-                desc = 'Launch project'
-            },
             { '<f9>',  function() require('dap').toggle_breakpoint() end, desc = 'DAP toggle breakpoint' },
             { '<f10>', function() require('dap').step_over() end,         desc = 'DAP step-over' },
             { '<f11>', function() require('dap').step_into() end,         desc = 'DAP step-into' },
