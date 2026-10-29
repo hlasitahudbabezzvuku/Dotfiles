@@ -1,5 +1,9 @@
 local M = {}
 
+local function quote(str)
+    return '\'' .. str .. '\''
+end
+
 local function input(opts)
     local c = coroutine.running()
 
