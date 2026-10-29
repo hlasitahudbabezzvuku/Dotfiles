@@ -34,6 +34,18 @@ function M.configure(adapters, tasks, callback)
         return
     end
 
+    local config = {
+        name = nil,
+        lang = vim.bo.filetype,
+        adapter = nil,
+        executable = nil,
+        task = {
+            is_template = nil,
+            name = nil,
+            command = nil,
+        }
+    }
+
     coroutine.wrap(function()
         if select({ 'Yes', 'No' }, { prompt = 'Create new project configuration?' }) ~= 'Yes' then
             if select({ 'Yes', 'No' }, { prompt = 'Run with default adapter configuration?' }) == 'Yes' then
