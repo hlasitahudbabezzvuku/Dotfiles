@@ -7,7 +7,7 @@ return {
         },
         keys = {
             {
-                '<f6>',
+                '<f5>',
                 function()
                     local adapters = {}
                     for k in pairs(require('dap').adapters or {}) do
