@@ -1,5 +1,17 @@
 local M = {}
 
+local function input(opts)
+    local c = coroutine.running()
+
+    vim.schedule(function()
+        vim.ui.input(opts, function(r)
+            coroutine.resume(c, r)
+        end)
+    end)
+
+    return coroutine.yield()
+end
+
 local function select(items, opts)
     local c = coroutine.running()
 
