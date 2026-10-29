@@ -127,6 +127,8 @@ function M.configure(adapters, tasks, callback)
         end
 
         vim.fn.writefile(format(config), file)
+        dofile(file)
+        callback()
     end)()
 end
 
