@@ -33,6 +33,15 @@ function M.configure(adapters, tasks, callback)
         callback()
         return
     end
+
+    coroutine.wrap(function()
+        if select({ 'Yes', 'No' }, { prompt = 'Create new project configuration?' }) ~= 'Yes' then
+            if select({ 'Yes', 'No' }, { prompt = 'Run with default adapter configuration?' }) == 'Yes' then
+                callback()
+            end
+            return
+        end
+    end)()
 end
 
 return M
