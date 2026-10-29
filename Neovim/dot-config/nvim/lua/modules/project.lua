@@ -125,6 +125,8 @@ function M.configure(adapters, tasks, callback)
         else
             config.task = nil
         end
+
+        vim.fn.writefile(format(config), file)
     end)()
 end
 
