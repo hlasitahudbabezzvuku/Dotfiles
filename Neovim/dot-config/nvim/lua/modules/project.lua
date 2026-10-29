@@ -72,7 +72,7 @@ function M.configure(adapters, tasks, callback)
             if not config.adapter or config.adapter == '' then return end
         end
 
-        config.executable = input({ prompt = 'Path to executable: ', default = '${workspaceFolder}/' })
+        config.executable = input({ prompt = 'Path to executable: ', default = '${workspaceFolder}/', completion = 'file' })
         if not config.executable or config.executable == '' then return end
 
         if select({ 'Yes', 'No' }, { prompt = 'Use pre-launch task?' }) == 'Yes' then
