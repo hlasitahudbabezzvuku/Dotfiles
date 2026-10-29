@@ -54,7 +54,7 @@ local function format(config)
 
     str_config = string.format(
         tmpl_config,
-        quote(config.lang),
+        config.lang,
         quote(config.name),
         quote(config.adapter),
         quote(config.executable),
