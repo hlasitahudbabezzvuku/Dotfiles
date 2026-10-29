@@ -30,6 +30,39 @@ local function select(items, opts)
     return coroutine.yield()
 end
 
+local function format(config)
+    local tmpl_default = vim.fn.readblob(vim.fn.stdpath('config') .. '/lua/templates/default.lua')
+    local tmpl_config = vim.fn.readblob(vim.fn.stdpath('config') .. '/lua/templates/config.lua')
+    local tmpl_task = vim.fn.readblob(vim.fn.stdpath('config') .. '/lua/templates/task.lua')
+    local tmpl_prelaunch = vim.fn.readblob(vim.fn.stdpath('config') .. '/lua/templates/prelaunch.lua')
+
+    local str_config = ''
+    local str_task = ''
+    local str_prelaunch = ''
+
+    if config.task and config.task.is_template == false then
+        str_prelaunch = string.format(tmpl_prelaunch, quote(config.task.name))
+        local parts = vim.split(config.task.command, '%s+', { trimempty = true })
+        str_task = string.format(
+            tmpl_task,
+            quote(config.task.name),
+            table.remove(parts, 1) or '',
+            table.concat(vim.tbl_map(quote, parts), ', '))
+    elseif config.task and config.task.is_template == true then
+        str_prelaunch = string.format(str_prelaunch, quote(config.task.name))
+    end
+
+    str_config = string.format(
+        tmpl_config,
+        quote(config.lang),
+        quote(config.name),
+        quote(config.adapter),
+        quote(config.executable),
+        str_prelaunch)
+
+    return string.format(tmpl_default, str_config, str_task)
+end
+
 function M.configure(adapters, tasks, callback)
     local file = vim.fn.getcwd() .. '/.nvim.lua'
 
