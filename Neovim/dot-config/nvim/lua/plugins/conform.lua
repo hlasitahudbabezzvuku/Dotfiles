@@ -1,3 +1,14 @@
+vim.g.autoformat = true
+
+vim.api.nvim_create_user_command("FormatDisable", function(args) vim.g.autoformat = false end, {
+    desc = "Disable autoformat-on-save",
+    bang = true,
+})
+
+vim.api.nvim_create_user_command("FormatEnable", function() vim.g.autoformat = true end, {
+    desc = "Re-enable autoformat-on-save",
+})
+
 return {
     'stevearc/conform.nvim',
     event = 'BufWritePre',
