@@ -46,7 +46,7 @@ local function format(config)
         str_task = string.format(
             tmpl_task,
             quote(config.task.name),
-            table.remove(parts, 1) or '',
+            quote(table.remove(parts, 1)),
             table.concat(vim.tbl_map(quote, parts), ', '))
     elseif config.task and config.task.is_template == true then
         str_prelaunch = string.format(str_prelaunch, quote(config.task.name))
