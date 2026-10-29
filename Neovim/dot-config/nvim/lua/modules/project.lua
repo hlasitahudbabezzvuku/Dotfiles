@@ -40,16 +40,16 @@ local function format(config)
     local str_task = ''
     local str_prelaunch = ''
 
-    if config.task and config.task.is_template == false then
+    if config.task then
+        if config.task.is_template == false then
+            local parts = vim.split(config.task.command, '%s+', { trimempty = true })
+            str_task = string.format(
+                tmpl_task,
+                quote(config.task.name),
+                quote(table.remove(parts, 1)),
+                table.concat(vim.tbl_map(quote, parts), ', '))
+        end
         str_prelaunch = string.format(tmpl_prelaunch, quote(config.task.name))
-        local parts = vim.split(config.task.command, '%s+', { trimempty = true })
-        str_task = string.format(
-            tmpl_task,
-            quote(config.task.name),
-            quote(table.remove(parts, 1)),
-            table.concat(vim.tbl_map(quote, parts), ', '))
-    elseif config.task and config.task.is_template == true then
-        str_prelaunch = string.format(str_prelaunch, quote(config.task.name))
     end
 
     str_config = string.format(
