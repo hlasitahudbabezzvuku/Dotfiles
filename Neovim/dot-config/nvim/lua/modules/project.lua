@@ -53,6 +53,41 @@ function M.configure(adapters, tasks, callback)
             end
             return
         end
+
+        config.name = input({ prompt = 'Configuration name: ', default = 'Launch' })
+        if not config.name or config.name == '' then return end
+
+        config.lang = input({ prompt = 'Language: ', default = config.lang })
+        if not config.lang or config.lang == '' then return end
+
+        if #adapters == 0 then
+            config.adapter = input({ prompt = 'No DAP adapters found. Enter adapter name manually: ' })
+            if not config.adapter or config.adapter == '' then return end
+        else
+            config.adapter = select(adapters, { prompt = 'Select DAP adapter: ' })
+            if not config.adapter or config.adapter == '' then return end
+        end
+
+        config.executable = input({ prompt = 'Path to executable: ', default = '${workspaceFolder}/' })
+        if not config.executable or config.executable == '' then return end
+
+        if select({ 'Yes', 'No' }, { prompt = 'Use pre-launch task?' }) == 'Yes' then
+            if select({ 'Template', 'Custom' }, { prompt = 'Use Overseer template or create custom one?' }) == 'Template' then
+                config.task.name = select(tasks, { prompt = 'Template: ' })
+                if not config.task.name or config.task.name == '' then return end
+
+                config.task.is_template = true
+            else
+                config.task.name = input({ prompt = 'Name: ', default = 'Build' })
+                if not config.task.name or config.task.name == '' then return end
+                config.task.command = input({ prompt = 'Command: ', default = 'make' })
+                if not config.task.command or config.task.command == '' then return end
+
+                config.task.is_template = false
+            end
+        else
+            config.task = nil
+        end
     end)()
 end
 
