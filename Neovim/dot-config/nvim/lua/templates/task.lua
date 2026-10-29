@@ -1,8 +1,8 @@
 overseer.register_template({
-    name = '%s',
+    name = %s,
     builder = function()
         return {
-            cmd = { '%s' },
+            cmd = { %s },
             args = { %s },
             components = { 'default', 'on_complete_dispose' }
         }

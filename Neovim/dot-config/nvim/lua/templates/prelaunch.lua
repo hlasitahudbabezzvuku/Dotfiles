@@ -1,0 +1,1 @@
+        preLaunchTask = %s,
