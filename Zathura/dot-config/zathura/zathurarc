@@ -1,0 +1,3 @@
+set font "Monaspace Neon normal 11"
+set statusbar-h-padding 16
+set statusbar-v-padding 16
