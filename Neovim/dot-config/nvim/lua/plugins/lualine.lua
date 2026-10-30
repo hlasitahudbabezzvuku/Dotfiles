@@ -1,6 +1,6 @@
 return {
     'nvim-lualine/lualine.nvim',
-    event = 'BufReadPre',
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
         local winbar_cfg = {
