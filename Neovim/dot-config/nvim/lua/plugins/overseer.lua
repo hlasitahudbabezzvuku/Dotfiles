@@ -32,18 +32,18 @@ return {
         {
             '<f7>',
             function()
-                require('overseer').close()
-                require('dapui').toggle()
-            end,
-            desc = 'Toggle DAP UI'
-        },
-        {
-            '<f8>',
-            function()
                 require('dapui').close()
                 require('overseer').toggle()
             end,
             desc = 'Toggle Overseer UI'
+        },
+        {
+            '<f8>',
+            function()
+                require('overseer').close()
+                require('dapui').toggle()
+            end,
+            desc = 'Toggle DAP UI'
         },
     },
     config = function()
