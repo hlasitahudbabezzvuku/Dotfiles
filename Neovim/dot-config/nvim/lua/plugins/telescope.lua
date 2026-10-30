@@ -8,12 +8,24 @@ return {
         },
         cmd = 'Telescope',
         keys = {
-            { '<leader>f', function() require('telescope.builtin').find_files() end,            desc = 'Find files' },
-            { '<leader>g', function() require('telescope.builtin').live_grep() end,             desc = 'Live grep' },
-            { '<leader>b', function() require('telescope.builtin').buffers() end,               desc = 'Find buffers' },
-            { '<leader>k', function() require('telescope.builtin').diagnostics() end,           desc = 'Find diagnostics' },
-            { '<leader>;', function() require('telescope.builtin').builtin() end,               desc = 'Telescope' },
-            { '<leader>j', function() require('telescope.builtin').lsp_document_symbols() end,  desc = 'LSP document symbols' },
+            { '<leader>f', function() require('telescope.builtin').find_files() end,  desc = 'Find files' },
+            { '<leader>g', function() require('telescope.builtin').live_grep() end,   desc = 'Live grep' },
+            { '<leader>b', function() require('telescope.builtin').buffers() end,     desc = 'Find buffers' },
+            { '<leader>k', function() require('telescope.builtin').diagnostics() end, desc = 'Find diagnostics' },
+            { '<leader>;', function() require('telescope.builtin').builtin() end,     desc = 'Telescope' },
+            {
+                '<leader>j',
+                function()
+                    local buf = vim.api.nvim_get_current_buf()
+
+                    if #vim.lsp.get_clients({ bufnr = buf, method = 'textDocument/documentSymbol', }) > 0 then
+                        require('telescope.builtin').lsp_document_symbols()
+                    else
+                        require('telescope.builtin').treesitter()
+                    end
+                end,
+                desc = 'LSP document symbols'
+            },
             { '<leader>h', function() require('telescope.builtin').lsp_workspace_symbols() end, desc = 'LSP workspace symbols' },
         },
         opts = {
