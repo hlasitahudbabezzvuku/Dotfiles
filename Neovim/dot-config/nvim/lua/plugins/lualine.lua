@@ -3,6 +3,22 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
+        local function tabs()
+            local current = vim.fn.tabpagenr()
+            local last = vim.fn.tabpagenr('$')
+            local parts = {}
+
+            for i = 1, last do
+                if i == current then
+                    table.insert(parts, '[' .. i .. ']')
+                else
+                    table.insert(parts, ' ' .. i .. ' ')
+                end
+            end
+
+            return table.concat(parts, '  ')
+        end
+
         local winbar_cfg = {
             lualine_b = {
                 {
@@ -35,7 +51,7 @@ return {
             },
             lualine_b = {
                 {
-                    'tabs',
+                    tabs,
                     padding = { left = 3, right = 1 },
                 },
                 { 'branch' },
