@@ -19,3 +19,17 @@ vim.api.nvim_create_autocmd({ 'VimResized' }, {
         vim.cmd('tabnext ' .. current_tab)
     end,
 })
+
+-- Wrap in text filetypes
+vim.api.nvim_create_autocmd('FileType', {
+    group = augroup('wrap'),
+    pattern = {
+        'text',
+        'plaintex',
+        'gitcommit',
+        'markdown',
+    },
+    callback = function()
+        vim.opt_local.wrap = true
+    end,
+})
