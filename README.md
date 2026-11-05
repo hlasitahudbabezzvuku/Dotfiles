@@ -1,4 +1,13 @@
-# HlasitaHudbaBezZvuku .files
+<div align="center">
+    <h1>Tečkosoubory</h1>
+    <h3>"T? What T? T my ass! ... I love templates."</h3><br>
+    <div>
+        <img src="https://img.shields.io/badge/OPEN_SOURCE-161b22?style=for-the-badge&logo=opensourceinitiative&logoColor=7ee787&labelColor=21262d">
+        <img src="https://img.shields.io/badge/FEDORA-161b22?style=for-the-badge&logo=fedora&logoColor=58a6ff&labelColor=21262d">
+        <img src="https://img.shields.io/badge/BASH-161b22?style=for-the-badge&logo=gnubash&logoColor=d2a8ff&labelColor=21262d">
+        <img src="https://img.shields.io/badge/GNU_STOW-161b22?style=for-the-badge&logo=make&logoColor=ffa657&labelColor=21262d">
+    </div>
+</div><br><br>
 
 This repository contains my personal dotfiles from my laptop, Termux and RPi server.
 
