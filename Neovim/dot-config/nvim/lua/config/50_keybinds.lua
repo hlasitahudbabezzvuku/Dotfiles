@@ -11,12 +11,6 @@ vim.keymap.set('n', '<leader>cu', function() vim.cmd('cd ' .. vim.fn.expand('..'
 -- QoL
 vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
 
--- Enable navigation using c-a-<direction>
-vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-k>', '<up>', { noremap = true, silent = true })
-vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-j>', '<down>', { noremap = true, silent = true })
-vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-h>', '<left>', { noremap = true, silent = true })
-vim.keymap.set({ 'n', 'i', 'x', 'v' }, '<c-a-l>', '<right>', { noremap = true, silent = true })
-
 -- Tab switching
 vim.keymap.set('n', '<tab>', function() vim.cmd('tabnext') end, { desc = 'Next buffer' })
 vim.keymap.set('n', '<s-tab>', function() vim.cmd('tabprevious') end, { desc = 'Previous buffer' })
