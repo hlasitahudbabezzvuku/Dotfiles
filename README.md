@@ -31,7 +31,3 @@ stow --delete <package>
 > [!WARNING]
 > Sometimes you'll have to rerun `stow <package>`, because stow doesn't always link the whole directory, but just the individual files.
 
-## Note
-
-These files are a reflection of my own specific workflow and hardware requirements. They aren't designed as a template for others to follow, but rather as a personal record of a system that finally feels stable and intuitive.
-
