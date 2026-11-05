@@ -1,5 +1,5 @@
 (
-    if [[ -n ${SSH_TTY+x} ]] &> /dev/null; then
+    if [[ -n ${SSH_TTY+x} ]] || [[ -n ${TMUX+x} ]]; then
         printf "\n"
     fi
 
