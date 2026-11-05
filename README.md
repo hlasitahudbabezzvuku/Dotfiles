@@ -28,7 +28,7 @@ To remove a package:
 stow --delete <package>
 ```
 
-> [!NOTE]
+> [!WARNING]
 > Sometimes you'll have to rerun `stow <package>`, because stow doesn't always link the whole directory, but just the individual files.
 
 ## Note
