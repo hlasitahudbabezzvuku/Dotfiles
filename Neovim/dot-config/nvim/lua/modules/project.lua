@@ -5,46 +5,13 @@
 --- DAP and Overseer configuration takes effect immediately. Running the
 --- wizard twice simply re-executes the existing file.
 local M = {}
+local ui = require('modules.ui')
 
 --- Wrap a string in single quotes so it can be embedded in generated Lua source.
 ---@param str string
 ---@return string
 local function quote(str)
     return '\'' .. str .. '\''
-end
-
---- Prompt the user for free-form input. Synchronous wrapper around
---- `vim.ui.input` for use inside a coroutine.
----@param opts table Options passed straight through to `vim.ui.input`.
----@return string? result The entered text, or nil when aborted.
-local function input(opts)
-    local c = coroutine.running()
-
-    vim.schedule(function()
-        vim.ui.input(opts, function(result)
-            coroutine.resume(c, result)
-        end)
-    end)
-
-    return coroutine.yield()
-end
-
---- Prompt the user to pick from a list. Synchronous wrapper around
---- `vim.ui.select` for use inside a coroutine.
----@param items any[] Options passed straight through to `vim.ui.select`.
----@param opts table
----@return any? item The selected item, or nil when aborted.
----@return integer? index The 1-based index of the selected item.
-local function select(items, opts)
-    local c = coroutine.running()
-
-    vim.schedule(function()
-        vim.ui.select(items, opts, function(item, idx)
-            coroutine.resume(c, item, idx)
-        end)
-    end)
-
-    return coroutine.yield()
 end
 
 --- Read a template file from this config's `lua/templates/` directory.
@@ -118,44 +85,44 @@ function M.configure(adapters, tasks, callback)
 
     coroutine.wrap(function()
         -- Gate: only continue when the user actually wants a new file.
-        if select({ 'Yes', 'No' }, { prompt = 'Create new project configuration?' }) ~= 'Yes' then
-            if select({ 'Yes', 'No' }, { prompt = 'Run with default adapter configuration?' }) == 'Yes' then
+        if ui.select({ 'Yes', 'No' }, { prompt = 'Create new project configuration?' }) ~= 'Yes' then
+            if ui.select({ 'Yes', 'No' }, { prompt = 'Run with default adapter configuration?' }) == 'Yes' then
                 callback()
             end
             return
         end
 
         -- Step: general configuration.
-        config.name = input({ prompt = 'Configuration name: ', default = 'Launch' })
+        config.name = ui.input({ prompt = 'Configuration name: ', default = 'Launch' })
         if not config.name or config.name == '' then return end
 
-        config.lang = input({ prompt = 'Language: ', default = config.lang })
+        config.lang = ui.input({ prompt = 'Language: ', default = config.lang })
         if not config.lang or config.lang == '' then return end
 
         -- Step: pick (or name) the DAP adapter.
         if #adapters == 0 then
-            config.adapter = input({ prompt = 'No DAP adapters found. Enter adapter name manually: ' })
+            config.adapter = ui.input({ prompt = 'No DAP adapters found. Enter adapter name manually: ' })
             if not config.adapter or config.adapter == '' then return end
         else
-            config.adapter = select(adapters, { prompt = 'Select DAP adapter: ' })
+            config.adapter = ui.select(adapters, { prompt = 'Select DAP adapter: ' })
             if not config.adapter or config.adapter == '' then return end
         end
 
         -- Step: target executable.
-        config.executable = input({ prompt = 'Path to executable: ', default = '${workspaceFolder}/', completion = 'file' })
+        config.executable = ui.input({ prompt = 'Path to executable: ', default = '${workspaceFolder}/', completion = 'file' })
         if not config.executable or config.executable == '' then return end
 
         -- Step: optional pre-launch task.
-        if select({ 'Yes', 'No' }, { prompt = 'Use pre-launch task?' }) == 'Yes' then
-            if select({ 'Template', 'Custom' }, { prompt = 'Use Overseer template or create custom one?' }) == 'Template' then
-                config.task.name = select(tasks, { prompt = 'Template: ' })
+        if ui.select({ 'Yes', 'No' }, { prompt = 'Use pre-launch task?' }) == 'Yes' then
+            if ui.select({ 'Template', 'Custom' }, { prompt = 'Use Overseer template or create custom one?' }) == 'Template' then
+                config.task.name = ui.select(tasks, { prompt = 'Template: ' })
                 if not config.task.name or config.task.name == '' then return end
 
                 config.task.is_template = true
             else
-                config.task.name = input({ prompt = 'Name: ', default = 'Build' })
+                config.task.name = ui.input({ prompt = 'Name: ', default = 'Build' })
                 if not config.task.name or config.task.name == '' then return end
-                config.task.command = input({ prompt = 'Command: ', default = 'make' })
+                config.task.command = ui.input({ prompt = 'Command: ', default = 'make' })
                 if not config.task.command or config.task.command == '' then return end
 
                 config.task.is_template = false
