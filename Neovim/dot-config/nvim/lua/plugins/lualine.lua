@@ -19,69 +19,6 @@ return {
             return table.concat(parts, '  ')
         end
 
-        local winbar_cfg = {
-            lualine_b = {
-                {
-                    'filetype',
-                    icon_only = true,
-                    padding = { left = 1, right = 0 },
-                    separator = { left = '', right = nil },
-                },
-                { 'filename' },
-                { 'diagnostics' },
-                { 'diff' },
-            },
-            lualine_y = {
-                { 'encoding' },
-                { 'progress' },
-                {
-                    'location',
-                    padding = { left = 0, right = 1 },
-                    separator = { left = nil, right = '' }
-                },
-            },
-        }
-
-        local sections_cfg = {
-            lualine_a = {
-                {
-                    'mode',
-                    separator = { left = '', right = '' }
-                }
-            },
-            lualine_b = {
-                {
-                    tabs,
-                    padding = { left = 3, right = 1 },
-                },
-                { 'branch' },
-                {
-                    require('noice').api.status.mode.get,
-                    cond = require('noice').api.status.mode.has,
-                    color = { fg = '#797ef9' },
-                },
-                { 'searchcount' },
-                { 'selectioncount' },
-            },
-            lualine_c = {},
-            lualine_x = {},
-            lualine_y = {
-                {
-                    'windows',
-                    mode = 2,
-                    padding = { left = 1, right = 3 },
-                }
-            },
-            lualine_z = {
-                {
-                    require('noice').api.status.command.get,
-                    cond = require('noice').api.status.command.has,
-                    padding = 3,
-                    separator = { left = '', right = '' }
-                },
-            },
-        }
-
         local theme = require('lualine.themes.auto')
 
         theme.normal = {
@@ -129,9 +66,53 @@ return {
                 disabled_filetypes = { 'dashboard' },
                 globalstatus = true,
             },
-            sections = sections_cfg,
-            winbar = winbar_cfg,
-            inactive_winbar = winbar_cfg,
+            sections = {
+                lualine_a = {
+                    {
+                        'mode',
+                        separator = { left = '', right = '' }
+                    }
+                },
+                lualine_b = {
+                    {
+                        tabs,
+                        padding = { left = 3, right = 1 },
+                    },
+                    { 'branch' },
+                    { 'diff' },
+                    { 'diagnostics' },
+                },
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {
+                    {
+                        require('noice').api.status.mode.get,
+                        cond = require('noice').api.status.mode.has,
+                        color = { fg = '#797ef9' },
+                    },
+                    { 'searchcount' },
+                    { 'selectioncount' },
+                    { 'progress' },
+                    { 'encoding' },
+                    {
+                        'filetype',
+                        icon_only = true,
+                        padding = { left = 1, right = 0 },
+                    },
+                    {
+                        'filename',
+                        padding = { left = 0, right = 3 },
+                        separator = { left = '?', right = nil },
+                    },
+                },
+                lualine_z = {
+                    {
+                        'location',
+                        padding = 2,
+                        separator = { left = '', right = '' }
+                    },
+                },
+            },
         })
     end
 }
