@@ -29,25 +29,17 @@ return {
             desc = 'Launch project'
         },
         { '<f6>', function() require('overseer.commands').run_template({}) end, desc = 'Launch generic task' },
-        {
-            '<f7>',
-            function()
-                require('dapui').close()
-                require('overseer').toggle()
-            end,
-            desc = 'Toggle Overseer UI'
-        },
-        {
-            '<f8>',
-            function()
-                require('overseer').close()
-                require('dapui').toggle()
-            end,
-            desc = 'Toggle DAP UI'
-        },
+        { '<f7>', function() require('modules.layout').toggle('overseer') end,  desc = 'Toggle Overseer UI' },
     },
     config = function()
         local overseer = require('overseer')
+        local layout = require('modules.layout')
+
+        layout.register('overseer', {
+            open = overseer.open,
+            close = overseer.close,
+            is_open = overseer.is_task_list_visible,
+        })
 
         overseer.setup({
             task_list = {
@@ -57,8 +49,7 @@ return {
         })
 
         overseer.add_template_hook({ name = '.*' }, function(_, _)
-            require('dapui').close()
-            overseer.open()
+            layout.open('overseer')
         end)
     end
 }

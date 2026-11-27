@@ -6,25 +6,25 @@ return {
             'jay-babu/mason-nvim-dap.nvim',
         },
         keys = {
-            { '<f9>',  function() require('dap').toggle_breakpoint() end, desc = 'DAP toggle breakpoint' },
-            { '<f10>', function() require('dap').step_over() end,         desc = 'DAP step-over' },
-            { '<f11>', function() require('dap').step_into() end,         desc = 'DAP step-into' },
-            { '<f12>', function() require('dap').step_out() end,          desc = 'DAP step-out' },
+            { '<f8>',  function() require('modules.layout').toggle('dapui') end, desc = 'Toggle DAP UI' },
+            { '<f9>',  function() require('dap').toggle_breakpoint() end,        desc = 'DAP toggle breakpoint' },
+            { '<f10>', function() require('dap').step_over() end,                desc = 'DAP step-over' },
+            { '<f11>', function() require('dap').step_into() end,                desc = 'DAP step-into' },
+            { '<f12>', function() require('dap').step_out() end,                 desc = 'DAP step-out' },
         },
         config = function()
             local dap = require('dap')
             local dapui = require('dapui')
-            local overseer = require('overseer')
+            local layout = require('modules.layout')
 
-            dap.listeners.before.attach.dapui_config = function()
-                overseer.close()
-                dapui.open()
-            end
+            layout.register('dapui', {
+                open = dapui.open,
+                close = dapui.close,
+                is_open = dapui.is_open,
+            })
 
-            dap.listeners.before.launch.dapui_config = function()
-                overseer.close()
-                dapui.open()
-            end
+            dap.listeners.before.attach.dapui_config = function() layout.open('dapui') end
+            dap.listeners.before.launch.dapui_config = function() layout.open('dapui') end
 
             vim.fn.sign_define('DapBreakpoint', { text = '', texthl = 'DapBreakpointColor', linehl = '', numhl = '' })
         end
