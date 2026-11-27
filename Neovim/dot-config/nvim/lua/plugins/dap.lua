@@ -39,7 +39,7 @@ return {
             layouts = {
                 {
                     position = 'right',
-                    size = 36,
+                    size = 48,
                     elements = {
                         { id = 'stacks',  size = 0.25 },
                         { id = 'scopes',  size = 0.50 },
