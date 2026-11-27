@@ -11,7 +11,10 @@
 
 This repository contains my personal dotfiles from my laptop, Termux and RPi server.
 
-> [!IMPORTANT]
+> [!CAUTION]
+> These files are a reflection of my own specific workflow and hardware requirements. They aren't designed as a template for others to follow. Don't expect me to fix things because it doesn't work on your computer.
+
+> [!NOTE]
 > This is the new repo I made after migrating from Hyprland in 2024. The old dotfiles from my Hyprland desktop are not available anymore.
 
 ## Deployment
