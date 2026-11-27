@@ -164,8 +164,9 @@ function M.configure(adapters, tasks, callback)
             config.task = nil
         end
 
-        -- Step: persist and apply.
+        -- Step: persist, trust, and apply.
         vim.fn.writefile(format(config), file)
+        vim.secure.trust({ action = 'allow', path = file })
         dofile(file)
         callback()
     end)()
